@@ -393,3 +393,87 @@ body { font-size: 20px; }
 .pcards { gap: 30px 22px; }
 @media (min-width: 621px) { .pcard { width: 318px; } }
 @media (max-width: 620px) { .eyebrow { letter-spacing: .05em; border-radius: 18px; line-height: 1.35; } }
+
+/* ============ larger text in the drawings (PI, 2026-11-18) ============ */
+.svg-sign.hi { font-size: 21px; letter-spacing: .5px; }
+.svg-sign.en { font-size: 14px; letter-spacing: .6px; }
+.svg-coin { font-size: 13px; }
+.town2 .svg-label { font-size: 34px; }
+/* imported scenes keep their own text; show them larger instead */
+.gallery { grid-template-columns: 1fr; max-width: 980px; }
+.wide-art .old-town { max-width: none; }
+#training .world, .project-page .proj-hero { max-width: 1260px; }
+#what-we-do .town-wrap { width: 100vw; position: relative; left: 50%; transform: translateX(-50%); }
+@media (min-width: 1000px) { .street.town2 { min-width: 0; } }
+
+/* ============ mobile view (PI, 2026-11-18): own type scale, menu button, compact cards ============ */
+.menu-btn { display: none; }
+@media (max-width: 720px) {
+  /* top bar and menu */
+  .nav { padding-top: 10px; }
+  .brand span { font-size: 24px; }
+  .brand svg { width: 32px; height: 32px; }
+  .menu-btn { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 46px; height: 42px; padding: 0 10px;
+    background: var(--paper); border: var(--line); border-radius: 12px; box-shadow: var(--shadow-sm); cursor: pointer; }
+  .menu-btn i { display: block; height: 3px; border-radius: 2px; background: var(--ink); transition: transform .2s, opacity .2s; }
+  .nav.open .menu-btn i:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .nav.open .menu-btn i:nth-child(2) { opacity: 0; }
+  .nav.open .menu-btn i:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  .nav .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0;
+    background: var(--cream); border-bottom: var(--line); box-shadow: 0 8px 0 rgba(31, 26, 46, .12); padding: 6px 16px 14px; }
+  .nav.open .nav-links { display: flex; }
+  .nav .nav-links a, .nav .nav-links a:not(:first-child) { display: block; font-size: 20px; padding: 12px 6px; border: 0;
+    border-bottom: 2px dashed rgba(31, 26, 46, .2); border-radius: 0; }
+  .nav .nav-links a:last-child { border-bottom: 0; }
+  .nav .nav-links a:hover { transform: none; background: transparent; color: var(--rani); }
+
+  /* mobile type scale: readable, not the laptop 1.5x */
+  body { font-size: 17px; }
+  .lede, .pillar-hero .lede, .proj-hero .lede { font-size: 18px; }
+  .section-head p:not(.eyebrow), .pitch { font-size: 17px; }
+  .eyebrow { font-size: 13px; letter-spacing: .06em; }
+  .chip-label { font-size: 12.5px; }
+  .chip, .line-chip, .pcard-chips .chip { font-size: 15px; }
+  .also .line-chip { font-size: 14px; }
+  .crumbs { font-size: 15px; }
+  .pillar-hero h1, .proj-hero h1 { font-size: 36px; }
+  .proj-tag { font-size: 13px !important; }
+  .env-count { font-size: 15px !important; }
+  .proj-card h3 { font-size: 24px; }
+  .proj-card p { font-size: 16px; }
+  .envs b { font-size: 19px; }
+  .envs span { font-size: 15px; }
+  .step span { font-size: 16px; }
+  .member b { font-size: 22px; }
+  .member span:not(.avatar) { font-size: 16px; }
+  .member i { font-size: 14.5px; }
+  .dboard tbody th a { font-size: 17px; }
+  .dboard td { font-size: 16px; }
+  .tag { font-size: 13.5px; }
+  .vs-label { font-size: 13px; }
+  .vs-task { font-size: 20px; }
+  .vs-en, .vs-card ul { font-size: 16px; }
+  .langs span { font-size: 14px; }
+  .foot-links { font-size: 15px; }
+  .gal figcaption { font-size: 16px; }
+  .gal figcaption b { font-size: 21px; }
+  .board-lang, .platform .board-lang { font-size: 12px; }
+
+  /* the street is too wide for a phone: each card already shows its building */
+  #what-we-do .town-wrap { display: none; }
+
+  /* compact pillar cards: small building on the left, name and one line on the right */
+  .pcards { gap: 16px; }
+  .pcard { width: 100%; max-width: none; flex-direction: row; box-shadow: 5px 5px 0 var(--lc); }
+  .pcard:hover { transform: none; }
+  .pcard-top { flex: none; width: 118px; padding: 4px; border-bottom: 0; border-right: var(--line); display: flex; align-items: flex-end; }
+  .pcard-top .pillar-num { top: 6px; left: 6px; font-size: 13px; padding: 0 7px; }
+  .pcard-body { padding: 12px 14px; }
+  .pcard-bldg-name { font-size: 13px; }
+  .pcard h3 { font-size: 22px; }
+  .pcard-line { font-size: 15.5px; margin: 4px 0 0; }
+  .pcard-body .chip-label, .pcard-chips { display: none; }
+
+  /* smaller building on pillar and project pages */
+  .pillar-hero-art, .proj-art-bldg { max-width: 300px; margin: 0 auto; }
+}

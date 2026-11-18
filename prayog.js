@@ -23,3 +23,19 @@
     show();
   }, 2600);
 })();
+
+// Phone menu: the ☰ button opens the links as a panel under the top bar.
+(() => {
+  const nav = document.getElementById("nav");
+  const btn = nav && nav.querySelector(".menu-btn");
+  if (!btn) return;
+  const set = (open) => {
+    nav.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.setAttribute("aria-label", open ? "Close the menu" : "Open the menu");
+  };
+  btn.addEventListener("click", () => set(!nav.classList.contains("open")));
+  nav.querySelectorAll(".nav-links a").forEach((a) => a.addEventListener("click", () => set(false)));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") set(false); });
+  matchMedia("(min-width: 721px)").addEventListener("change", (m) => { if (m.matches) set(false); });
+})();
