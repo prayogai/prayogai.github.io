@@ -187,3 +187,33 @@ a.line-chip:hover { transform: translateY(-2px); background: #fff; }
 .envs li:hover { transform: translateY(-4px) rotate(-1deg); }
 .envs b { font-family: var(--display); font-size: 20px; line-height: 1.2; }
 .envs span { color: var(--ink-soft); font-weight: 600; font-size: 14.5px; }
+
+/* ============ v2 street (2026-11-18): built on the Karobaar Gym street ============ */
+.street.town2 { min-width: 1500px; }
+.pt-truck { animation: ptTruck 26s linear infinite; }
+@keyframes ptTruck { from { transform: translate(-320px, 368px); } to { transform: translate(2400px, 368px); } }
+.pt-truck > g { animation: bounce .45s ease-in-out infinite alternate; }
+.pt-auto { animation: ptAuto 17s linear -7s infinite; }
+@keyframes ptAuto { from { transform: translate(2400px, 446px) scaleX(-1); } to { transform: translate(-220px, 446px) scaleX(-1); } }
+.town2 .svg-label { font-size: 30px; }
+.town-wrap { border-bottom: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .pt-truck, .pt-truck > g, .pt-auto { animation: none !important; }
+  .pt-truck { transform: translate(300px, 368px); }
+  .pt-auto { transform: translate(1560px, 446px) scaleX(-1); }
+}
+.bldg-big text, .old-town text { stroke: none; }
+.pillar-hero-art, .proj-art-bldg { padding: 0; background: #ffe8c4; }
+.bldg-big { max-width: none; }
+
+/* wide old-town strip on the tool-calling page */
+.wide-art { max-width: 1180px; margin: 0 auto 10px; padding: 0 16px; }
+.wide-art .old-town { display: block; width: 100%; height: auto; border: var(--line); border-radius: var(--radius); box-shadow: var(--shadow); background: #fff1d6; }
+
+/* Karobaar gallery */
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 30px; max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+.gal { margin: 0; }
+.gal figcaption { margin-top: 18px; font-weight: 600; color: var(--ink-soft); }
+.gal figcaption b { display: block; font-family: var(--display); font-size: 22px; color: var(--ink); }
+@media (max-width: 760px) { .gallery { grid-template-columns: 1fr; } }
+#training .world { max-width: 1180px; margin: 0 auto; }
