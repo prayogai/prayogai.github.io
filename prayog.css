@@ -513,3 +513,27 @@ body { font-size: 20px; }
   .dboard tbody th, .dboard td { padding: 2px 0; }
 }
 .slide-bldg text { stroke: none; }
+
+/* ============ 2026-11-18: phone board fix; continuous swipeable street on phones (option A) ============ */
+.town-inner { position: relative; }
+.town-inner .snap { position: absolute; top: 0; width: 1px; height: 1px; pointer-events: none; }
+.swipe-dots { display: none; }
+@media (max-width: 720px) {
+  /* board: one full-width block per project (entry 42's fixed table layout squeezed it) */
+  .dboard table, .dboard tbody { display: block; table-layout: auto; width: 100%; }
+  .dboard colgroup { display: none; }
+  .dboard tbody tr { display: block; width: 100%; }
+  .dboard tbody th, .dboard td { display: block; width: 100%; padding: 2px 0; }
+  .dboard .d-what { max-width: none; }
+
+  /* street: the real street, cropped above the rooftops, scrolls sideways */
+  #what-we-do .town-wrap { display: block; height: 330px; overflow-x: auto; overflow-y: hidden;
+    scroll-snap-type: x mandatory; scrollbar-width: none; margin-bottom: 14px; }
+  #what-we-do .town-wrap::-webkit-scrollbar { display: none; }
+  .town-inner { width: max-content; }
+  .street.town2 { width: auto; min-width: 0; height: 430px; margin-top: -99px; }
+  .town-inner .snap { scroll-snap-align: center; }
+  .swipe-dots { display: flex; justify-content: center; gap: 8px; margin-bottom: 26px; }
+  .swipe-dots i { width: 9px; height: 9px; border-radius: 50%; background: rgba(31, 26, 46, .22); transition: background .2s, transform .2s; }
+  .swipe-dots i.on { background: var(--ink); transform: scale(1.3); }
+}

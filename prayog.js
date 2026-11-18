@@ -40,14 +40,19 @@
   matchMedia("(min-width: 721px)").addEventListener("change", (m) => { if (m.matches) set(false); });
 })();
 
-// Phone swipe strip: light the dot of the building in view.
+// Phones: the street scrolls sideways and stops at each building; the dots follow it.
 (() => {
-  const strip = document.querySelector(".town-swipe .swipe-track");
-  if (!strip || !("IntersectionObserver" in window)) return;
-  const slides = [...strip.querySelectorAll(".slide")];
-  const dots = [...document.querySelectorAll(".town-swipe .swipe-dots i")];
-  const io = new IntersectionObserver((es) => es.forEach((en) => {
-    if (en.isIntersecting) dots.forEach((d, k) => d.classList.toggle("on", slides[k] === en.target));
-  }), { root: strip, threshold: 0.6 });
-  slides.forEach((s) => io.observe(s));
+  const wrap = document.getElementById("town");
+  const dots = [...document.querySelectorAll(".swipe-dots i")];
+  if (!wrap || !dots.length) return;
+  const marks = [...wrap.querySelectorAll(".snap")];
+  const update = () => {
+    const mid = wrap.scrollLeft + wrap.clientWidth / 2;
+    let best = 0, bestD = Infinity;
+    marks.forEach((m, k) => { const d = Math.abs(m.offsetLeft - mid); if (d < bestD) { bestD = d; best = k; } });
+    dots.forEach((d, k) => d.classList.toggle("on", k === best));
+  };
+  wrap.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
+  addEventListener("resize", update);
+  update();
 })();
