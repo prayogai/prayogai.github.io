@@ -253,3 +253,55 @@ a.line-chip:hover { transform: translateY(-2px); background: #fff; }
 .platform .board-script { font-size: clamp(22px, 2.4vw, 34px); }
 .platform h1.board-en { font-size: clamp(38px, 4.3vw, 64px); }
 .platform .board-lang { top: 8px; right: 10px; font-size: 10px; }
+
+/* ============ departure board (projects) ============ */
+.dboard { max-width: 1180px; margin: 0 auto; background: #1f1a2e; color: #ffd34a; border: var(--line); border-radius: 18px;
+  box-shadow: 8px 8px 0 var(--marigold); overflow: hidden; }
+.dboard-head { display: flex; align-items: center; gap: 14px; padding: 14px 22px; background: #2f2b3f; border-bottom: 3px solid #4a4560;
+  font-family: var(--display); font-weight: 800; letter-spacing: .12em; }
+.dboard-head span[lang] { font-size: 22px; letter-spacing: 0; color: #fff8ec; }
+.dboard-head b { font-size: 20px; }
+.dboard-dots { margin-left: auto; display: flex; gap: 6px; }
+.dboard-dots i { width: 9px; height: 9px; border-radius: 50%; background: #3fa34d; animation: twinkle 1s steps(1) infinite alternate; }
+.dboard-dots i:nth-child(2) { animation-delay: .33s; } .dboard-dots i:nth-child(3) { animation-delay: .66s; }
+.dboard table { width: 100%; border-collapse: collapse; }
+.dboard thead th { text-align: left; font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: #8f88a3; padding: 12px 22px 8px; }
+.dboard tbody tr { border-top: 2px dashed #3d3850; }
+.dboard tbody tr:hover { background: #2a2540; }
+.dboard tbody th, .dboard td { padding: 14px 22px; vertical-align: top; text-align: left; }
+.dboard tbody th a { color: #ffd34a; text-decoration: none; font-family: "Courier New", ui-monospace, monospace; font-weight: 700; font-size: 18px;
+  letter-spacing: .04em; text-transform: uppercase; }
+.dboard tbody th a:hover { color: #fff; text-decoration: underline; }
+.dboard td { color: #e9e6ee; font-weight: 600; font-size: 15px; }
+.dboard td.tags { white-space: nowrap; }
+.tag { display: inline-block; margin: 0 6px 6px 0; font-size: 12.5px; font-weight: 800; color: #fff8ec; border: 2px solid var(--lc);
+  border-left-width: 10px; border-radius: 6px; padding: 1px 8px; background: #2a2540; }
+.flap { display: inline-block; }
+.js .dboard.in .flap { animation: flapIn .6s cubic-bezier(.3, 1.4, .5, 1) both; }
+.js .dboard.in tr:nth-child(2) .flap { animation-delay: .08s; } .js .dboard.in tr:nth-child(3) .flap { animation-delay: .16s; }
+.js .dboard.in tr:nth-child(4) .flap { animation-delay: .24s; } .js .dboard.in tr:nth-child(5) .flap { animation-delay: .32s; }
+.js .dboard.in tr:nth-child(6) .flap { animation-delay: .40s; } .js .dboard.in tr:nth-child(7) .flap { animation-delay: .48s; }
+.js .dboard.in tr:nth-child(8) .flap { animation-delay: .56s; } .js .dboard.in tr:nth-child(9) .flap { animation-delay: .64s; }
+@keyframes flapIn { from { transform: perspective(300px) rotateX(-90deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .js .dboard .flap, .dboard-dots i { animation: none !important; } }
+@media (max-width: 760px) {
+  .dboard thead { display: none; }
+  .dboard tbody tr { display: block; padding: 12px 16px; }
+  .dboard tbody th, .dboard td { display: block; padding: 2px 0; }
+  .dboard td.tags { white-space: normal; padding-top: 8px; }
+}
+
+/* ============ what makes it Indian: side by side ============ */
+.versus { display: grid; grid-template-columns: 1fr auto 1fr; gap: 22px; align-items: stretch; max-width: 1100px; margin: 0 auto; }
+.vs-card { background: var(--paper); border: var(--line); border-radius: var(--radius); padding: 22px 24px; box-shadow: var(--shadow-sm); }
+.vs-old { background: #efedf2; }
+.vs-old .vs-task { color: #6b6478; }
+.vs-new { box-shadow: 8px 8px 0 var(--marigold), 8px 8px 0 3px var(--ink); }
+.vs-label { margin: 0 0 10px; font-size: 13px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.vs-task { font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1.35; margin: 0; }
+.vs-en { margin: 6px 0 12px; font-weight: 700; color: var(--ink-soft); font-size: 15px; }
+.vs-card ul { margin: 0; padding-left: 20px; font-weight: 600; font-size: 15.5px; }
+.vs-card li { margin: 4px 0; }
+.vs-arrow { align-self: center; font-family: var(--display); font-weight: 800; font-size: 40px; }
+@media (max-width: 820px) { .versus { grid-template-columns: 1fr; } .vs-arrow { transform: rotate(90deg); justify-self: center; } }
+.avatar { object-fit: cover; padding: 0; width: 96px; height: 96px; }
