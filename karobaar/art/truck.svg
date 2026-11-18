@@ -1,0 +1,545 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="A goods truck parked at a highway dhaba at sunset; the driver on a charpai holds the proof of delivery while the owner asks on the phone if he has sent it">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Nunito:wght@800;900&amp;display=swap');
+    .tr-rise { animation: tr-rise 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+    .tr-rise2 { animation: tr-rise 4.4s ease-in-out -1.8s infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+    .tr-sway { animation: tr-sway 3.4s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 0; }
+    .tr-sway2 { animation: tr-sway 4.2s ease-in-out -1.2s infinite; transform-box: fill-box; transform-origin: 50% 0; }
+    .tr-bob { animation: tr-bob 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+    .tr-glow { animation: tr-glow 2.6s ease-in-out infinite; }
+    @keyframes tr-rise { 0% { transform: translateY(4px) scaleY(.92); opacity: .35 } 50% { transform: translateY(-3px) scaleY(1.04); opacity: .8 } 100% { transform: translateY(4px) scaleY(.92); opacity: .35 } }
+    @keyframes tr-sway { 0%,100% { transform: rotate(-5deg) } 50% { transform: rotate(5deg) } }
+    @keyframes tr-bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-4px) } }
+    @keyframes tr-glow { 0%,100% { opacity: .55 } 50% { opacity: .9 } }
+    @media (prefers-reduced-motion: reduce) { .tr-rise,.tr-rise2,.tr-sway,.tr-sway2,.tr-bob,.tr-glow { animation: none } }
+  </style>
+  <defs>
+    <linearGradient id="tr-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb06a"/><stop offset=".55" stop-color="#ffd091"/><stop offset="1" stop-color="#ffecc8"/>
+    </linearGradient>
+    <radialGradient id="tr-sunglow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff6d2" stop-opacity=".95"/><stop offset=".4" stop-color="#ffe4a0" stop-opacity=".45"/><stop offset="1" stop-color="#ffd091" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tr-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1c58e"/><stop offset="1" stop-color="#e2aa6c"/>
+    </linearGradient>
+    <linearGradient id="tr-road" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c6a69a"/><stop offset="1" stop-color="#8f8091"/>
+    </linearGradient>
+    <linearGradient id="tr-inside" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b2119"/><stop offset=".6" stop-color="#5b3424"/><stop offset="1" stop-color="#6e412b"/>
+    </linearGradient>
+    <radialGradient id="tr-bulb" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffe7a8" stop-opacity=".9"/><stop offset=".45" stop-color="#ffc85a" stop-opacity=".3"/><stop offset="1" stop-color="#ffb020" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tr-fire" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffe08a"/><stop offset=".5" stop-color="#ff7a29"/><stop offset="1" stop-color="#c22a5f"/>
+    </radialGradient>
+    <linearGradient id="tr-win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2d2440"/><stop offset="1" stop-color="#4a3a52"/>
+    </linearGradient>
+    <linearGradient id="tr-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#d6d3dc"/><stop offset="1" stop-color="#9f99ab"/>
+    </linearGradient>
+    <linearGradient id="tr-under" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2130"/><stop offset="1" stop-color="#6b4a3c" stop-opacity=".5"/>
+    </linearGradient>
+    <pattern id="tr-weave" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#e2c08a"/><path d="M0 0 L10 10 M10 0 L0 10" stroke="#b98d55" stroke-width="1.6"/>
+    </pattern>
+    <pattern id="tr-tin" width="8" height="40" patternUnits="userSpaceOnUse">
+      <rect width="8" height="40" fill="#cdbdb5"/><rect width="3" height="40" fill="#e4d8d1"/><rect x="6" width="2" height="40" fill="#ad9c95"/>
+    </pattern>
+    <pattern id="tr-check" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#d93a3a"/><rect width="8" height="2.5" fill="#fff8ec" opacity=".85"/><rect width="2.5" height="8" fill="#fff8ec" opacity=".85"/>
+    </pattern>
+    <pattern id="tr-lungi" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#3d6fae"/><rect width="12" height="3" fill="#2a4f86"/><rect width="3" height="12" fill="#2a4f86"/><rect x="7" width="1.5" height="12" fill="#bfe6ff" opacity=".6"/>
+    </pattern>
+    <clipPath id="tr-frame"><rect width="800" height="560"/></clipPath>
+    <clipPath id="tr-cabclip"><path d="M502 300 L606 300 L624 372 L628 374 V446 L616 446 A36 36 0 0 0 544 446 L502 446 Z"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#tr-frame)">
+  <!-- golden-hour sky -->
+  <rect width="800" height="560" fill="url(#tr-sky)"/>
+  <circle cx="370" cy="214" r="190" fill="url(#tr-sunglow)"/>
+  <circle cx="370" cy="214" r="40" fill="#fff4cc"/>
+  <g fill="#ffe2b6" opacity=".8">
+    <path d="M420 92 h150 a10 10 0 0 1 0 20 h-150 a10 10 0 0 1 0 -20z"/>
+    <path d="M470 120 h110 a7 7 0 0 1 0 14 h-110 a7 7 0 0 1 0 -14z"/>
+    <path d="M230 128 h96 a8 8 0 0 1 0 16 h-96 a8 8 0 0 1 0 -16z"/>
+  </g>
+  <g fill="none" stroke="#7a4a3a" stroke-width="2" stroke-linecap="round" opacity=".6">
+    <path d="M420 160 q5 -5 10 0 q5 -5 10 0"/><path d="M446 146 q4 -4 8 0 q4 -4 8 0"/><path d="M398 176 q4 -4 8 0 q4 -4 8 0"/>
+  </g>
+
+  <!-- a patang stuck on the wire -->
+  <g class="tr-sway2">
+    <path d="M550 102 v12" stroke="#1f1a2e" stroke-width="1.2" opacity=".7"/>
+    <g stroke="#1f1a2e" stroke-width="2" stroke-linejoin="round">
+      <path d="M550 112 L566 128 L550 146 L534 128Z" fill="#e8407a"/>
+      <path d="M550 112 L566 128 L550 128Z" fill="#ffb020" stroke="none"/>
+      <path d="M550 112 L566 128 L550 146 L534 128Z" fill="none"/>
+      <path d="M534 128 Q550 120 566 128 M550 112 V146" fill="none" stroke-width="1.5"/>
+      <path d="M550 146 l-5 8 h10z" fill="#0f8b8d" stroke-width="1.5"/>
+      <path d="M550 154 q-6 8 0 14 q6 6 0 12" fill="none" stroke-width="1.2"/>
+    </g>
+  </g>
+
+  <!-- low hills -->
+  <path d="M-10 224 Q50 188 120 206 Q190 168 270 200 Q330 176 400 210 Q470 182 540 200 Q620 160 700 194 Q760 176 810 190 V280 H-10Z" fill="#f4cba6"/>
+  <path d="M-10 246 Q70 214 160 234 Q250 206 340 236 Q430 216 520 234 Q610 210 700 236 Q760 222 810 230 V290 H-10Z" fill="#ebb791"/>
+  <path d="M-10 264 Q100 242 220 256 Q340 240 460 254 Q570 242 664 258 L810 262 V290 H-10Z" fill="#e2a982"/>
+  <g fill="#d99d77">
+    <path d="M556 246 q4 -16 10 0z M568 248 q5 -20 12 0z M600 250 q4 -14 9 0z"/>
+    <rect x="512" y="232" width="10" height="8"/><path d="M514 240 l-3 10 M520 240 l3 10" stroke="#d99d77" stroke-width="1.5"/>
+  </g>
+  <!-- electric pole and wires -->
+  <g fill="none" stroke="#1f1a2e" stroke-width="1.8" opacity=".5">
+    <path d="M-10 62 Q100 92 208 45 Q500 118 810 64"/><path d="M-10 80 Q110 110 236 45 Q520 134 810 88"/>
+  </g>
+  <rect x="216" y="38" width="7" height="232" fill="#8a6a5a"/>
+  <rect x="202" y="47" width="40" height="5" fill="#8a6a5a"/>
+  <g fill="#fff8ec"><rect x="206" y="41" width="4" height="6"/><rect x="234" y="41" width="4" height="6"/></g>
+  <g fill="#1f1a2e" opacity=".75">
+    <path d="M300 72 q6 -8 12 0 q-6 3 -12 0z"/><circle cx="312" cy="69" r="3"/>
+    <path d="M330 78 q6 -8 12 0 q-6 3 -12 0z"/><circle cx="342" cy="75" r="3"/>
+  </g>
+
+  <!-- fuel pump across the road -->
+  <g>
+    <rect x="702" y="200" width="3" height="76" fill="#b88c7c"/>
+    <rect x="692" y="190" width="24" height="18" rx="3" fill="#f6efe2"/><rect x="692" y="200" width="24" height="5" fill="#e98a6a"/>
+    <rect x="718" y="220" width="96" height="12" fill="#f6efe2"/><rect x="718" y="226" width="96" height="6" fill="#7fb6b0"/>
+    <rect x="728" y="232" width="4" height="46" fill="#cdb1a2"/><rect x="792" y="232" width="4" height="46" fill="#cdb1a2"/>
+    <rect x="752" y="250" width="16" height="28" rx="2" fill="#f6efe2"/><rect x="752" y="254" width="16" height="6" fill="#e98a6a"/>
+    <rect x="774" y="256" width="12" height="22" rx="2" fill="#f6efe2"/>
+  </g>
+
+  <!-- the highway, receding to a toll plaza in the hills -->
+  <path d="M664 262 L676 262 L810 286 L810 392 Z" fill="url(#tr-road)"/>
+  <path d="M664 262 L810 392" stroke="#fff6e8" stroke-width="2" opacity=".8"/>
+  <path d="M676 262 L810 286" stroke="#fff6e8" stroke-width="1.5" opacity=".8"/>
+  <path d="M670 262 L810 338" stroke="#fff6e8" stroke-width="2.5" stroke-dasharray="10 12" opacity=".85"/>
+  <g>
+    <rect x="642" y="243" width="58" height="5" fill="#c98f7a"/>
+    <rect x="645" y="248" width="3" height="14" fill="#c98f7a"/><rect x="662" y="248" width="3" height="14" fill="#c98f7a"/><rect x="678" y="248" width="3" height="14" fill="#c98f7a"/><rect x="694" y="248" width="3" height="14" fill="#c98f7a"/>
+    <rect x="652" y="252" width="6" height="9" fill="#e8b39a"/><rect x="684" y="252" width="6" height="9" fill="#e8b39a"/>
+    <rect x="646" y="238" width="50" height="5" fill="#e98a6a"/>
+  </g>
+
+  <!-- dhaba yard -->
+  <path d="M-10 268 Q300 262 664 262 L810 392 V570 H-10Z" fill="url(#tr-ground)"/>
+  <path d="M664 262 L810 392 V420 Z" fill="#e8c49a"/>
+  <g fill="none" stroke="#cf9a62" stroke-width="3" stroke-linecap="round" opacity=".6">
+    <path d="M300 520 Q480 506 700 530"/><path d="M290 540 Q470 524 700 552"/>
+    <path d="M420 300 Q520 296 640 300"/>
+  </g>
+  <g fill="#c98e58" opacity=".7">
+    <ellipse cx="380" cy="532" rx="4" ry="2"/><ellipse cx="560" cy="516" rx="3" ry="1.6"/><ellipse cx="250" cy="512" rx="3" ry="1.6"/><ellipse cx="640" cy="548" rx="5" ry="2.2"/>
+  </g>
+
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- ============ DHABA ============ -->
+    <rect x="-10" y="176" width="196" height="300" fill="url(#tr-inside)"/>
+    <circle class="tr-glow" cx="110" cy="214" r="110" fill="url(#tr-bulb)" stroke="none"/>
+    <!-- wall shelf with biscuit jars -->
+    <rect x="-10" y="226" width="170" height="7" fill="#a8693d" stroke-width="2.5"/>
+    <g stroke-width="2">
+      <rect x="6" y="200" width="20" height="26" rx="5" fill="#ffffff" fill-opacity=".3"/><rect x="5" y="196" width="22" height="6" rx="2" fill="#e8407a"/><rect x="10" y="212" width="12" height="10" rx="2" fill="#ffd34a" stroke="none"/>
+      <rect x="32" y="200" width="20" height="26" rx="5" fill="#ffffff" fill-opacity=".3"/><rect x="31" y="196" width="22" height="6" rx="2" fill="#3fa34d"/><rect x="36" y="210" width="12" height="12" rx="2" fill="#c98a55" stroke="none"/>
+      <rect x="58" y="200" width="20" height="26" rx="5" fill="#ffffff" fill-opacity=".3"/><rect x="57" y="196" width="22" height="6" rx="2" fill="#ffb020"/><rect x="62" y="214" width="12" height="8" rx="2" fill="#ff7a29" stroke="none"/>
+      <rect x="92" y="190" width="30" height="36" rx="2" fill="#fff8ec"/><rect x="96" y="194" width="22" height="20" fill="#ff7a29" stroke-width="1.5"/><circle cx="107" cy="204" r="5" fill="#ffd34a" stroke-width="1.5"/><path d="M96 220 h22" stroke="#e8407a" stroke-width="2"/>
+      <rect x="132" y="208" width="20" height="18" rx="2" fill="#d6d3dc"/><path d="M136 214 h12" stroke="#3d3a8c" stroke-width="2"/>
+    </g>
+    <!-- counter with chai kettle and pots -->
+    <rect x="-10" y="286" width="190" height="10" fill="#c98a55"/>
+    <rect x="-10" y="296" width="190" height="60" fill="#8a4f2e" stroke-width="2.5"/>
+    <g stroke-width="2.5">
+      <path d="M4 286 q-2 -26 6 -32 h36 q8 6 6 32z" fill="#d6d3dc"/><path d="M6 262 h44" stroke="#9f99ab" stroke-width="2"/><rect x="8" y="248" width="40" height="8" rx="3" fill="#bdb8c6"/><circle cx="28" cy="246" r="3" fill="#6b6478" stroke-width="1.5"/>
+      <rect x="64" y="278" width="44" height="8" rx="2" fill="#3a3340"/>
+      <path d="M70 278 q-2 -20 16 -22 q18 2 16 22z" fill="#d6d3dc"/><path d="M102 268 q12 -4 14 -12" fill="none" stroke-width="3"/><path d="M76 256 q10 -10 20 0" fill="none" stroke-width="2.5"/>
+      <path d="M78 262 q2 6 0 10" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+      <g fill="#e9e6ee" stroke-width="1.8"><path d="M130 286 l2 -16 h10 l2 16z"/><path d="M146 286 l2 -16 h10 l2 16z"/><path d="M138 270 l2 -14 h10 l2 14z"/></g>
+    </g>
+    <path class="tr-rise" d="M114 252 q-6 -10 2 -18 q8 -8 0 -18" fill="none" stroke="#fff8ec" stroke-width="3" opacity=".7"/>
+    <!-- hanging packet strip -->
+    <g class="tr-sway" stroke-width="2">
+      <path d="M168 180 v74" stroke-width="1.5"/>
+      <rect x="160" y="188" width="16" height="16" rx="2" fill="#e8407a"/><rect x="160" y="206" width="16" height="16" rx="2" fill="#ffb020"/><rect x="160" y="224" width="16" height="16" rx="2" fill="#0f8b8d"/><rect x="160" y="242" width="16" height="16" rx="2" fill="#e8407a"/>
+    </g>
+    <!-- posts -->
+    <rect x="-4" y="176" width="10" height="300" fill="#a8693d"/>
+    <rect x="178" y="176" width="10" height="300" fill="#a8693d"/>
+    <!-- tin roof -->
+    <path d="M-12 152 L196 152 L208 182 L-12 182Z" fill="url(#tr-tin)"/>
+    <path d="M-12 176 L206 176 L208 182 L-12 182Z" fill="#a8968f" stroke="none"/>
+    <path d="M-12 152 L196 152 L208 182 L-12 182Z" fill="none"/>
+    <path d="M30 156 q10 8 24 4 q-4 10 -18 12z M140 160 q14 2 22 12 q-14 2 -20 -4z" fill="#c8703e" opacity=".55" stroke="none"/>
+    <path d="M-12 182 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0 q6 6 12 0" fill="#bba9a1" stroke-width="2.5"/>
+    <!-- dhaba sign -->
+    <rect x="26" y="134" width="6" height="20" fill="#7a4a2a" stroke-width="2"/><rect x="158" y="134" width="6" height="20" fill="#7a4a2a" stroke-width="2"/>
+    <rect x="10" y="84" width="170" height="56" rx="8" fill="#ff7a29"/>
+    <rect x="12" y="134" width="166" height="6" fill="#e2611a" stroke="none"/>
+    <rect x="10" y="84" width="170" height="56" rx="8" fill="none"/>
+    <text x="95" y="114" text-anchor="middle" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="29" fill="#fff8ec" stroke="none">ढाबा</text>
+    <rect x="40" y="119" width="110" height="12" rx="6" fill="#c22a5f" stroke="none"/>
+    <text x="95" y="128.5" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="7.5" fill="#fff8ec" stroke="none" letter-spacing=".8">24 GHANTE · CHAI · PARATHA</text>
+    <circle cx="28" cy="104" r="8" fill="#ffb020" stroke-width="2"/><circle cx="162" cy="104" r="8" fill="#ffb020" stroke-width="2"/>
+    <path d="M28 98 v12 M22 104 h12 M162 98 v12 M156 104 h12" stroke="#c22a5f" stroke-width="2"/>
+    <!-- tandoor -->
+    <path d="M-14 456 Q-20 420 -6 396 H46 Q60 420 54 456Z" fill="#c9733f"/>
+    <path d="M38 398 Q54 422 48 456 H54 Q60 420 46 396Z" fill="#a95a2c" stroke="none"/>
+    <path d="M-14 456 Q-20 420 -6 396 H46 Q60 420 54 456Z" fill="none"/>
+    <path d="M-16 420 H56 M-17 440 H56" stroke="#a95a2c" stroke-width="2.5"/>
+    <ellipse cx="20" cy="396" rx="27" ry="7" fill="#7a3a1f"/>
+    <ellipse class="tr-glow" cx="20" cy="396" rx="20" ry="4.5" fill="url(#tr-fire)" stroke="none"/>
+    <path class="tr-rise2" d="M14 386 q-10 -16 2 -28 q12 -12 0 -28 M28 384 q8 -12 -2 -22" fill="none" stroke="#efe3d8" stroke-width="4" opacity=".65"/>
+
+    <!-- ============ TRUCK ============ -->
+    <ellipse cx="430" cy="492" rx="262" ry="13" fill="#1f1a2e" opacity=".16" stroke="none"/>
+    <path d="M186 412 L244 436 H620 L620 470 Q430 476 240 472 Z" fill="url(#tr-under)" stroke="none"/>
+    <!-- far-side wheels -->
+    <g fill="#2b2533" stroke-width="2.5">
+      <circle cx="280" cy="437" r="31"/><circle cx="280" cy="437" r="16" fill="#5b5466"/>
+      <circle cx="520" cy="437" r="31"/><circle cx="520" cy="437" r="16" fill="#5b5466"/>
+    </g>
+    <!-- chassis rail -->
+    <rect x="240" y="430" width="380" height="12" fill="#2b2533" stroke-width="2.5"/>
+
+    <!-- headboard, seen from behind above the load -->
+    <path d="M490 264 L430 242 L430 410 L490 432Z" fill="#e2611a"/>
+    <path d="M490 278 L430 256 M490 292 L430 270" stroke="#c24f12" stroke-width="2"/>
+    <!-- tailgate (rear face) -->
+    <path d="M250 338 L190 316 L190 400 L250 422Z" fill="#ffb020"/>
+    <path d="M246 344 L194 325 L194 395 L246 414Z" fill="none" stroke="#e8407a" stroke-width="2.5"/>
+    <g transform="translate(220 369) skewY(20.14)" font-family="'Baloo 2', sans-serif" font-weight="800" text-anchor="middle" stroke="none">
+      <text y="-12" font-size="14" fill="#1f1a2e">HORN</text>
+      <text y="7" font-size="17" fill="#c22a5f">OK</text>
+      <text y="23" font-size="11.5" fill="#1f1a2e">PLEASE</text>
+      <circle cx="-17" cy="1" r="3" fill="#0f8b8d"/><circle cx="17" cy="1" r="3" fill="#0f8b8d"/>
+    </g>
+    <!-- rear bumper -->
+    <path d="M250 422 L190 400 L190 414 L250 436Z" fill="#2b2533"/>
+    <path d="M200 404 l8 3 v8 l-8 -3z M232 416 l8 3 v8 l-8 -3z" fill="#ffb020" stroke="none"/>
+    <path d="M216 410 l12 4.4 v6 l-12 -4.4z" fill="#fff8ec" stroke-width="1.2"/>
+    <path d="M192 402 l6 2.2 v6 l-6 -2.2z" fill="#e8407a" stroke-width="1.2"/><path d="M242 420 l6 2.2 v6 l-6 -2.2z" fill="#e8407a" stroke-width="1.2"/>
+
+    <!-- tarpaulin load -->
+    <path d="M250 338 V300 Q250 284 266 284 L206 262 Q190 262 190 278 V316 Z" fill="#3d3a8c"/>
+    <path d="M266 284 C300 276 330 290 360 282 C395 274 430 290 474 284 L414 262 C370 268 335 252 300 260 C270 268 240 254 206 262 Z" fill="#7c84cc"/>
+    <path d="M250 338 V300 Q250 284 266 284 C300 276 330 290 360 282 C395 274 430 290 474 284 Q490 284 490 300 V338 Z" fill="#5560b4"/>
+    <path d="M300 286 q4 22 -2 50 M392 284 q6 24 0 52 M452 287 q-4 22 2 50" fill="none" stroke="#454ea0" stroke-width="2.5"/>
+    <path d="M276 290 q16 -6 30 -2 M400 282 q20 -6 36 0" fill="none" stroke="#9aa1dc" stroke-width="2.5"/>
+    <g fill="none" stroke="#f3e2b8" stroke-width="2.5">
+      <path d="M262 338 L330 288 L398 338 L466 288"/><path d="M262 290 L330 338 L398 288 L466 338"/>
+      <path d="M330 288 L270 266 M466 288 L406 266"/>
+      <path d="M245 330 L198 312 M245 300 L198 284"/>
+    </g>
+    <!-- side body (dala) -->
+    <rect x="250" y="338" width="240" height="84" fill="#0f8b8d"/>
+    <rect x="250" y="338" width="240" height="11" fill="#ff7a29"/>
+    <g fill="#fff8ec" stroke="none"><circle cx="262" cy="343.5" r="2"/><circle cx="278" cy="343.5" r="2"/><circle cx="294" cy="343.5" r="2"/><circle cx="310" cy="343.5" r="2"/><circle cx="326" cy="343.5" r="2"/><circle cx="342" cy="343.5" r="2"/><circle cx="358" cy="343.5" r="2"/><circle cx="374" cy="343.5" r="2"/><circle cx="390" cy="343.5" r="2"/><circle cx="406" cy="343.5" r="2"/><circle cx="422" cy="343.5" r="2"/><circle cx="438" cy="343.5" r="2"/><circle cx="454" cy="343.5" r="2"/><circle cx="470" cy="343.5" r="2"/><circle cx="484" cy="343.5" r="2"/></g>
+    <rect x="250" y="338" width="240" height="11" fill="none" stroke-width="2.5"/>
+    <path d="M250 366 h240 M250 388 h240" stroke="#0c7779" stroke-width="2" opacity=".7"/>
+    <rect x="306" y="349" width="8" height="61" fill="#ffb020" stroke-width="2"/><rect x="426" y="349" width="8" height="61" fill="#ffb020" stroke-width="2"/>
+    <rect x="256" y="354" width="44" height="50" rx="4" fill="none" stroke="#ffd34a" stroke-width="2" stroke-dasharray="1 4"/>
+    <rect x="440" y="354" width="44" height="50" rx="4" fill="none" stroke="#ffd34a" stroke-width="2" stroke-dasharray="1 4"/>
+    <rect x="320" y="354" width="100" height="50" rx="5" fill="#0a6668" stroke="#ffb020" stroke-width="2"/>
+    <text x="370" y="379" text-anchor="middle" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="17" fill="#fff8ec" stroke="none">मालवा रोडलाइंस</text>
+    <text x="370" y="396" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="8" fill="#ffd34a" stroke="none" letter-spacing="1.2">INDORE · M.P.</text>
+    <g stroke-width="1.8">
+      <g transform="translate(278 379)">
+        <ellipse rx="5" ry="13" fill="#e8407a"/><ellipse rx="5" ry="13" fill="#e8407a" transform="rotate(45)"/><ellipse rx="5" ry="13" fill="#e8407a" transform="rotate(90)"/><ellipse rx="5" ry="13" fill="#e8407a" transform="rotate(135)"/><circle r="6" fill="#ffb020"/>
+      </g>
+      <g transform="translate(462 379)">
+        <ellipse rx="5" ry="13" fill="#e8407a"/><ellipse rx="5" ry="13" fill="#e8407a" transform="rotate(45)"/><ellipse rx="5" ry="13" fill="#e8407a" transform="rotate(90)"/><ellipse rx="5" ry="13" fill="#e8407a" transform="rotate(135)"/><circle r="6" fill="#ffb020"/>
+      </g>
+    </g>
+    <rect x="250" y="410" width="240" height="12" fill="#e8407a" stroke-width="2.5"/>
+    <path d="M250 422 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10 l8 -10 l8 10" fill="#ffb020" stroke-width="1.5"/>
+    <rect x="250" y="338" width="240" height="84" fill="none"/>
+    <!-- sill with reflector tape -->
+    <rect x="246" y="422" width="248" height="10" fill="#7a4a2a" stroke-width="2.5"/>
+    <g stroke="none"><rect x="262" y="424" width="12" height="6" fill="#e83a3a"/><rect x="274" y="424" width="12" height="6" fill="#fff8ec"/><rect x="330" y="424" width="12" height="6" fill="#e83a3a"/><rect x="342" y="424" width="12" height="6" fill="#fff8ec"/><rect x="400" y="424" width="12" height="6" fill="#e83a3a"/><rect x="412" y="424" width="12" height="6" fill="#fff8ec"/><rect x="460" y="424" width="12" height="6" fill="#e83a3a"/><rect x="472" y="424" width="12" height="6" fill="#fff8ec"/></g>
+
+    <!-- headboard side and crown over the cab -->
+    <rect x="490" y="264" width="12" height="168" fill="#ff7a29"/>
+    <path d="M490 264 L502 264 L442 242 L430 242Z" fill="#ffb27a"/>
+    <path d="M502 264 L606 268 L546 246 L442 242Z" fill="#ff8fb3"/>
+    <path d="M512 259 L592 262 L546 249 L466 246Z" fill="none" stroke="#ffd34a" stroke-width="2" stroke-dasharray="1 5"/>
+    <path d="M530 254 l8 -4 l8 4 l-8 4z" fill="#ffb020" stroke-width="1.5"/>
+    <path d="M502 264 L606 268 L624 298 L502 298Z" fill="#e8407a"/>
+    <path d="M506 270 L602 273 L614 293 L506 293Z" fill="none" stroke="#ffb020" stroke-width="2"/>
+    <text x="555" y="289" text-anchor="middle" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="14" fill="#fff8ec" stroke="none">जय माता दी</text>
+
+    <!-- cab -->
+    <path d="M502 300 L606 300 L624 372 L628 374 V446 L616 446 A36 36 0 0 0 544 446 L502 446 Z" fill="#ffb020"/>
+    <g clip-path="url(#tr-cabclip)" stroke="none">
+      <rect x="500" y="420" width="132" height="30" fill="#e8407a"/>
+      <rect x="500" y="414" width="132" height="5" fill="#0f8b8d"/>
+      <path d="M500 300 h130 v8 h-130z" fill="#ffd34a"/>
+      <path d="M612 300 L632 380 V450 H620 Z" fill="#e89a10"/>
+    </g>
+    <path d="M502 300 L606 300 L624 372 L628 374 V446 L616 446 A36 36 0 0 0 544 446 L502 446 Z" fill="none"/>
+    <!-- window with steering wheel -->
+    <path d="M520 312 H590 L604 356 H520 Z" fill="url(#tr-win)"/>
+    <ellipse cx="588" cy="346" rx="4" ry="12" fill="none" stroke="#1f1a2e" stroke-width="3" transform="rotate(-28 588 346)"/>
+    <path d="M534 314 Q556 334 578 314" fill="none" stroke="#1f1a2e" stroke-width="1.2"/>
+    <g fill="#ff9a1f" stroke="none"><circle cx="538" cy="318.5" r="2.6"/><circle cx="543" cy="323" r="2.6" fill="#ffd34a"/><circle cx="549" cy="326" r="2.6"/><circle cx="556" cy="327.5" r="2.6" fill="#ffd34a"/><circle cx="563" cy="326" r="2.6"/><circle cx="569" cy="323" r="2.6" fill="#ffd34a"/><circle cx="574" cy="318.5" r="2.6"/></g>
+    <path d="M530 354 L548 314 M542 354 L560 314" stroke="#ffffff" stroke-width="3" opacity=".22"/>
+    <path d="M520 312 H590 L604 356 H520 Z" fill="none"/>
+    <!-- door -->
+    <path d="M514 306 H592 L608 368 V404 H514 Z" fill="none" stroke-width="2.5"/>
+    <rect x="520" y="372" width="14" height="5" rx="2" fill="#d6d3dc" stroke-width="2"/>
+    <g transform="translate(570 384)" stroke-width="1.5">
+      <circle r="10" fill="#0f8b8d"/><path d="M0 -7 q5 7 0 14 q-5 -7 0 -14z M-7 0 q7 -5 14 0 q-7 5 -14 0z" fill="#ffd34a"/><circle r="2.5" fill="#e8407a"/>
+    </g>
+    <text x="561" y="401" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="6.5" fill="#c22a5f" stroke="none" letter-spacing=".5">NATIONAL PERMIT</text>
+    <path d="M508 322 v66" stroke="#d6d3dc" stroke-width="4"/>
+    <rect x="516" y="414" width="22" height="5" fill="#d6d3dc" stroke-width="2"/><rect x="516" y="432" width="22" height="5" fill="#d6d3dc" stroke-width="2"/>
+    <!-- headlamp, radiator filler, bumper -->
+    <path d="M628 384 a10 10 0 0 1 0 20z" fill="url(#tr-chrome)" stroke-width="2.5"/>
+    <path d="M628 388 a6 6 0 0 1 0 12z" fill="#fff4c4" stroke-width="1.5"/>
+    <rect x="625" y="407" width="6" height="6" fill="#ff7a29" stroke-width="1.5"/>
+    <path d="M626 418 h12 l-1 8 h-10z" fill="url(#tr-chrome)" stroke-width="2"/>
+    <path d="M636 418 q9 -2 9 8" fill="none" stroke="#9f99ab" stroke-width="2"/><circle cx="645" cy="429" r="3" fill="#d6d3dc" stroke-width="1.5"/>
+    <rect x="602" y="440" width="44" height="16" rx="3" fill="#2b2533"/>
+    <path d="M610 442 l-6 12 M622 442 l-6 12 M634 442 l-6 12 M646 442 l-6 12" stroke="#ffb020" stroke-width="3"/>
+    <rect x="602" y="440" width="44" height="16" rx="3" fill="none"/>
+    <!-- mirror -->
+    <path d="M604 318 L636 314 M612 348 L636 344" stroke="#9f99ab" stroke-width="3"/>
+    <rect x="632" y="306" width="13" height="44" rx="3" fill="#2b2533" stroke-width="2.5"/>
+    <rect x="635" y="310" width="7" height="36" rx="2" fill="#bfe6ff" stroke="none"/>
+    <path d="M637 314 v10" stroke="#ffffff" stroke-width="2"/>
+    <!-- tassel fringe on the crown -->
+    <g class="tr-sway" stroke-width="1.5">
+      <path d="M574 298 q-3 8 0 12 q3 -4 0 -12z" fill="#ffb020"/><path d="M584 298 q-3 8 0 12 q3 -4 0 -12z" fill="#e8407a"/><path d="M594 298 q-3 8 0 12 q3 -4 0 -12z" fill="#0f8b8d"/><path d="M604 298 q-3 8 0 12 q3 -4 0 -12z" fill="#ffb020"/><path d="M614 298 q-3 8 0 12 q3 -4 0 -12z" fill="#e8407a"/>
+    </g>
+
+    <!-- fuel tank, battery box, side guard -->
+    <rect x="390" y="436" width="80" height="28" rx="12" fill="url(#tr-chrome)" stroke-width="2.5"/>
+    <path d="M410 436 v28 M452 436 v28" stroke-width="3"/>
+    <rect x="426" y="431" width="10" height="6" rx="2" fill="#6b6478" stroke-width="2"/>
+    <rect x="478" y="438" width="44" height="26" rx="2" fill="#0a6668" stroke-width="2.5"/>
+    <path d="M484 446 h32" stroke="#0f8b8d" stroke-width="2"/><rect x="496" y="452" width="8" height="5" fill="#d6d3dc" stroke-width="1.5"/>
+    <rect x="372" y="468" width="176" height="7" fill="#ffb020" stroke-width="2.5"/>
+    <path d="M384 468 l-6 7 M400 468 l-6 7 M416 468 l-6 7 M432 468 l-6 7 M448 468 l-6 7 M464 468 l-6 7 M480 468 l-6 7 M496 468 l-6 7 M512 468 l-6 7 M528 468 l-6 7 M544 468 l-6 7" stroke="#1f1a2e" stroke-width="3"/>
+    <rect x="372" y="468" width="176" height="7" fill="none" stroke-width="2.5"/>
+
+    <!-- mudflaps -->
+    <path d="M288 432 h16 v52 q-8 4 -16 0z" fill="#c22a5f" stroke-width="2.5"/>
+    <circle cx="296" cy="450" r="4" fill="#fff8ec" stroke-width="1.5"/><circle cx="296" cy="450" r="1.6" fill="#1f1a2e" stroke="none"/>
+    <path d="M290 470 h12" stroke="#ffb020" stroke-width="2.5"/>
+    <path d="M530 444 h12 v40 q-6 3 -12 0z" fill="#2b2533" stroke-width="2.5"/>
+    <path d="M532 452 h8" stroke="#d6d3dc" stroke-width="2"/>
+
+    <!-- rear dual wheel -->
+    <circle cx="331" cy="456" r="31" fill="#2b2533"/>
+    <circle cx="340" cy="459" r="31" fill="#2b2533"/>
+    <path d="M316 440 a26 26 0 0 1 30 -6" fill="none" stroke="#6b6478" stroke-width="2.5"/>
+    <circle cx="340" cy="459" r="18" fill="#d6d3dc" stroke-width="2.5"/>
+    <circle cx="340" cy="459" r="13" fill="#c22a5f" stroke-width="2"/>
+    <g fill="#fff8ec" stroke="none"><circle cx="340" cy="449" r="1.8"/><circle cx="347" cy="452" r="1.8"/><circle cx="350" cy="459" r="1.8"/><circle cx="347" cy="466" r="1.8"/><circle cx="340" cy="469" r="1.8"/><circle cx="333" cy="466" r="1.8"/><circle cx="330" cy="459" r="1.8"/><circle cx="333" cy="452" r="1.8"/></g>
+    <circle cx="340" cy="459" r="5" fill="#d6d3dc" stroke-width="2"/>
+    <!-- front wheel -->
+    <circle cx="580" cy="459" r="31" fill="#2b2533"/>
+    <path d="M556 442 a26 26 0 0 1 30 -9" fill="none" stroke="#6b6478" stroke-width="2.5"/>
+    <circle cx="580" cy="459" r="18" fill="#d6d3dc" stroke-width="2.5"/>
+    <circle cx="580" cy="459" r="13" fill="#c22a5f" stroke-width="2"/>
+    <g fill="#fff8ec" stroke="none"><circle cx="580" cy="449" r="1.8"/><circle cx="587" cy="452" r="1.8"/><circle cx="590" cy="459" r="1.8"/><circle cx="587" cy="466" r="1.8"/><circle cx="580" cy="469" r="1.8"/><circle cx="573" cy="466" r="1.8"/><circle cx="570" cy="459" r="1.8"/><circle cx="573" cy="452" r="1.8"/></g>
+    <circle cx="580" cy="459" r="6" fill="url(#tr-chrome)" stroke-width="2"/>
+
+    <!-- black nazar tassels at the back, nimbu-mirchi on the bumper -->
+    <g class="tr-sway" stroke-width="1.5">
+      <path d="M248 436 v6"/><circle cx="248" cy="445" r="3.5" fill="#1f1a2e"/>
+      <path d="M244 448 L240 468 L244 465 L248 470 L252 465 L256 468 L252 448Z" fill="#1f1a2e"/>
+      <path d="M243 451 h10" stroke="#e83a3a" stroke-width="2"/>
+    </g>
+    <g class="tr-sway2" stroke-width="1.5">
+      <path d="M193 414 v6"/><circle cx="193" cy="423" r="3.5" fill="#1f1a2e"/>
+      <path d="M189 426 L185 446 L189 443 L193 448 L197 443 L201 446 L197 426Z" fill="#1f1a2e"/>
+      <path d="M188 429 h10" stroke="#e83a3a" stroke-width="2"/>
+    </g>
+    <g class="tr-sway" stroke-width="1.5">
+      <path d="M636 456 v8"/>
+      <ellipse cx="636" cy="469" rx="5" ry="6" fill="#ffd34a"/>
+      <path d="M632 475 q-2 10 1 14 M636 476 q0 10 1 14 M640 475 q2 10 1 14" fill="none" stroke="#3fa34d" stroke-width="3"/>
+      <path d="M636 490 v4" stroke-width="1.5"/>
+    </g>
+
+    <!-- radiator steam -->
+    <path class="tr-rise" d="M630 414 q-9 -10 -2 -20 q8 -10 0 -22" fill="none" stroke="#ffffff" stroke-width="3.5" opacity=".75"/>
+
+    <!-- stray dog asleep in the truck's shade -->
+    <ellipse cx="436" cy="532" rx="46" ry="5" fill="#1f1a2e" opacity=".16" stroke="none"/>
+    <g stroke-width="2.5">
+      <path d="M412 530 Q406 508 432 503 Q462 499 470 516 Q474 530 460 531 Z" fill="#d9a066"/>
+      <path d="M440 504 Q462 500 470 516 Q472 524 466 528 Q466 512 440 504Z" fill="#c08550" stroke="none"/>
+      <path d="M412 530 Q406 508 432 503 Q462 499 470 516 Q474 530 460 531 Z" fill="none"/>
+      <path d="M446 530 q-4 -16 10 -20" fill="none" stroke-width="2"/>
+      <path d="M467 524 Q480 530 468 535 Q456 538 444 534" fill="none" stroke="#1f1a2e" stroke-width="6.5"/>
+      <path d="M467 524 Q480 530 468 535 Q456 538 444 534" fill="none" stroke="#d9a066" stroke-width="2.5"/>
+      <ellipse cx="400" cy="531" rx="9" ry="4" fill="#f3d9b0"/>
+      <path d="M392 524 q-2 -14 14 -16 q14 0 14 12 q0 10 -12 11 h-12 q-6 0 -4 -7z" fill="#d9a066"/>
+      <path d="M394 520 q-8 0 -8 6 q0 4 6 4 h8" fill="#ecc893" stroke-width="2.5"/>
+      <ellipse cx="387.5" cy="523.5" rx="2.4" ry="1.8" fill="#1f1a2e" stroke="none"/>
+      <path d="M392 528 q3 1 5 -1" fill="none" stroke-width="1.5"/>
+      <path d="M398 517 q3 2 6 0" fill="none" stroke-width="2"/>
+      <path d="M408 510 q8 -2 10 6 q-2 6 -8 6 q2 -6 -2 -12z" fill="#9a6232" stroke-width="2"/>
+    </g>
+
+    <!-- ============ CLEANER BOY pouring water into the radiator ============ -->
+    <ellipse cx="692" cy="512" rx="32" ry="6" fill="#1f1a2e" opacity=".16" stroke="none"/>
+    <g>
+      <!-- legs and chappals -->
+      <path d="M676 490 q-2 9 -1 18 h9 q1 -9 0 -18z" fill="#a0672f" stroke-width="2.5"/>
+      <path d="M696 490 q0 9 1 18 h9 q0 -9 -1 -18z" fill="#8f5a29" stroke-width="2.5"/>
+      <path d="M664 513 q0 -6 9 -6 h12 v6z" fill="#3d6fae" stroke-width="2.5"/>
+      <path d="M686 513 q0 -6 9 -6 h12 v6z" fill="#3d6fae" stroke-width="2.5"/>
+      <!-- shorts -->
+      <path d="M676 470 H708 L710 494 H694 L692 480 L688 494 H672Z" fill="#5a5fae"/>
+      <path d="M700 472 L708 472 L710 494 H702Z" fill="#46499a" stroke="none"/>
+      <path d="M676 470 H708 L710 494 H694 L692 480 L688 494 H672Z" fill="none"/>
+      <path d="M673 488 h15 M694 488 h16" stroke="#3d3a8c" stroke-width="2"/>
+      <!-- t-shirt -->
+      <path d="M674 474 Q670 446 680 430 Q694 424 706 430 Q714 450 710 474Z" fill="#ff7a29"/>
+      <path d="M706 432 Q714 450 710 474 H700 Q706 452 698 434Z" fill="#e2611a" stroke="none"/>
+      <path d="M674 474 Q670 446 680 430 Q694 424 706 430 Q714 450 710 474Z" fill="none"/>
+      <path d="M685 428 q8 6 15 0" fill="none" stroke-width="2"/>
+      <path d="M680 460 h24" stroke="#ffd34a" stroke-width="3"/>
+      <!-- neck and head -->
+      <rect x="688" y="412" width="11" height="16" fill="#8f5a29" stroke-width="2.5"/>
+      <ellipse cx="708" cy="400" rx="4.5" ry="6.5" fill="#a0672f" stroke-width="2.5"/>
+      <ellipse cx="694" cy="398" rx="15" ry="17" fill="#a0672f"/>
+      <path d="M680 394 q-2 -16 12 -19 q16 -3 20 12 q2 6 0 12 q-4 -8 -6 -12 q-6 2 -12 -2 q-6 4 -14 9z" fill="#2a1d1a"/>
+      <path d="M684 380 l-1 -6 l5 4 l2 -6 l4 5 l4 -5 l2 6 l5 -2 l-1 5" fill="#2a1d1a" stroke-width="2"/>
+      <path d="M680 392 q4 -3 7 -1 M690 391 q4 -2 7 1" fill="none" stroke-width="2"/>
+      <ellipse cx="683" cy="398" rx="1.7" ry="2.5" fill="#1f1a2e" stroke="none"/>
+      <ellipse cx="693" cy="398" rx="1.9" ry="2.7" fill="#1f1a2e" stroke="none"/>
+      <path d="M680 400 q-5 5 -1 8 h3" fill="none" stroke-width="2"/>
+      <path d="M682 411 q4 1 7 -2" fill="none" stroke-width="2"/>
+      <circle cx="696" cy="406" r="3.5" fill="#e8407a" opacity=".25" stroke="none"/>
+      <!-- far arm crosses in front to hold the can's base -->
+      <path d="M708 436 Q714 454 700 460 L694 450 Q700 448 700 436Z" fill="#e2611a"/>
+      <path d="M700 460 L684 444 L690 437 L702 450Z" fill="#8f5a29"/>
+      <!-- jerrycan -->
+      <g transform="translate(0 17) rotate(-40 658 407)">
+        <rect x="646" y="392" width="24" height="30" rx="3" fill="#ffd34a" stroke-width="2.5"/>
+        <path d="M650 398 l16 18 M666 398 l-16 18" stroke="#e8b52a" stroke-width="2"/>
+        <rect x="664" y="392" width="6" height="30" rx="2" fill="#e8b52a" stroke="none"/>
+        <rect x="646" y="392" width="24" height="30" rx="3" fill="none" stroke-width="2.5"/>
+        <path d="M654 392 v-6 h12 v6" fill="none" stroke-width="2.5"/>
+        <path d="M648 394 l-4 -8 h6 l2 6z" fill="#ffd34a" stroke-width="2"/>
+      </g>
+      <path d="M631 418 q1 1 1 3" fill="none" stroke="#7fd0ff" stroke-width="3"/>
+      <ellipse cx="683" cy="440" rx="6" ry="5" fill="#a0672f" stroke-width="2.5"/>
+      <!-- near arm reaches up to the handle -->
+      <path d="M690 434 Q680 432 672 428 L668 438 Q678 446 688 446Z" fill="#ff7a29"/>
+      <path d="M672 430 L658 412 L652 418 L668 438Z" fill="#a0672f"/>
+      <ellipse cx="655" cy="411" rx="6.5" ry="5.5" fill="#a0672f" stroke-width="2.5"/>
+      <path d="M652 409 h6" stroke-width="1.5"/>
+    </g>
+
+    <!-- ============ MILESTONE ============ -->
+    <ellipse cx="758" cy="518" rx="46" ry="7" fill="#1f1a2e" opacity=".16" stroke="none"/>
+    <path d="M720 516 V434 A38 38 0 0 1 796 434 V516 Z" fill="#fff8ec"/>
+    <path d="M782 408 A38 38 0 0 1 796 434 V516 H784 Z" fill="#e8dcc6" stroke="none"/>
+    <path d="M720 442 V434 A38 38 0 0 1 796 434 V442 Z" fill="#ffb020"/>
+    <path d="M784 410 A38 38 0 0 1 796 434 V442 H786 Z" fill="#e89a10" stroke="none"/>
+    <path d="M720 516 V434 A38 38 0 0 1 796 434 V516 Z" fill="none"/>
+    <path d="M720 442 H796" stroke-width="2.5"/>
+    <text x="757" y="432" text-anchor="middle" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="13" fill="#1f1a2e" stroke="none">NH 52</text>
+    <text x="756" y="463" text-anchor="middle" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="15" fill="#1f1a2e" stroke="none">इंदौर</text>
+    <text x="756" y="478" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="10.5" fill="#1f1a2e" stroke="none">INDORE</text>
+    <text x="756" y="505" text-anchor="middle" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="22" fill="#c22a5f" stroke="none">312</text>
+    <path d="M716 516 h84" stroke-width="3"/>
+    <g fill="#3fa34d" stroke-width="2"><path d="M712 518 q-4 -14 2 -18 q2 10 4 18z"/><path d="M718 518 q2 -10 8 -12 q-2 8 -2 12z" fill="#5cbf5c"/><path d="M792 518 q4 -14 10 -14 q-4 8 -4 14z"/></g>
+
+    <!-- ============ CHARPAI ============ -->
+    <ellipse cx="110" cy="548" rx="120" ry="9" fill="#1f1a2e" opacity=".16" stroke="none"/>
+    <path d="M166 470 L158 470 L158 526 L166 526Z" fill="#a8693d" stroke-width="2.5"/>
+    <path d="M-40 468 L166 468 L210 490 L-10 490Z" fill="url(#tr-weave)"/>
+    <path d="M-40 466 L168 466 L170 472 L-40 472Z" fill="#c98a55" stroke-width="2.5"/>
+    <path d="M166 466 L212 490 L208 494 L162 470Z" fill="#c98a55" stroke-width="2.5"/>
+    <path d="M202 496 q-4 10 0 18 q-4 12 0 22 q2 8 0 12 h12 q-2 -4 0 -12 q4 -10 0 -22 q4 -8 0 -18z" fill="#c98a55" stroke-width="2.5"/>
+    <path d="M-2 496 q-4 10 0 18 q-4 12 0 22 q2 8 0 12 h12 q-2 -4 0 -12 q4 -10 0 -22 q4 -8 0 -18z" fill="#c98a55" stroke-width="2.5"/>
+    <rect x="-16" y="488" width="234" height="10" rx="2" fill="#c98a55"/>
+    <path d="M-12 491 h226" stroke="#e0ad78" stroke-width="2"/>
+
+    <!-- chai glass on the charpai -->
+    <path d="M182 480 l-2 -18 h14 l-2 18z" fill="#c97a3a" stroke-width="2"/>
+    <path d="M181 466 h12" stroke="#f2c08a" stroke-width="2"/>
+    <path class="tr-rise" d="M184 458 q-4 -6 0 -12 q4 -6 0 -12 M191 458 q3 -6 0 -10" fill="none" stroke="#ffffff" stroke-width="2.5" opacity=".8"/>
+
+    <!-- ============ DRIVER ============ -->
+    <g>
+      <!-- far leg -->
+      <path d="M126 516 q-2 12 0 24 h9 q1 -12 0 -24z" fill="#8f5a29" stroke-width="2.5"/>
+      <path d="M118 549 q0 -8 10 -8 h8 q8 2 8 8z" fill="#5e3a22" stroke-width="2.5"/>
+      <!-- lap and lungi -->
+      <path d="M66 488 Q62 500 74 502 L150 502 Q164 500 162 486 Q160 472 148 470 L96 470 Z" fill="url(#tr-lungi)"/>
+      <path d="M132 492 L162 490 Q168 508 164 524 L130 526 Q126 508 132 492Z" fill="url(#tr-lungi)"/>
+      <path d="M144 494 q4 14 2 30 M156 494 q4 12 2 28" fill="none" stroke="#24467a" stroke-width="2"/>
+      <path d="M128 523 h38" stroke="#bfe6ff" stroke-width="2.5"/>
+      <!-- near leg -->
+      <path d="M140 524 q-2 10 0 18 h10 q1 -9 0 -18z" fill="#a0672f" stroke-width="2.5"/>
+      <path d="M136 550 q0 -8 10 -8 h10 q9 2 9 8z" fill="#7a4a2a" stroke-width="2.5"/>
+      <path d="M146 544 v6" stroke="#c98a55" stroke-width="2"/>
+      <!-- torso in a kurta -->
+      <path d="M68 490 Q60 458 74 440 Q100 430 126 440 Q138 458 134 490Z" fill="#f4ecdc"/>
+      <path d="M126 440 Q138 458 134 490 H122 Q128 462 118 442Z" fill="#e2d4bb" stroke="none"/>
+      <path d="M68 490 Q60 458 74 440 Q100 430 126 440 Q138 458 134 490Z" fill="none"/>
+      <path d="M78 472 Q110 478 140 472 Q150 474 152 484 Q118 492 72 490Z" fill="#f4ecdc"/>
+      <path d="M96 438 l7 12 l7 -12" fill="none" stroke-width="2.5"/>
+      <path d="M80 458 q-2 14 0 28 M116 456 q4 14 4 30" fill="none" stroke="#d6c4a2" stroke-width="2"/>
+      <path d="M103 450 v16" stroke-width="2"/><circle cx="103" cy="456" r="1.5" fill="#1f1a2e" stroke="none"/><circle cx="103" cy="462" r="1.5" fill="#1f1a2e" stroke="none"/>
+      <!-- gamchha over the far shoulder -->
+      <path d="M112 436 Q128 434 134 446 L132 484 L120 486 L122 452 Q118 444 108 442Z" fill="url(#tr-check)" stroke-width="2.5"/>
+      <path d="M120 486 l-2 6 M126 485 l0 6 M131 484 l2 6" stroke="#d93a3a" stroke-width="2"/>
+      <!-- neck and head -->
+      <rect x="96" y="420" width="14" height="18" fill="#8f5a29" stroke-width="2.5"/>
+      <ellipse cx="102" cy="402" rx="19" ry="21" fill="#a0672f"/>
+      <path d="M110 384 q10 4 10 14 q-4 -8 -10 -8z" fill="#ffffff" opacity=".2" stroke="none"/>
+      <path d="M84 404 q-6 -24 12 -30 q20 -6 26 14 q-8 -6 -16 -4 q-8 2 -12 8 q-4 4 -5 14z" fill="#2a1d1a"/>
+      <path d="M87 397 q2 -6 6 -8" fill="none" stroke="#7d7480" stroke-width="2"/>
+      <!-- face: talking to the owner -->
+      <path d="M99 392 q4 -4 9 -2 M113 391 q4 -3 8 0" fill="none" stroke-width="2.5"/>
+      <ellipse cx="104" cy="399" rx="2" ry="2.8" fill="#1f1a2e" stroke="none"/>
+      <ellipse cx="117" cy="399" rx="1.8" ry="2.6" fill="#1f1a2e" stroke="none"/>
+      <path d="M115 400 q6 6 2 10 q-2 1 -4 0" fill="none" stroke-width="2.5"/>
+      <path d="M98 415 Q109 407 123 413 Q119 419 111 416 Q103 420 98 415Z" fill="#2a1d1a" stroke-width="2"/>
+      <path d="M106 420 q5 4 10 0 z" fill="#7a2a2a" stroke-width="2"/>
+      <path d="M92 414 q4 8 12 10" fill="none" stroke="#8a5428" stroke-width="2" opacity=".7"/>
+      <!-- near hand holds the phone to his ear -->
+      <path d="M78 440 Q66 452 74 472 L90 470 Q84 456 90 446Z" fill="#f4ecdc"/>
+      <path d="M76 470 Q88 446 82 420 L92 418 Q98 446 90 472Z" fill="#a0672f"/>
+      <rect x="77" y="392" width="11" height="24" rx="3" fill="#1f1a2e" stroke-width="2" transform="rotate(-8 82 404)"/>
+      <rect x="79" y="395" width="6" height="14" rx="1" fill="#3d3a8c" stroke="none" transform="rotate(-8 82 404)"/>
+      <path d="M80 414 q-2 -10 6 -12 q8 0 8 8 q0 8 -6 10 q-6 1 -8 -6z" fill="#a0672f" stroke-width="2.5"/>
+      <path d="M86 406 h6 M86 411 h6" stroke-width="1.5"/>
+      <!-- far hand holds the POD out -->
+      <path d="M126 444 Q144 452 144 470 L134 472 Q134 460 122 454Z" fill="#f4ecdc"/>
+      <path d="M134 470 L158 462 L160 470 L138 478Z" fill="#8f5a29" stroke-width="2.5"/>
+      <g transform="rotate(-8 178 454)">
+        <rect x="158" y="428" width="40" height="52" rx="2" fill="#ffffff" stroke-width="2.5"/>
+        <text x="178" y="440" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="9" fill="#1f1a2e" stroke="none">POD</text>
+        <path d="M164 446 h28 M164 452 h28 M164 458 h18" stroke="#9fb3d9" stroke-width="1.5"/>
+        <circle cx="186" cy="467" r="7.5" fill="#ffffff" stroke="#5a4fc4" stroke-width="2"/>
+        <circle cx="186" cy="467" r="4.5" fill="none" stroke="#5a4fc4" stroke-width="1"/>
+        <path d="M164 470 q4 -4 6 0 q3 4 6 -2" fill="none" stroke="#3d3a8c" stroke-width="1.5"/>
+      </g>
+      <path d="M156 470 q-2 -8 6 -10 q8 -1 8 6 q0 6 -6 7 q-6 1 -8 -3z" fill="#8f5a29" stroke-width="2.5"/>
+    </g>
+
+    <!-- message from the owner -->
+    <g class="tr-bob">
+      <path d="M14 304 h170 a14 14 0 0 1 14 14 v28 a14 14 0 0 1 -14 14 h-96 l-6 20 l-10 -20 h-58 a14 14 0 0 1 -14 -14 v-28 a14 14 0 0 1 14 -14z" fill="#ffffff"/>
+      <text x="28" y="322" font-family="Nunito, sans-serif" font-weight="900" font-size="10" fill="#0f8b8d" stroke="none">SETH JI</text>
+      <text x="28" y="346" font-family="Nunito, sans-serif" font-weight="900" font-size="18" fill="#1f1a2e" stroke="none">POD bhej diya?</text>
+    </g>
+  </g>
+  </g>
+</svg>

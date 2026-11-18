@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluation &amp; Benchmarking · Prayog AI</title>
+  <meta name="description" content="Benchmarks for frontier and open models on Indian tasks and languages.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../landing.css">
+  <link rel="stylesheet" href="../prayog.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2064%2064%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2228%22%20fill%3D%22%23ffb020%22%20stroke%3D%22%231f1a2e%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M26%2014%20H38%20M28%2014%20V27%20L17%2046%20Q15%2051%2021%2051%20H43%20Q49%2051%2047%2046%20L36%2027%20V14%22%20fill%3D%22%23fff8ec%22%20stroke%3D%22%231f1a2e%22%20stroke-width%3D%223.5%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M21.5%2042%20H42.5%20L46%2047.5%20Q47%2050%2043%2050%20H21%20Q17%2050%2018%2047.5Z%22%20fill%3D%22%23e8407a%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2229%22%20cy%3D%2237%22%20r%3D%222.2%22%20fill%3D%22%23e8407a%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2232%22%20r%3D%221.6%22%20fill%3D%22%23e8407a%22%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <a href="../index.html" class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="28" fill="#ffb020" stroke="#1f1a2e" stroke-width="4"/>
+      <path d="M26 14 H38 M28 14 V27 L17 46 Q15 51 21 51 H43 Q49 51 47 46 L36 27 V14" fill="#fff8ec" stroke="#1f1a2e" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M21.5 42 H42.5 L46 47.5 Q47 50 43 50 H21 Q17 50 18 47.5Z" fill="#e8407a"/>
+      <circle cx="29" cy="37" r="2.2" fill="#e8407a"/><circle cx="35" cy="32" r="1.6" fill="#e8407a"/>
+    </svg>
+    <span>Prayog AI</span>
+  </a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="../index.html#pillars">Pillars</a>
+    <a href="../index.html#metro">Metro map</a>
+    <a href="../index.html#languages" class="nav-wide">Languages</a>
+    <a href="../karobaar/index.html" class="nav-blog">Karobaar Gym</a>
+  </nav>
+</header>
+
+<main id="main" class="pillar-page" style="--pc:#b9b6ff; --lc:#3d3a8c">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Prayog AI</a> › <a href="../index.html#pillars">Pillars</a> › <span>Evaluation &amp; Benchmarking</span></nav>
+<section class="pillar-hero">
+  <div class="pillar-hero-copy">
+    <p class="eyebrow reveal">Pillar 04 · <span lang="hi">परीक्षा केंद्र</span> · Pariksha Kendra, the exam centre</p>
+    <h1 class="reveal">Evaluation &amp; Benchmarking</h1>
+    <p class="lede reveal">We test models on Indian tasks in Indian languages: frontier models through their APIs, and open models on our own servers. Most of our environments are also benchmarks. A task keeps the same records and the same checker in every language, so a score in Tamil can be compared fairly with a score in English.</p>
+  </div>
+  <div class="pillar-hero-art reveal"><svg class="bldg-big" viewBox="-10 76 230 236" role="img" aria-label="Pariksha Kendra (परीक्षा केंद्र), the exam centre: the Evaluation &amp; Benchmarking pillar">
+  <rect x="-10" y="298" width="230" height="16" fill="#cfe9c4" stroke="#1f1a2e" stroke-width="3"/>
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" class="b-evaluation">
+  <rect x="14" y="286" width="182" height="14" fill="#e8d3b0"/>
+  <rect x="16" y="160" width="178" height="126" fill="#ecebff"/>
+  <rect x="10" y="150" width="190" height="14" fill="#b9b6ff"/>
+  <rect x="84" y="112" width="42" height="40" rx="6" fill="#fff8ec"/>
+  <circle cx="105" cy="132" r="14" fill="#fff"/>
+  <path class="clock-m" d="M105 132 H115" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M105 132 V124" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="36" y="170" width="138" height="40" rx="6" fill="#3d3a8c"/>
+  <text x="105.0" y="187" text-anchor="middle" class="svg-sign small light hi">परीक्षा केंद्र</text>
+  <text x="105.0" y="203" text-anchor="middle" class="svg-sign small light en">EVALUATION</text>
+  <rect x="28" y="224" width="44" height="62" fill="#3d3a8c"/>
+  <circle cx="64" cy="256" r="2.5" fill="#ffb020"/>
+  <rect x="114" y="222" width="72" height="56" rx="4" fill="#fffdf8"/>
+  <rect x="114" y="222" width="72" height="13" rx="4" fill="#b9b6ff"/>
+  <text x="150" y="232.5" text-anchor="middle" class="svg-coin">RESULT</text>
+  <path d="M124 244 H160" stroke-width="2"/><g class="mark m0"><path d="M168 243 l3 3 5 -6" stroke="#3fa34d" stroke-width="2.5" fill="none"/></g><path d="M124 253 H160" stroke-width="2"/><g class="mark m1"><path d="M168 250 l6 6 M174 250 l-6 6" stroke="#e8407a" stroke-width="2.5"/></g><path d="M124 262 H160" stroke-width="2"/><g class="mark m2"><path d="M168 261 l3 3 5 -6" stroke="#3fa34d" stroke-width="2.5" fill="none"/></g><path d="M124 271 H160" stroke-width="2"/><g class="mark m3"><path d="M168 270 l3 3 5 -6" stroke="#3fa34d" stroke-width="2.5" fill="none"/></g></g>
+</svg></div>
+</section>
+
+<section class="section" id="projects">
+  <div class="section-head">
+    <p class="eyebrow reveal">Projects</p>
+    <h2 class="reveal">Stations on the <span class="line-name" style="--lc:#3d3a8c">Evaluation</span> line</h2>
+  </div>
+  <div class="proj-grid">
+    <article class="proj-card reveal">
+      <p class="proj-tag"><span lang="hi">डेटाबेस</span> · text-to-SQL</p>
+      <h3><a href="../projects/indicdb.html">IndicDB</a></h3>
+      <p>A benchmark for text-to-SQL in Indian languages.</p>
+      <p class="also"><span class="chip-label">Also on</span><a class="line-chip" href="../pillars/datasets.html"><i style="--lc:#0f8b8d"></i>Datasets</a></p>
+      <a class="more" href="../projects/indicdb.html">Open the project <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="proj-card reveal">
+      <p class="proj-tag"><span lang="hi">औज़ार</span> · tool use</p>
+      <h3><a href="../projects/tool-use.html">Tool-calling Environments</a></h3>
+      <p>Our Indian analogue of Agent World Model: generated backends of Indian apps.</p>
+      <p class="env-count">7 environments: Government services, Banking and payments, Shopping, Healthcare…</p><p class="also"><span class="chip-label">Also on</span><a class="line-chip" href="../pillars/environments.html"><i style="--lc:#e09400"></i>RL Environments</a></p>
+      <a class="more" href="../projects/tool-use.html">Open the project <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="proj-card reveal">
+      <p class="proj-tag"><span lang="hi">स्क्रीन</span> · GUI agents</p>
+      <h3><a href="../projects/bharatgui.html">BharatGUI</a></h3>
+      <p>Our Indian analogue of InfiniteWeb: Indian websites for agents that use the screen.</p>
+      <p class="env-count">2 environments: GST-style portal, Railway booking</p><p class="also"><span class="chip-label">Also on</span><a class="line-chip" href="../pillars/environments.html"><i style="--lc:#e09400"></i>RL Environments</a></p>
+      <a class="more" href="../projects/bharatgui.html">Open the project <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="proj-card reveal">
+      <p class="proj-tag"><span lang="hi">कारोबार</span> · business</p>
+      <h3><a href="../projects/karobaar.html">Karobaar Gym</a></h3>
+      <p>AI agents run simulated Indian businesses for weeks.</p>
+      <p class="env-count">11 environments: Kirana store, Truck fleet, Municipal corporation, Wedding planning…</p><p class="also"><span class="chip-label">Also on</span><a class="line-chip" href="../pillars/environments.html"><i style="--lc:#e09400"></i>RL Environments</a><a class="line-chip" href="../pillars/models.html"><i style="--lc:#e8407a"></i>Models</a></p>
+      <a class="more" href="../projects/karobaar.html">Open the project <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="proj-card reveal">
+      <p class="proj-tag"><span lang="hi">परख</span> · model behaviour</p>
+      <h3><a href="../projects/alignment-faking.html">Alignment Faking and Evaluation Awareness</a></h3>
+      <p>Does a model behave differently when it believes it is being tested?</p>
+      <p class="also"><span class="chip-label">Also on</span><a class="line-chip" href="../pillars/safety.html"><i style="--lc:#ff7a29"></i>AI Safety</a></p>
+      <a class="more" href="../projects/alignment-faking.html">Open the project <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="proj-card reveal">
+      <p class="proj-tag"><span lang="hi">अनुवाद</span> · translation</p>
+      <h3><a href="../projects/misgendering.html">Misgendering in English-to-Hindi Translation</a></h3>
+      <p>How often translation systems misgender people in Hindi, and how to reduce it.</p>
+      <p class="also"><span class="chip-label">Also on</span><a class="line-chip" href="../pillars/safety.html"><i style="--lc:#ff7a29"></i>AI Safety</a></p>
+      <a class="more" href="../projects/misgendering.html">Open the project <span aria-hidden="true">→</span></a>
+    </article></div>
+</section>
+
+<nav class="pn" aria-label="Other pillars">
+  <a href="models.html" style="--lc:#e8407a"><small>← Pillar 03</small><b>Models</b></a>
+  <a href="safety.html" style="--lc:#ff7a29"><small>Pillar 05 →</small><b>AI Safety</b></a>
+</nav>
+</main>
+
+<footer class="foot">
+  <p><b>Prayog AI</b> · the Bharat AI Prayogshala at BITS Pilani</p>
+  <p class="foot-links"><a href="../pillars/datasets.html">Datasets</a> · <a href="../pillars/environments.html">RL Environments</a> · <a href="../pillars/models.html">Models</a> · <a href="../pillars/evaluation.html">Evaluation</a> · <a href="../pillars/safety.html">AI Safety</a> · <a href="../pillars/interpretability.html">Interpretability</a> · <a href="../pillars/self-improvement.html">Self-improvement</a></p>
+</footer>
+<script src="../script.js"></script>
+<script src="../prayog.js"></script>
+<script src="../scrollbuddy.js"></script>
+</body>
+</html>

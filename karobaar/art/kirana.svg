@@ -1,0 +1,352 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="A woman at a kirana shop counter asks the shopkeeper to put her purchase on khata">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Nunito:wght@800;900&amp;display=swap');
+    .kr-bob { animation: kr-bob 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+    .kr-sway { animation: kr-sway 4s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 0; }
+    .kr-sway2 { animation: kr-sway 5s ease-in-out -1.5s infinite; transform-box: fill-box; transform-origin: 50% 0; }
+    .kr-glow { animation: kr-glow 3s ease-in-out infinite; }
+    .kr-pen { animation: kr-pen 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: 0 100%; }
+    @keyframes kr-bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-5px) } }
+    @keyframes kr-sway { 0%,100% { transform: rotate(-3deg) } 50% { transform: rotate(3deg) } }
+    @keyframes kr-glow { 0%,100% { opacity: .55 } 50% { opacity: .75 } }
+    @keyframes kr-pen { 0%,100% { transform: translate(0,0) } 25% { transform: translate(3px,-1px) } 50% { transform: translate(6px,0) } 75% { transform: translate(3px,1px) } }
+    @media (prefers-reduced-motion: reduce) { .kr-bob,.kr-sway,.kr-sway2,.kr-glow,.kr-pen { animation: none } }
+  </style>
+  <defs>
+    <linearGradient id="kr-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd9a3"/><stop offset="1" stop-color="#fff2dc"/>
+    </linearGradient>
+    <linearGradient id="kr-inside" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b2119"/><stop offset=".55" stop-color="#5b3424"/><stop offset="1" stop-color="#6e412b"/>
+    </linearGradient>
+    <radialGradient id="kr-bulb" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffe7a8" stop-opacity=".95"/><stop offset=".45" stop-color="#ffc85a" stop-opacity=".35"/><stop offset="1" stop-color="#ffb020" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="kr-counter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9a5632"/><stop offset="1" stop-color="#743c22"/>
+    </linearGradient>
+    <linearGradient id="kr-glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/><stop offset=".35" stop-color="#ffffff" stop-opacity=".12"/><stop offset="1" stop-color="#ffffff" stop-opacity=".35"/>
+    </linearGradient>
+    <pattern id="kr-jute" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#d8b47a"/><path d="M0 3h6M3 0v6" stroke="#c49a5c" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="kr-rice" width="10" height="8" patternUnits="userSpaceOnUse">
+      <rect width="10" height="8" fill="#fbf6ea"/><ellipse cx="3" cy="3" rx="2" ry="1" fill="#e6dcc4"/><ellipse cx="8" cy="6" rx="2" ry="1" fill="#e6dcc4" transform="rotate(30 8 6)"/>
+    </pattern>
+    <pattern id="kr-dal" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#f6c431"/><circle cx="2" cy="2" r="1.6" fill="#e2a91c"/><circle cx="6" cy="6" r="1.6" fill="#e2a91c"/>
+    </pattern>
+    <pattern id="kr-tile" width="80" height="40" patternUnits="userSpaceOnUse">
+      <rect width="80" height="40" fill="#e8cfa4"/><path d="M0 0h80M0 0v40" stroke="#d4b583" stroke-width="2"/>
+    </pattern>
+    <clipPath id="kr-frame"><rect width="800" height="560"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#kr-frame)">
+  <!-- sky and the street behind -->
+  <rect width="800" height="560" fill="url(#kr-sky)"/>
+  <circle cx="712" cy="58" r="34" fill="#ffe08a" opacity=".8"/>
+  <g opacity=".9">
+    <path d="M-10 250 V80 H70 V60 H96 V250Z" fill="#f2bf8c"/>
+    <rect x="14" y="104" width="22" height="30" rx="3" fill="#f9dcb8"/><rect x="46" y="104" width="22" height="30" rx="3" fill="#f9dcb8"/>
+    <rect x="14" y="152" width="22" height="30" rx="3" fill="#f9dcb8"/><rect x="46" y="152" width="22" height="30" rx="3" fill="#f9dcb8"/>
+    <path d="M704 250 V40 H790 V250Z" fill="#eeb07e"/>
+    <path d="M700 40 H812 V30 H700Z" fill="#e39d68"/>
+    <rect x="722" y="66" width="24" height="34" rx="12" fill="#f8d6ae"/><rect x="760" y="66" width="24" height="34" rx="12" fill="#f8d6ae"/>
+    <rect x="722" y="124" width="24" height="34" rx="12" fill="#f8d6ae"/><rect x="760" y="124" width="24" height="34" rx="12" fill="#f8d6ae"/>
+    <path d="M716 108 h76 v8 h-76z" fill="#d98e58"/>
+  </g>
+  <!-- tangled overhead wires -->
+  <g fill="none" stroke="#1f1a2e" stroke-width="2" opacity=".55">
+    <path d="M-10 30 Q200 70 420 34 T820 44"/>
+    <path d="M-10 44 Q260 96 520 40 T820 70"/>
+    <path d="M60 0 Q140 60 300 50"/>
+  </g>
+  <g fill="#1f1a2e" opacity=".75">
+    <path d="M318 49 q6 -8 12 0 q-6 3 -12 0z"/><circle cx="330" cy="46" r="3"/>
+    <path d="M352 47 q6 -8 12 0 q-6 3 -12 0z"/><circle cx="364" cy="44" r="3"/>
+  </g>
+
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- shop facade -->
+    <rect x="92" y="62" width="616" height="420" fill="#f6e3c3"/>
+    <rect x="660" y="62" width="48" height="420" fill="#e9cfa7" stroke="none"/>
+    <path d="M86 56 H714 V70 H86Z" fill="#e7c79a"/>
+    <g stroke="#c9a77a" stroke-width="2" opacity=".7" fill="none">
+      <path d="M110 220 l10 14 l-4 10"/><path d="M690 330 l-6 10"/><path d="M118 420 l8 -10"/>
+    </g>
+
+    <!-- signboard -->
+    <rect x="148" y="80" width="504" height="70" rx="12" fill="#e8407a"/>
+    <rect x="148" y="136" width="504" height="14" rx="0" fill="#c22a5f" stroke="none"/>
+    <rect x="148" y="80" width="504" height="70" rx="12" fill="none"/>
+    <rect x="158" y="89" width="484" height="52" rx="8" fill="none" stroke="#ffd6e4" stroke-width="2" stroke-dasharray="2 6"/>
+    <text x="400" y="129" text-anchor="middle" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="42" fill="#fff8ec" stroke="none">किराना स्टोर</text>
+    <circle cx="180" cy="115" r="12" fill="#ffb020"/><path d="M180 105 v20 M170 115 h20" stroke="#c22a5f" stroke-width="2"/>
+    <circle cx="620" cy="115" r="12" fill="#ffb020"/><path d="M620 105 v20 M610 115 h20" stroke="#c22a5f" stroke-width="2"/>
+
+    <!-- inside of the shop -->
+    <rect x="132" y="166" width="536" height="310" fill="url(#kr-inside)"/>
+    <circle class="kr-glow" cx="520" cy="240" r="200" fill="url(#kr-bulb)" stroke="none"/>
+
+    <!-- shelf uprights and planks -->
+    <g fill="#a8693d">
+      <rect x="140" y="214" width="10" height="262"/><rect x="650" y="214" width="10" height="262"/>
+      <rect x="140" y="258" width="520" height="9"/>
+      <rect x="140" y="320" width="520" height="9"/>
+      <rect x="140" y="380" width="520" height="9"/>
+    </g>
+
+    <!-- top shelf: oil, tea, pickles, tins, ghee -->
+    <g stroke-width="2.5">
+      <path d="M156 258 v-30 q0 -6 5 -8 v-6 h8 v6 q5 2 5 8 v30z" fill="#ffd34a"/><rect x="160" y="208" width="10" height="6" fill="#e8407a"/>
+      <path d="M178 258 v-30 q0 -6 5 -8 v-6 h8 v6 q5 2 5 8 v30z" fill="#ffd34a"/><rect x="182" y="208" width="10" height="6" fill="#e8407a"/>
+      <rect x="156" y="236" width="18" height="10" fill="#3fa34d" stroke-width="1.5"/><rect x="178" y="236" width="18" height="10" fill="#3fa34d" stroke-width="1.5"/>
+      <rect x="206" y="222" width="30" height="36" rx="2" fill="#e8407a"/><path d="M206 234 h30" stroke="#fff8ec" stroke-width="3"/>
+      <rect x="238" y="222" width="30" height="36" rx="2" fill="#3fa34d"/><path d="M238 234 h30" stroke="#fff8ec" stroke-width="3"/>
+      <rect x="280" y="226" width="26" height="32" rx="6" fill="#ff7a29"/><rect x="278" y="220" width="30" height="8" rx="3" fill="#e8407a"/>
+      <rect x="312" y="226" width="26" height="32" rx="6" fill="#ffb020"/><rect x="310" y="220" width="30" height="8" rx="3" fill="#3d3a8c"/>
+      <rect x="350" y="228" width="24" height="30" rx="3" fill="#d6d3dc"/><rect x="350" y="236" width="24" height="12" fill="#ffb020" stroke-width="1.5"/>
+      <rect x="376" y="228" width="24" height="30" rx="3" fill="#d6d3dc"/><rect x="376" y="236" width="24" height="12" fill="#0f8b8d" stroke-width="1.5"/>
+      <rect x="412" y="218" width="36" height="40" rx="3" fill="#fff8ec"/><path d="M412 230 h36 M412 246 h36" stroke="#3d3a8c" stroke-width="3"/>
+      <rect x="460" y="230" width="18" height="28" rx="5" fill="#0f8b8d"/><rect x="463" y="224" width="12" height="7" fill="#1f1a2e" stroke-width="1"/>
+      <rect x="482" y="230" width="18" height="28" rx="5" fill="#0f8b8d"/><rect x="485" y="224" width="12" height="7" fill="#1f1a2e" stroke-width="1"/>
+      <rect x="510" y="216" width="44" height="42" rx="4" fill="#ffd34a"/><rect x="510" y="230" width="44" height="14" fill="#3fa34d" stroke-width="1.5"/>
+      <rect x="566" y="226" width="26" height="32" rx="6" fill="#c22a5f"/><rect x="564" y="220" width="30" height="8" rx="3" fill="#ffb020"/>
+      <rect x="600" y="224" width="40" height="34" rx="2" fill="#3d3a8c"/><circle cx="620" cy="241" r="9" fill="#ffb020" stroke-width="1.5"/>
+    </g>
+
+    <!-- middle shelf: biscuits, soap, detergent, noodles -->
+    <g stroke-width="2.5">
+      <rect x="154" y="288" width="16" height="32" rx="2" fill="#ffb020" transform="rotate(-4 162 320)"/>
+      <rect x="172" y="288" width="16" height="32" rx="2" fill="#e8407a"/>
+      <rect x="190" y="288" width="16" height="32" rx="2" fill="#3d3a8c" transform="rotate(4 198 320)"/>
+      <rect x="214" y="296" width="40" height="12" rx="2" fill="#bfe6ff"/><rect x="214" y="308" width="40" height="12" rx="2" fill="#ffadc8"/>
+      <rect x="262" y="282" width="42" height="38" rx="4" fill="#3b6fd8"/><circle cx="283" cy="301" r="10" fill="#fff8ec" stroke-width="2"/><circle cx="283" cy="301" r="4" fill="#e8407a" stroke="none"/>
+      <rect x="310" y="282" width="42" height="38" rx="4" fill="#3b6fd8"/><circle cx="331" cy="301" r="10" fill="#fff8ec" stroke-width="2"/><circle cx="331" cy="301" r="4" fill="#e8407a" stroke="none"/>
+      <rect x="490" y="292" width="34" height="28" rx="3" fill="#ffd34a"/><path d="M494 306 q13 -8 26 0" fill="none" stroke="#e8407a" stroke-width="2.5"/>
+      <rect x="528" y="292" width="34" height="28" rx="3" fill="#ffd34a"/><path d="M532 306 q13 -8 26 0" fill="none" stroke="#e8407a" stroke-width="2.5"/>
+      <rect x="572" y="300" width="20" height="20" rx="2" fill="#ff7a29"/><rect x="572" y="286" width="20" height="14" rx="2" fill="#ff7a29"/>
+      <rect x="598" y="288" width="44" height="32" rx="3" fill="#fff8ec"/><path d="M598 300 h44" stroke="#3fa34d" stroke-width="4"/>
+    </g>
+
+    <!-- bottom shelf: atta and rice bags -->
+    <g stroke-width="2.5">
+      <path d="M152 380 q-2 -30 4 -36 h30 q6 6 4 36z" fill="#fff8ec"/><path d="M154 360 h34" stroke="#e8407a" stroke-width="4"/>
+      <path d="M196 380 q-2 -30 4 -36 h30 q6 6 4 36z" fill="#fff8ec"/><path d="M198 360 h34" stroke="#3fa34d" stroke-width="4"/>
+      <path d="M560 380 q-2 -30 4 -36 h34 q6 6 4 36z" fill="#fff8ec"/><path d="M562 360 h38" stroke="#ff7a29" stroke-width="4"/>
+      <path d="M608 380 q-2 -30 4 -36 h30 q6 6 4 36z" fill="#fff8ec"/><path d="M610 360 h34" stroke="#3d3a8c" stroke-width="4"/>
+    </g>
+
+    <!-- hanging sachet strips and bananas -->
+    <g class="kr-sway" stroke-width="2">
+      <path d="M170 204 v104" stroke="#1f1a2e" stroke-width="1.5"/>
+      <rect x="162" y="214" width="16" height="18" rx="2" fill="#e8407a"/><rect x="162" y="234" width="16" height="18" rx="2" fill="#ffb020"/>
+      <rect x="162" y="254" width="16" height="18" rx="2" fill="#0f8b8d"/><rect x="162" y="274" width="16" height="18" rx="2" fill="#e8407a"/>
+      <rect x="162" y="294" width="16" height="18" rx="2" fill="#ffb020"/>
+    </g>
+    <g class="kr-sway2" stroke-width="2">
+      <path d="M196 204 v84" stroke="#1f1a2e" stroke-width="1.5"/>
+      <rect x="188" y="214" width="16" height="18" rx="2" fill="#bfe6ff"/><rect x="188" y="234" width="16" height="18" rx="2" fill="#3d3a8c"/>
+      <rect x="188" y="254" width="16" height="18" rx="2" fill="#bfe6ff"/><rect x="188" y="274" width="16" height="18" rx="2" fill="#3d3a8c"/>
+    </g>
+    <g class="kr-sway2">
+      <path d="M632 204 v18" stroke-width="2"/>
+      <path d="M632 222 c-26 4 -30 30 -22 48 c6 -10 12 -22 22 -30 c10 8 16 20 22 30 c8 -18 4 -44 -22 -48z" fill="#ffd34a"/>
+      <path d="M632 226 c-6 14 -6 30 -2 44 M622 232 c-8 12 -10 24 -10 36 M642 232 c8 12 10 24 10 36" fill="none" stroke-width="2"/>
+      <path d="M610 270 l-3 6 M654 270 l3 6 M630 272 v6" stroke-width="2.5"/>
+    </g>
+
+    <rect x="132" y="206" width="536" height="26" fill="#1f1a2e" opacity=".28" stroke="none"/>
+    <!-- hanging bulb -->
+    <path d="M560 172 v40" stroke-width="2"/>
+    <path d="M552 210 h16 v8 h-16z" fill="#6b6478" stroke-width="2"/>
+    <path d="M560 218 c-12 0 -16 10 -14 18 c2 8 8 10 8 16 h12 c0 -6 6 -8 8 -16 c2 -8 -2 -18 -14 -18z" fill="#fff4c4" stroke-width="2.5"/>
+    <path d="M553 226 q-2 6 1 12" fill="none" stroke="#ffffff" stroke-width="3"/>
+
+    <!-- striped scalloped awning -->
+    <path d="M118 160 H682 L700 208 H100Z" fill="#fff8ec"/>
+    <g stroke="none">
+      <path d="M118 160 H158 L148 208 H100Z" fill="#ffb020"/>
+      <path d="M198 160 H238 L236 208 H188Z" fill="#ffb020"/>
+      <path d="M278 160 H318 L322 208 H276Z" fill="#ffb020"/>
+      <path d="M358 160 H398 L408 208 H362Z" fill="#ffb020"/>
+      <path d="M438 160 H478 L494 208 H448Z" fill="#ffb020"/>
+      <path d="M518 160 H558 L580 208 H534Z" fill="#ffb020"/>
+      <path d="M598 160 H638 L666 208 H620Z" fill="#ffb020"/>
+      <path d="M118 160 H682 L686 172 H114Z" fill="#1f1a2e" opacity=".12"/>
+    </g>
+    <path d="M118 160 H682 L700 208 H100Z" fill="none"/>
+    <path d="M100 208 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0 q11 16 22 0" fill="#ffb020"/>
+
+    <!-- marigold toran under the sign -->
+    <path d="M150 152 Q400 176 650 152" fill="none" stroke-width="2"/>
+    <g stroke-width="2">
+      <path d="M190 157 q-4 12 0 18 q4 -6 0 -18z" fill="#3fa34d"/><circle cx="222" cy="162" r="7" fill="#ff7a29"/>
+      <path d="M254 164 q-4 12 0 18 q4 -6 0 -18z" fill="#3fa34d"/><circle cx="286" cy="167" r="7" fill="#ffb020"/>
+      <path d="M318 168 q-4 12 0 18 q4 -6 0 -18z" fill="#3fa34d"/><circle cx="350" cy="170" r="7" fill="#ff7a29"/>
+      <path d="M382 170 q-4 12 0 18 q4 -6 0 -18z" fill="#3fa34d"/><circle cx="414" cy="170" r="7" fill="#ffb020"/>
+      <path d="M446 170 q-4 12 0 18 q4 -6 0 -18z" fill="#3fa34d"/><circle cx="478" cy="168" r="7" fill="#ff7a29"/>
+      <path d="M510 166 q-4 12 0 18 q4 -6 0 -18z" fill="#3fa34d"/><circle cx="542" cy="164" r="7" fill="#ffb020"/>
+      <path d="M574 160 q-4 12 0 18 q4 -6 0 -18z" fill="#3fa34d"/><circle cx="606" cy="157" r="7" fill="#ff7a29"/>
+    </g>
+
+    <!-- the shopkeeper -->
+    <g transform="translate(432 398) scale(1.24) translate(-432 -398)">
+      <path d="M380 398 Q378 352 398 340 L466 340 Q486 352 484 398Z" fill="#bfe6ff"/>
+      <path d="M466 340 Q486 352 484 398 H462 Q470 366 458 344Z" fill="#94c8ea" stroke="none"/>
+      <path d="M380 398 Q378 352 398 340 L466 340 Q486 352 484 398Z" fill="none"/>
+      <path d="M418 340 l14 18 l14 -18" fill="#fff8ec" stroke-width="2.5"/>
+      <rect x="448" y="362" width="18" height="16" rx="2" fill="#a9d6f2" stroke-width="2"/>
+      <path d="M452 356 v12" stroke="#3d3a8c" stroke-width="3"/>
+      <rect x="424" y="320" width="16" height="22" fill="#b87a3f" stroke-width="2.5"/>
+      <g transform="translate(0 9)">
+      <ellipse cx="404" cy="296" rx="7" ry="10" fill="#c68642"/>
+      <ellipse cx="460" cy="296" rx="7" ry="10" fill="#c68642"/>
+      <ellipse cx="432" cy="292" rx="28" ry="32" fill="#c68642"/>
+      <path d="M432 260 q20 1 26 16 q-4 -6 -26 -6z" fill="#ffffff" opacity=".25" stroke="none"/>
+      <path d="M404 300 q-6 -26 8 -36 q-2 14 2 34z" fill="#7d7480" stroke-width="2.5"/>
+      <path d="M460 300 q6 -26 -8 -36 q2 14 -2 34z" fill="#7d7480" stroke-width="2.5"/>
+      <path d="M414 282 q6 -4 12 0 M438 282 q6 -4 12 0" fill="none" stroke-width="3"/>
+      <rect x="412" y="286" width="17" height="13" rx="5" fill="#ffffff" fill-opacity=".35" stroke-width="2.5"/>
+      <rect x="435" y="286" width="17" height="13" rx="5" fill="#ffffff" fill-opacity=".35" stroke-width="2.5"/>
+      <path d="M429 291 h6" stroke-width="2.5"/>
+      <path d="M416 294 q4 3 8 0 M440 294 q4 3 8 0" fill="none" stroke-width="2.5"/>
+      <path d="M432 298 q-4 8 -1 11 q3 1 5 -1" fill="none" stroke-width="2.5"/>
+      <path d="M414 316 Q432 304 450 316 Q442 322 432 317 Q422 322 414 316Z" fill="#4a3b3e" stroke-width="2.5"/>
+      <path d="M426 324 q6 3 12 0" fill="none" stroke-width="2.5"/>
+      </g>
+      <path d="M392 352 Q376 378 404 394 L420 390 Q402 376 412 356Z" fill="#bfe6ff"/>
+      <ellipse cx="420" cy="391" rx="10" ry="7" fill="#c68642"/>
+      <path d="M476 352 Q492 378 470 394 L452 392 Q470 376 460 356Z" fill="#94c8ea"/>
+      <g class="kr-pen">
+        <ellipse cx="452" cy="390" rx="10" ry="7" fill="#c68642"/>
+        <path d="M444 393 l-12 -14" stroke="#3d3a8c" stroke-width="4"/>
+      </g>
+    </g>
+
+    <!-- counter -->
+    <rect x="170" y="396" width="480" height="84" fill="url(#kr-counter)"/>
+    <rect x="186" y="414" width="140" height="52" rx="4" fill="#7e4427" stroke-width="2.5"/>
+    <rect x="340" y="414" width="140" height="52" rx="4" fill="#7e4427" stroke-width="2.5"/>
+    <rect x="494" y="414" width="140" height="52" rx="4" fill="#7e4427" stroke-width="2.5"/>
+    <path d="M190 418 h132 M344 418 h132 M498 418 h132" stroke="#a0603a" stroke-width="2"/>
+    <rect x="160" y="388" width="500" height="14" rx="4" fill="#c98a55"/>
+    <path d="M166 392 h488" stroke="#e0ad78" stroke-width="2"/>
+
+    <!-- on the counter: candy jars, khata, scale, UPI stand -->
+    <g stroke-width="2.5">
+      <rect x="196" y="350" width="34" height="40" rx="8" fill="#ffffff" fill-opacity=".35"/>
+      <circle cx="206" cy="376" r="5" fill="#e8407a" stroke-width="1.5"/><circle cx="219" cy="380" r="5" fill="#ffb020" stroke-width="1.5"/><circle cx="212" cy="366" r="5" fill="#3fa34d" stroke-width="1.5"/><circle cx="222" cy="368" r="4" fill="#e8407a" stroke-width="1.5"/>
+      <rect x="194" y="342" width="38" height="10" rx="4" fill="#e8407a"/>
+      <rect x="236" y="354" width="34" height="36" rx="8" fill="#ffffff" fill-opacity=".35"/>
+      <rect x="242" y="366" width="8" height="18" rx="2" fill="#ff7a29" stroke-width="1.5" transform="rotate(-12 246 375)"/><rect x="254" y="364" width="8" height="20" rx="2" fill="#ffd34a" stroke-width="1.5" transform="rotate(10 258 374)"/>
+      <rect x="234" y="346" width="38" height="10" rx="4" fill="#0f8b8d"/>
+      <rect x="276" y="358" width="30" height="32" rx="8" fill="#ffffff" fill-opacity=".35"/>
+      <circle cx="286" cy="380" r="4" fill="#3d3a8c" stroke-width="1.5"/><circle cx="296" cy="378" r="4" fill="#e8407a" stroke-width="1.5"/><circle cx="291" cy="370" r="4" fill="#ffb020" stroke-width="1.5"/>
+      <rect x="274" y="350" width="34" height="10" rx="4" fill="#ffb020"/>
+      <rect x="196" y="350" width="34" height="40" rx="8" fill="url(#kr-glass)" stroke="none"/>
+      <rect x="236" y="354" width="34" height="36" rx="8" fill="url(#kr-glass)" stroke="none"/>
+
+      <path d="M378 392 L392 374 L432 378 L428 392Z" fill="#fff8ec"/>
+      <path d="M428 392 L432 378 L472 374 L486 392Z" fill="#fff8ec"/>
+      <path d="M394 380 l30 3 M392 385 l32 2 M440 381 l26 -3 M440 386 l30 -2" stroke="#9fb3d9" stroke-width="1.5"/>
+      <path d="M374 394 L388 372 L432 376 L476 372 L490 394Z" fill="none"/>
+      <path d="M372 394 h120" stroke="#c22a5f" stroke-width="5"/>
+
+      <rect x="540" y="372" width="70" height="18" rx="4" fill="#d6d3dc"/>
+      <rect x="548" y="364" width="54" height="10" rx="3" fill="#bdb8c6"/>
+      <rect x="554" y="377" width="30" height="9" rx="2" fill="#1f1a2e" stroke-width="1.5"/>
+      <text x="569" y="385" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="8" fill="#7dff9a" stroke="none">0.50</text>
+      <circle cx="596" cy="381" r="3" fill="#e8407a" stroke-width="1.5"/>
+
+      <path d="M620 390 l6 -40 h20 l6 40z" fill="#fff8ec"/>
+      <rect x="628" y="356" width="16" height="16" fill="#fff" stroke-width="1.5"/>
+      <g fill="#1f1a2e" stroke="none"><rect x="630" y="358" width="5" height="5"/><rect x="637" y="358" width="5" height="5"/><rect x="630" y="365" width="5" height="5"/><rect x="638" y="366" width="2" height="2"/><rect x="641" y="368" width="2" height="2"/></g>
+      <path d="M626 378 h20" stroke="#0f8b8d" stroke-width="3"/>
+    </g>
+
+    <!-- pavement -->
+    <rect x="-10" y="476" width="820" height="100" fill="url(#kr-tile)"/>
+    <path d="M-10 476 H810" stroke-width="3"/>
+    <rect x="160" y="476" width="500" height="12" fill="#cfae7d"/>
+    <path d="M160 488 H660" stroke-width="2.5"/>
+
+    <!-- open sacks of rice, dal and chillies -->
+    <ellipse cx="610" cy="534" rx="140" ry="12" fill="#1f1a2e" opacity=".14" stroke="none"/>
+    <g>
+      <path d="M484 452 q-12 40 -4 78 h80 q8 -38 -4 -78z" fill="url(#kr-jute)"/>
+      <ellipse cx="520" cy="452" rx="40" ry="11" fill="url(#kr-rice)"/>
+      <path d="M480 452 q40 16 80 0 q2 8 -2 12 q-38 12 -76 0 q-4 -4 -2 -12z" fill="#c49a5c"/>
+      <path d="M528 448 l22 -22 l7 7 l-22 22z" fill="#d6d3dc" stroke-width="2.5"/>
+      <path d="M550 426 l10 -10" stroke-width="5"/>
+      <path d="M570 458 q-10 36 -4 72 h76 q8 -36 -2 -72z" fill="url(#kr-jute)"/>
+      <ellipse cx="605" cy="458" rx="37" ry="10" fill="url(#kr-dal)"/>
+      <path d="M568 458 q37 15 74 0 q2 8 -2 12 q-35 11 -70 0 q-4 -4 -2 -12z" fill="#c49a5c"/>
+      <path d="M652 466 q-8 34 -2 64 h70 q8 -32 0 -64z" fill="url(#kr-jute)"/>
+      <ellipse cx="686" cy="466" rx="34" ry="9" fill="#d93a2b"/>
+      <g fill="#ff5a3c" stroke-width="1.5"><path d="M666 464 q10 -6 18 2"/><path d="M684 470 q10 -8 20 -2"/><path d="M672 470 q6 -8 12 -4"/><path d="M694 462 q8 -4 12 2"/></g>
+      <path d="M650 466 q36 14 70 0 q2 8 -2 12 q-33 10 -66 0 q-4 -4 -2 -12z" fill="#c49a5c"/>
+    </g>
+    <g stroke-width="2">
+      <path d="M502 498 l-4 -30" stroke="#8a5a32"/><rect x="480" y="486" width="40" height="22" rx="3" fill="#fff8ec" transform="rotate(-6 500 497)"/>
+      <path d="M590 508 l-2 -30" stroke="#8a5a32"/><rect x="570" y="494" width="44" height="22" rx="3" fill="#fff8ec" transform="rotate(4 592 505)"/>
+      <path d="M688 510 l2 -26" stroke="#8a5a32"/><rect x="666" y="496" width="46" height="22" rx="3" fill="#fff8ec" transform="rotate(-3 689 507)"/>
+    </g>
+    <g font-family="'Baloo 2', sans-serif" font-weight="800" font-size="14" fill="#1f1a2e" stroke="none" text-anchor="middle">
+      <text x="500" y="503" transform="rotate(-6 500 497)">₹48</text>
+      <text x="592" y="511" transform="rotate(4 592 505)">₹120</text>
+      <text x="689" y="512" transform="rotate(-3 689 507)">₹260</text>
+    </g>
+
+    <!-- the customer -->
+    <ellipse cx="128" cy="532" rx="66" ry="9" fill="#1f1a2e" opacity=".16" stroke="none"/>
+    <g>
+      <path d="M96 318 Q82 372 92 434 L110 432 Q102 372 112 322Z" fill="#0b7072"/>
+      <path d="M98 346 Q90 432 84 524 L176 524 Q170 432 160 346Z" fill="#0f8b8d"/>
+      <path d="M86 504 L174 504 L176 524 L84 524Z" fill="#ffb020"/>
+      <path d="M86 510 h88" stroke="#e8407a" stroke-width="2"/>
+      <path d="M134 360 q2 80 -2 160 M146 360 q4 80 6 160 M122 362 q-2 80 -8 158" fill="none" stroke="#0a6668" stroke-width="2.5"/>
+      <path d="M92 524 q-2 -8 8 -8 h18 q6 0 6 8z" fill="#8a4b2c" stroke-width="2.5"/>
+      <path d="M140 524 q-2 -8 8 -8 h18 q6 0 6 8z" fill="#8a4b2c" stroke-width="2.5"/>
+      <path d="M102 314 Q118 300 128 302 Q140 300 156 310 L160 348 L98 348Z" fill="#e8407a"/>
+      <path d="M100 312 L126 306 L166 360 L162 384 L98 334Z" fill="#0f8b8d"/>
+      <path d="M100 312 L126 306 L166 360" fill="none" stroke="#ffb020" stroke-width="5"/>
+      <path d="M100 312 L126 306 L166 360 L162 384 L98 334Z" fill="none"/>
+      <path d="M152 314 Q170 316 184 334 L196 326 Q178 302 156 304Z" fill="#e8407a"/>
+      <path d="M184 334 L212 312 L206 304 L178 324Z" fill="#c68642"/>
+      <path d="M190 326 l4 -4 M196 322 l4 -4" stroke="#ffb020" stroke-width="3"/>
+      <path d="M206 304 q6 -6 10 -2 l12 -12 q4 -2 5 2 l-11 13 q4 4 -2 10 l-8 7z" fill="#c68642" stroke-width="2.5"/>
+      <path d="M100 340 Q88 370 92 398 L104 400 Q100 374 112 346Z" fill="#c68642"/>
+      <path d="M92 386 h12 M92 392 h12" stroke="#3fa34d" stroke-width="3"/>
+      <path d="M96 400 q-12 -16 2 -26 M104 400 q14 -16 -2 -26" fill="none" stroke="#8a4b2c" stroke-width="3"/>
+      <path d="M76 404 h44 q4 30 -2 60 h-40 q-6 -30 -2 -60z" fill="#ffb020"/>
+      <path d="M78 418 h40 M78 434 h41 M78 450 h40" stroke="#ff7a29" stroke-width="3"/>
+      <path d="M84 404 q-2 -14 6 -22 q2 12 0 22z" fill="#3fa34d" stroke-width="2.5"/>
+      <path d="M92 404 q4 -18 14 -20 q-2 12 -6 20z" fill="#5cbf5c" stroke-width="2.5"/>
+      <path d="M108 404 q0 -12 10 -16 q-2 10 -4 16z" fill="#3fa34d" stroke-width="2.5"/>
+      <rect x="121" y="288" width="14" height="18" fill="#b87a3f" stroke-width="2.5"/>
+      <ellipse cx="129" cy="268" rx="23" ry="26" fill="#c68642"/>
+      <path d="M139 246 q-30 -10 -40 16 q-4 14 6 26 q4 -18 14 -26 q12 -10 26 -6z" fill="#2a1d1a"/>
+      <circle cx="102" cy="280" r="13" fill="#2a1d1a"/>
+      <path d="M100 276 q4 -6 10 -2" fill="none" stroke="#4d3a33" stroke-width="2"/>
+      <circle cx="112" cy="286" r="4" fill="#ffb020" stroke-width="2"/>
+      <circle cx="134" cy="256" r="2.6" fill="#e8407a" stroke="none"/>
+      <path d="M134 262 q5 -3 10 0" fill="none" stroke-width="2.5"/>
+      <ellipse cx="140" cy="268" rx="2.5" ry="3.4" fill="#1f1a2e" stroke="none"/>
+      <path d="M150 266 q4 6 0 10" fill="none" stroke-width="2.5"/>
+      <path d="M138 282 q6 4 10 -1" fill="none" stroke-width="2.5"/>
+      <circle cx="142" cy="276" r="4" fill="#e8407a" opacity=".3" stroke="none"/>
+    </g>
+
+    <!-- speech bubble -->
+    <g class="kr-bob">
+      <path d="M22 160 h214 a16 16 0 0 1 16 16 v40 a16 16 0 0 1 -16 16 h-92 l-14 18 l-2 -18 h-106 a16 16 0 0 1 -16 -16 v-40 a16 16 0 0 1 16 -16z" fill="#ffffff"/>
+      <text x="129" y="188" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="17" fill="#1f1a2e" stroke="none">Bhaiya, khate mein</text>
+      <text x="129" y="212" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="17" fill="#e8407a" stroke="none">likh do!</text>
+    </g>
+  </g>
+  </g>
+</svg>

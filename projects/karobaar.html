@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karobaar Gym · Prayog AI</title>
+  <meta name="description" content="AI agents run simulated Indian businesses for weeks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../landing.css">
+  <link rel="stylesheet" href="../prayog.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2064%2064%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2228%22%20fill%3D%22%23ffb020%22%20stroke%3D%22%231f1a2e%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M26%2014%20H38%20M28%2014%20V27%20L17%2046%20Q15%2051%2021%2051%20H43%20Q49%2051%2047%2046%20L36%2027%20V14%22%20fill%3D%22%23fff8ec%22%20stroke%3D%22%231f1a2e%22%20stroke-width%3D%223.5%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M21.5%2042%20H42.5%20L46%2047.5%20Q47%2050%2043%2050%20H21%20Q17%2050%2018%2047.5Z%22%20fill%3D%22%23e8407a%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2229%22%20cy%3D%2237%22%20r%3D%222.2%22%20fill%3D%22%23e8407a%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2232%22%20r%3D%221.6%22%20fill%3D%22%23e8407a%22%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <a href="../index.html" class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="28" fill="#ffb020" stroke="#1f1a2e" stroke-width="4"/>
+      <path d="M26 14 H38 M28 14 V27 L17 46 Q15 51 21 51 H43 Q49 51 47 46 L36 27 V14" fill="#fff8ec" stroke="#1f1a2e" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M21.5 42 H42.5 L46 47.5 Q47 50 43 50 H21 Q17 50 18 47.5Z" fill="#e8407a"/>
+      <circle cx="29" cy="37" r="2.2" fill="#e8407a"/><circle cx="35" cy="32" r="1.6" fill="#e8407a"/>
+    </svg>
+    <span>Prayog AI</span>
+  </a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="../index.html#pillars">Pillars</a>
+    <a href="../index.html#metro">Metro map</a>
+    <a href="../index.html#languages" class="nav-wide">Languages</a>
+    <a href="../karobaar/index.html" class="nav-blog">Karobaar Gym</a>
+  </nav>
+</header>
+
+<main id="main" class="project-page" style="--pc:#ffb020; --lc:#e09400">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Prayog AI</a> › <a href="../pillars/environments.html">RL Environments</a> › <span>Karobaar Gym</span></nav>
+<section class="proj-hero">
+  <div class="proj-hero-copy">
+    <p class="eyebrow reveal"><span lang="hi">कारोबार</span> · business</p>
+    <h1 class="reveal">Karobaar Gym</h1>
+    <p class="lines reveal"><span class="chip-label">Lines</span><a class="line-chip" href="../pillars/environments.html"><i style="--lc:#e09400"></i>RL Environments</a><a class="line-chip" href="../pillars/models.html"><i style="--lc:#e8407a"></i>Models</a><a class="line-chip" href="../pillars/evaluation.html"><i style="--lc:#3d3a8c"></i>Evaluation</a></p>
+    <p class="lede reveal">An AI agent runs a simulated Indian business for weeks. The agent is the seller. Customers, suppliers and prices come from a simulator that draws them from realistic distributions, and the books are kept honestly. In KiranaBench, four open models ran a kirana shop (a neighbourhood grocery) for 30 days. One made money, ₹13,683, while a scripted shopkeeper made ₹1,03,434 in the same shops. Because the books are honest, profit is a reward we can train on: a Qwen3.5-4B we trained now makes 83% of the scripted owner&#x27;s weekly profit on shops it never saw.</p>
+    <p class="gym-note">Part of <b>BharatGym</b>, with Tool-calling Environments and BharatGUI.</p><div class="cta cta-left"><a class="btn btn-primary" href="../karobaar/index.html">Open the Karobaar Gym site <span aria-hidden="true">→</span></a></div>
+  </div>
+  <div class="world-art proj-art reveal" style="--accent:#ffb020">      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="A robot in a gym lifts a dumbbell with one hand and checks a shop's ledger on a tablet with the other, while a truck runs on a treadmill and small model businesses sit on the weight rack">
+  <style>
+    .kg-curl { animation: kg-curl 2.4s ease-in-out infinite; transform-box: view-box; transform-origin: 318px 300px; }
+    @keyframes kg-curl { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-38deg); } }
+    .kg-belt { animation: kg-belt .6s linear infinite; }
+    @keyframes kg-belt { to { transform: translateX(-24px); } }
+    .kg-bounce { animation: kg-bounce .3s ease-in-out infinite alternate; }
+    @keyframes kg-bounce { to { transform: translateY(-3px); } }
+    .kg-wheel { animation: kg-spin .5s linear infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes kg-spin { to { transform: rotate(360deg); } }
+    .kg-blink { animation: kg-blink 4s steps(1) infinite; }
+    @keyframes kg-blink { 0%, 92% { opacity: 1; } 93%, 97% { opacity: 0; } }
+    .kg-line { stroke-dasharray: 200; animation: kg-line 3s ease-in-out infinite; }
+    @keyframes kg-line { 0% { stroke-dashoffset: 200; } 60%, 100% { stroke-dashoffset: 0; } }
+    .kg-coin { animation: kg-coin 2.4s ease-in infinite; }
+    .kg-coin.d2 { animation-delay: -1.2s; }
+    @keyframes kg-coin { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(-70px); opacity: 0; } }
+    .kg-sweat { animation: kg-sweat 2.4s ease-in infinite; }
+    @keyframes kg-sweat { 0%, 40% { transform: translateY(0); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(26px); opacity: 0; } }
+    .kg-ant { animation: kg-ant 1s ease-in-out infinite alternate; }
+    @keyframes kg-ant { to { fill: #ffb020; } }
+    .kg-t { font-family: "Baloo 2", system-ui, sans-serif; font-weight: 800; fill: #1f1a2e; stroke: none; }
+    .kg-s { font-family: Nunito, system-ui, sans-serif; font-weight: 900; fill: #1f1a2e; stroke: none; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <!-- wall and floor -->
+  <rect width="800" height="560" fill="#fff1d6"/>
+  <g opacity=".5" stroke="#e8d3b0" stroke-width="3">
+    <path d="M0 120 H800 M0 220 H800 M0 320 H800"/>
+  </g>
+  <rect x="0" y="440" width="800" height="120" fill="#c98a4b"/>
+  <g stroke="#a86f38" stroke-width="3"><path d="M0 476 H800 M0 514 H800 M120 440 V476 M300 476 V514 M520 440 V476 M680 476 V514 M60 514 V560 M420 514 V560"/></g>
+  <path d="M0 440 H800" stroke="#1f1a2e" stroke-width="3"/>
+
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- banner -->
+    <rect x="236" y="24" width="328" height="64" rx="12" fill="#ffb020"/>
+    <path d="M236 40 L210 56 L236 72 M564 40 L590 56 L564 72" fill="#e8407a"/>
+    <text x="400" y="68" text-anchor="middle" class="kg-t" font-size="34">कारोबार GYM</text>
+
+    <!-- scoreboard -->
+    <rect x="40" y="40" width="148" height="104" rx="10" fill="#1f1a2e"/>
+    <text x="114" y="70" text-anchor="middle" class="kg-s" font-size="14" fill="#ffb020" style="fill:#ffb020">DAY</text>
+    <text x="114" y="108" text-anchor="middle" class="kg-t" font-size="40" style="fill:#b6f0c0">30</text>
+    <text x="114" y="132" text-anchor="middle" class="kg-s" font-size="12" style="fill:#fff8ec">NET WORTH ▲</text>
+
+    <!-- treadmill with a truck -->
+    <g>
+      <path d="M40 430 L60 380 H250 L262 430Z" fill="#8a8396"/>
+      <rect x="54" y="372" width="200" height="14" rx="7" fill="#55506a"/>
+      <clipPath id="kg-beltclip"><rect x="58" y="374" width="192" height="10"/></clipPath>
+      <g clip-path="url(#kg-beltclip)"><g class="kg-belt" stroke="#8a8396" stroke-width="3"><path d="M60 374 v10 M84 374 v10 M108 374 v10 M132 374 v10 M156 374 v10 M180 374 v10 M204 374 v10 M228 374 v10 M252 374 v10 M276 374 v10"/></g></g>
+      <path d="M242 380 L262 280 H286" fill="none" stroke-width="5"/>
+      <rect x="262" y="262" width="44" height="26" rx="5" fill="#bfe6ff"/>
+      <text x="284" y="281" text-anchor="middle" class="kg-s" font-size="11">km/h</text>
+      <!-- truck -->
+      <g class="kg-bounce">
+        <rect x="84" y="318" width="96" height="46" rx="4" fill="#ff7a29"/>
+        <path d="M92 326 H172 M92 340 H172" stroke="#ffb020" stroke-width="4"/>
+        <path d="M180 330 H206 Q220 332 222 350 V364 H180Z" fill="#3d3a8c"/>
+        <rect x="188" y="336" width="20" height="14" rx="3" fill="#bfe6ff"/>
+        <path d="M84 318 Q96 306 112 316 Q128 306 140 316 Q156 306 170 318" fill="none" stroke="#e8407a" stroke-width="3"/>
+      </g>
+      <circle class="kg-wheel" cx="106" cy="368" r="9" fill="#55506a"/>
+      <circle class="kg-wheel" cx="200" cy="368" r="9" fill="#55506a"/>
+    </g>
+
+    <!-- weight rack with tiny businesses -->
+    <g>
+      <rect x="560" y="210" width="12" height="230" fill="#55506a"/>
+      <rect x="748" y="210" width="12" height="230" fill="#55506a"/>
+      <rect x="552" y="296" width="216" height="12" rx="4" fill="#8a8396"/>
+      <rect x="552" y="392" width="216" height="12" rx="4" fill="#8a8396"/>
+      <!-- municipal building -->
+      <rect x="582" y="238" width="72" height="58" fill="#fff8ec"/>
+      <path d="M576 240 L618 214 L660 240Z" fill="#0f8b8d"/>
+      <rect x="610" y="258" width="16" height="38" rx="8" fill="#3d3a8c"/>
+      <rect x="588" y="256" width="14" height="14" rx="3" fill="#bfe6ff"/><rect x="634" y="256" width="14" height="14" rx="3" fill="#bfe6ff"/>
+      <!-- mandap -->
+      <path d="M672 296 V246 M738 296 V246" stroke-width="4"/>
+      <path d="M664 248 Q705 214 746 248Z" fill="#e8407a"/>
+      <path d="M674 256 Q705 276 736 256" fill="none" stroke="#ffb020" stroke-width="5" stroke-dasharray="2 7"/>
+      <!-- kirana -->
+      <rect x="584" y="342" width="76" height="50" fill="#ffe08a"/>
+      <path d="M578 344 H666 L660 358 H584Z" fill="#ff7a29"/>
+      <rect x="596" y="364" width="12" height="14" fill="#e8407a"/><rect x="614" y="366" width="12" height="12" fill="#0f8b8d"/><rect x="632" y="362" width="14" height="16" fill="#3fa34d"/>
+      <!-- staffing hard hat -->
+      <path d="M684 390 Q684 352 712 352 Q740 352 740 390Z" fill="#ffb020"/>
+      <path d="M676 390 H748" stroke-width="5"/>
+      <path d="M712 352 V390" stroke-width="2.5"/>
+    </g>
+
+    <!-- floor shadow -->
+    <ellipse cx="408" cy="446" rx="112" ry="12" fill="#1f1a2e" opacity=".18" stroke="none"/>
+
+    <!-- ===== robot ===== -->
+    <!-- legs -->
+    <rect x="362" y="376" width="30" height="62" rx="10" fill="#c9cbe0"/>
+    <rect x="422" y="376" width="30" height="62" rx="10" fill="#c9cbe0"/>
+    <path d="M352 444 Q352 430 378 430 Q400 430 400 444Z M414 444 Q414 430 438 430 Q462 430 462 444Z" fill="#e8407a"/>
+
+    <!-- right arm (viewer's right) holding the tablet -->
+    <path d="M478 296 Q520 318 530 346" fill="none" stroke-width="18" stroke="#1f1a2e"/>
+    <path d="M478 296 Q520 318 530 346" fill="none" stroke-width="12" stroke="#c9cbe0"/>
+    <g transform="rotate(-8 548 344)">
+      <rect x="484" y="304" width="122" height="88" rx="10" fill="#1f1a2e"/>
+      <rect x="492" y="312" width="106" height="72" rx="5" fill="#fff8ec"/>
+      <text x="500" y="328" class="kg-s" font-size="10">खाता · LEDGER</text>
+      <path d="M500 334 H590" stroke-width="1.5"/>
+      <path class="kg-line" d="M502 376 L522 366 L540 370 L558 352 L574 356 L590 338" fill="none" stroke="#3fa34d" stroke-width="4"/>
+      <circle cx="590" cy="338" r="4" fill="#3fa34d"/>
+    </g>
+    <circle cx="532" cy="350" r="11" fill="#c9cbe0"/>
+    <g class="kg-coin"><circle cx="580" cy="296" r="11" fill="#ffb020"/><text x="580" y="301" text-anchor="middle" class="kg-s" font-size="13">₹</text></g>
+    <g class="kg-coin d2"><circle cx="552" cy="292" r="9" fill="#ffb020"/><text x="552" y="296" text-anchor="middle" class="kg-s" font-size="11">₹</text></g>
+
+    <!-- body -->
+    <rect x="340" y="262" width="138" height="124" rx="26" fill="#e3e5f5"/>
+    <rect x="356" y="280" width="106" height="62" rx="12" fill="#3d3a8c"/>
+    <text x="409" y="306" text-anchor="middle" class="kg-t" font-size="18" style="fill:#ffb020">AGENT</text>
+    <g stroke="none"><circle cx="380" cy="324" r="5" fill="#b6f0c0"/><circle cx="398" cy="324" r="5" fill="#ffb020"/><circle cx="416" cy="324" r="5" fill="#e8407a"/><circle cx="434" cy="324" r="5" fill="#8fd6d0"/></g>
+    <rect x="350" y="356" width="118" height="16" rx="8" fill="#e8407a"/>
+    <!-- sweatband on the head comes later -->
+
+    <!-- left arm (viewer's left) curling a dumbbell -->
+    <g class="kg-curl">
+      <path d="M342 296 Q306 316 296 352" fill="none" stroke-width="18" stroke="#1f1a2e"/>
+      <path d="M342 296 Q306 316 296 352" fill="none" stroke-width="12" stroke="#c9cbe0"/>
+      <circle cx="294" cy="358" r="11" fill="#c9cbe0"/>
+      <rect x="254" y="352" width="80" height="10" rx="5" fill="#55506a"/>
+      <rect x="240" y="334" width="22" height="46" rx="6" fill="#e8407a"/>
+      <rect x="326" y="334" width="22" height="46" rx="6" fill="#e8407a"/>
+      <text x="251" y="362" text-anchor="middle" class="kg-s" font-size="9" style="fill:#fff" transform="rotate(-90 251 358)">GST</text>
+      <text x="337" y="362" text-anchor="middle" class="kg-s" font-size="9" style="fill:#fff" transform="rotate(-90 337 358)">GST</text>
+    </g>
+    <circle cx="342" cy="296" r="12" fill="#c9cbe0"/>
+    <circle cx="478" cy="296" r="12" fill="#c9cbe0"/>
+
+    <!-- neck + head -->
+    <rect x="392" y="240" width="34" height="26" rx="6" fill="#c9cbe0"/>
+    <rect x="344" y="152" width="130" height="96" rx="28" fill="#e3e5f5"/>
+    <rect x="362" y="170" width="94" height="58" rx="16" fill="#1f1a2e"/>
+    <g class="kg-blink" stroke="none">
+      <rect x="380" y="186" width="16" height="22" rx="8" fill="#8fd6d0"/>
+      <rect x="422" y="186" width="16" height="22" rx="8" fill="#8fd6d0"/>
+    </g>
+    <path d="M396 216 Q409 224 422 216" fill="none" stroke="#8fd6d0" stroke-width="3"/>
+    <!-- sweatband -->
+    <path d="M346 172 Q409 156 472 172 L472 160 Q409 144 346 160Z" fill="#e8407a"/>
+    <!-- antenna -->
+    <path d="M409 150 V124" stroke-width="4"/>
+    <circle class="kg-ant" cx="409" cy="118" r="9" fill="#e8407a"/>
+    <!-- ears -->
+    <rect x="332" y="186" width="14" height="30" rx="5" fill="#c9cbe0"/>
+    <rect x="472" y="186" width="14" height="30" rx="5" fill="#c9cbe0"/>
+    <!-- sweat -->
+    <path class="kg-sweat" d="M480 166 Q486 176 480 180 Q474 176 480 166Z" fill="#bfe6ff" stroke-width="2"/>
+
+    <!-- towel on rack -->
+    <path d="M560 210 H572 V250 Q566 256 560 250Z" fill="#8fd6d0"/>
+  </g>
+</svg>
+</div>
+</section>
+
+<section class="section" id="environments">
+  <div class="section-head">
+    <p class="eyebrow reveal">Environments</p>
+    <h2 class="reveal">11 environments in Karobaar Gym</h2>
+  </div>
+  <ul class="envs"><li class="reveal"><b>Kirana store</b><span>A neighbourhood grocery</span></li><li class="reveal"><b>Truck fleet</b><span>Loads, routes and drivers</span></li><li class="reveal"><b>Municipal corporation</b><span>Departments and accounts</span></li><li class="reveal"><b>Wedding planning</b><span>Vendors, guests and payments</span></li><li class="reveal"><b>Staffing agency</b><span>Workers and placements</span></li><li class="reveal"><b>Kabaadi wala</b><span>A scrap dealer</span></li><li class="reveal"><b>Hotel</b><span>Rooms and bookings</span></li><li class="reveal"><b>Cloud kitchen</b><span>Orders and delivery</span></li><li class="reveal"><b>Mandi arhtiya</b><span>A commission agent in a grain market</span></li><li class="reveal"><b>Dairy co-operative</b><span>Milk collection and payments</span></li><li class="reveal"><b>Property management</b><span>Tenants and rent</span></li></ul>
+</section>
+</main>
+
+<footer class="foot">
+  <p><b>Prayog AI</b> · the Bharat AI Prayogshala at BITS Pilani</p>
+  <p class="foot-links"><a href="../pillars/datasets.html">Datasets</a> · <a href="../pillars/environments.html">RL Environments</a> · <a href="../pillars/models.html">Models</a> · <a href="../pillars/evaluation.html">Evaluation</a> · <a href="../pillars/safety.html">AI Safety</a> · <a href="../pillars/interpretability.html">Interpretability</a> · <a href="../pillars/self-improvement.html">Self-improvement</a></p>
+</footer>
+<script src="../script.js"></script>
+<script src="../prayog.js"></script>
+<script src="../scrollbuddy.js"></script>
+</body>
+</html>

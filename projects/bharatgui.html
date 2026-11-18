@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BharatGUI · Prayog AI</title>
+  <meta name="description" content="Our Indian analogue of InfiniteWeb: Indian websites for agents that use the screen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../landing.css">
+  <link rel="stylesheet" href="../prayog.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2064%2064%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2228%22%20fill%3D%22%23ffb020%22%20stroke%3D%22%231f1a2e%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M26%2014%20H38%20M28%2014%20V27%20L17%2046%20Q15%2051%2021%2051%20H43%20Q49%2051%2047%2046%20L36%2027%20V14%22%20fill%3D%22%23fff8ec%22%20stroke%3D%22%231f1a2e%22%20stroke-width%3D%223.5%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M21.5%2042%20H42.5%20L46%2047.5%20Q47%2050%2043%2050%20H21%20Q17%2050%2018%2047.5Z%22%20fill%3D%22%23e8407a%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2229%22%20cy%3D%2237%22%20r%3D%222.2%22%20fill%3D%22%23e8407a%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2232%22%20r%3D%221.6%22%20fill%3D%22%23e8407a%22%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <a href="../index.html" class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="28" fill="#ffb020" stroke="#1f1a2e" stroke-width="4"/>
+      <path d="M26 14 H38 M28 14 V27 L17 46 Q15 51 21 51 H43 Q49 51 47 46 L36 27 V14" fill="#fff8ec" stroke="#1f1a2e" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M21.5 42 H42.5 L46 47.5 Q47 50 43 50 H21 Q17 50 18 47.5Z" fill="#e8407a"/>
+      <circle cx="29" cy="37" r="2.2" fill="#e8407a"/><circle cx="35" cy="32" r="1.6" fill="#e8407a"/>
+    </svg>
+    <span>Prayog AI</span>
+  </a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="../index.html#pillars">Pillars</a>
+    <a href="../index.html#metro">Metro map</a>
+    <a href="../index.html#languages" class="nav-wide">Languages</a>
+    <a href="../karobaar/index.html" class="nav-blog">Karobaar Gym</a>
+  </nav>
+</header>
+
+<main id="main" class="project-page" style="--pc:#ffb020; --lc:#e09400">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Prayog AI</a> › <a href="../pillars/environments.html">RL Environments</a> › <span>BharatGUI</span></nav>
+<section class="proj-hero">
+  <div class="proj-hero-copy">
+    <p class="eyebrow reveal"><span lang="hi">स्क्रीन</span> · GUI agents</p>
+    <h1 class="reveal">BharatGUI</h1>
+    <p class="lines reveal"><span class="chip-label">Lines</span><a class="line-chip" href="../pillars/environments.html"><i style="--lc:#e09400"></i>RL Environments</a><a class="line-chip" href="../pillars/evaluation.html"><i style="--lc:#3d3a8c"></i>Evaluation</a></p>
+    <p class="lede reveal">GUI agents use a computer the way a person does: they read a screenshot, then click and type. Much Indian software, like state portals, has no API, so an agent that helps someone who does not read English has to work on the screen. Our Indian analogue of InfiniteWeb builds Indian websites over the same backends as our tool-calling environments. We have built two full replicas so far: a GST-style portal with 191 pages in English and Hindi, and a railway-booking site. Together they hold 226 tasks, and our reference solution passes every one.</p>
+    <p class="gym-note">Part of <b>BharatGym</b>, with Tool-calling Environments and Karobaar Gym.</p>
+  </div>
+  <div class="world-art proj-art reveal" style="--accent:#ffb020">      <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A laptop shows a Hindi government portal while an agent's cursor fills in the form">
+        <rect width="800" height="560" fill="#e6f6f4"/>
+        <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round">
+          <!-- desk -->
+          <rect x="-10" y="470" width="820" height="100" fill="#c98a4b"/>
+          <!-- laptop -->
+          <rect x="140" y="78" width="520" height="350" rx="18" fill="#1f1a2e"/>
+          <rect x="160" y="98" width="480" height="310" rx="6" fill="#fff8ec"/>
+          <path d="M96 428 H704 L732 470 H68Z" fill="#8a8396"/>
+          <rect x="350" y="436" width="100" height="12" rx="6" fill="#55506a"/>
+          <!-- portal header -->
+          <rect x="160" y="98" width="480" height="48" fill="#ff7a29"/>
+          <circle cx="190" cy="122" r="14" fill="#ffb020"/>
+          <text x="214" y="129" class="svg-sign small light">ई-सेवा पोर्टल</text>
+          <g stroke-width="2">
+            <rect x="520" y="110" width="44" height="24" rx="12" fill="#fff8ec"/>
+            <rect x="570" y="110" width="56" height="24" rx="12" fill="#3d3a8c"/>
+          </g>
+          <text x="542" y="127" text-anchor="middle" class="svg-coin">EN</text>
+          <text x="598" y="127" text-anchor="middle" class="svg-coin" fill="#fff">हिन्दी</text>
+          <!-- form -->
+          <text x="186" y="180" class="svg-big">जीएसटी रिटर्न दाखिल करें</text>
+          <g stroke-width="2.5">
+            <text x="186" y="214" class="svg-bubble" stroke="none">जीएसटीआईएन</text>
+            <rect x="186" y="222" width="250" height="34" rx="6" fill="#fff"/>
+            <text x="186" y="284" class="svg-bubble" stroke="none">कर अवधि</text>
+            <rect x="186" y="292" width="250" height="34" rx="6" fill="#fff"/>
+          </g>
+          <text x="198" y="245" class="svg-bubble" stroke="none">27ABCDE1234F1Z5</text>
+          <text x="198" y="315" class="svg-bubble" stroke="none">अक्टूबर 2026 ▾</text>
+          <g class="typing-caret"><rect x="372" y="229" width="3" height="20" fill="#1f1a2e" stroke="none"/></g>
+          <rect class="tap-btn" x="186" y="346" width="150" height="40" rx="20" fill="#0f8b8d"/>
+          <text x="261" y="372" text-anchor="middle" class="svg-sign small light">जमा करें</text>
+          <!-- OTP panel -->
+          <rect x="468" y="200" width="148" height="126" rx="10" fill="#fff"/>
+          <text x="542" y="226" text-anchor="middle" class="svg-bubble" stroke="none">OTP</text>
+          <g stroke-width="2.5" fill="#fff8ec">
+            <rect x="482" y="240" width="26" height="32" rx="5"/><rect x="514" y="240" width="26" height="32" rx="5"/>
+            <rect x="546" y="240" width="26" height="32" rx="5"/><rect x="578" y="240" width="26" height="32" rx="5"/>
+          </g>
+          <text x="495" y="263" text-anchor="middle" class="svg-big" stroke="none">4</text>
+          <text x="527" y="263" text-anchor="middle" class="svg-big" stroke="none">8</text>
+          <text x="559" y="263" text-anchor="middle" class="svg-big" stroke="none">1</text>
+          <text x="542" y="306" text-anchor="middle" class="svg-coin" stroke="none">SMS से आया</text>
+          <!-- agent cursor -->
+          <g class="agent-cursor-b"><path d="M0 0 L0 30 L8 23 L14 36 L20 33 L14 21 L25 21Z" fill="#fff" stroke-width="3"/></g>
+          <!-- screenshot frame -->
+          <g class="snap" fill="none" stroke="#e8407a" stroke-width="5" stroke-linecap="round">
+            <path d="M150 124 V88 H186 M614 88 H650 V124 M650 382 V418 H614 M186 418 H150 V382"/>
+          </g>
+          <!-- thought bubble of the agent -->
+          <g class="pop-bubble">
+            <rect x="560" y="18" width="212" height="52" rx="16" fill="#fff"/>
+            <path d="M600 70 L590 88 L620 70Z" fill="#fff"/>
+            <text x="666" y="50" text-anchor="middle" class="svg-bubble" stroke="none">screenshot → click → type</text>
+          </g>
+          <!-- language tags -->
+          <g class="lang-float" stroke-width="2.5">
+            <rect x="24" y="150" width="92" height="34" rx="17" fill="#ffb020"/>
+            <rect x="24" y="200" width="92" height="34" rx="17" fill="#ffadc8"/>
+            <rect x="684" y="250" width="92" height="34" rx="17" fill="#b9b6ff"/>
+            <rect x="684" y="300" width="92" height="34" rx="17" fill="#a6dca6"/>
+          </g>
+          <text x="70" y="173" text-anchor="middle" class="svg-bubble" stroke="none">हिन्दी</text>
+          <text x="70" y="223" text-anchor="middle" class="svg-bubble" stroke="none">தமிழ்</text>
+          <text x="730" y="273" text-anchor="middle" class="svg-bubble" stroke="none">বাংলা</text>
+          <text x="730" y="323" text-anchor="middle" class="svg-bubble" stroke="none">ಕನ್ನಡ</text>
+        </g>
+      </svg>
+</div>
+</section>
+
+<section class="section" id="environments">
+  <div class="section-head">
+    <p class="eyebrow reveal">Environments</p>
+    <h2 class="reveal">2 environments in BharatGUI</h2>
+  </div>
+  <ul class="envs"><li class="reveal"><b>GST-style portal</b><span>191 pages in English and Hindi, 117 tasks</span></li><li class="reveal"><b>Railway booking</b><span>109 tasks</span></li></ul>
+</section>
+</main>
+
+<footer class="foot">
+  <p><b>Prayog AI</b> · the Bharat AI Prayogshala at BITS Pilani</p>
+  <p class="foot-links"><a href="../pillars/datasets.html">Datasets</a> · <a href="../pillars/environments.html">RL Environments</a> · <a href="../pillars/models.html">Models</a> · <a href="../pillars/evaluation.html">Evaluation</a> · <a href="../pillars/safety.html">AI Safety</a> · <a href="../pillars/interpretability.html">Interpretability</a> · <a href="../pillars/self-improvement.html">Self-improvement</a></p>
+</footer>
+<script src="../script.js"></script>
+<script src="../prayog.js"></script>
+<script src="../scrollbuddy.js"></script>
+</body>
+</html>

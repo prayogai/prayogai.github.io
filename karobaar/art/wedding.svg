@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="At a night wedding, the planner takes a call saying the guest count has grown to 450 while her checklist still shows the hotel unbooked">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Nunito:wght@800;900&amp;display=swap');
+    .wd-flame { animation: wd-flame .9s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: 50% 100%; }
+    .wd-flame2 { animation: wd-flame .7s ease-in-out -.3s infinite alternate; transform-box: fill-box; transform-origin: 50% 100%; }
+    .wd-steam path { animation: wd-steam 2.6s ease-in-out infinite; }
+    .wd-steam path:nth-child(2) { animation-delay: -.9s; } .wd-steam path:nth-child(3) { animation-delay: -1.7s; }
+    .wd-twinkle { animation: wd-twinkle 2.4s ease-in-out infinite alternate; }
+    .wd-twinkle2 { animation: wd-twinkle 2.4s ease-in-out -1.2s infinite alternate; }
+    .wd-ring { animation: wd-ring 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: 30% 100%; }
+    @keyframes wd-flame { from { transform: scale(1,1) } to { transform: scale(.9,1.12) } }
+    @keyframes wd-steam { 0% { opacity: 0; transform: translateY(6px) } 40% { opacity: .9 } 100% { opacity: 0; transform: translateY(-16px) } }
+    @keyframes wd-twinkle { from { opacity: .35 } to { opacity: 1 } }
+    @keyframes wd-ring { 0%,70%,100% { transform: rotate(0) } 75% { transform: rotate(-2deg) } 80% { transform: rotate(2deg) } 85% { transform: rotate(-1deg) } }
+    @media (prefers-reduced-motion: reduce) { .wd-flame,.wd-flame2,.wd-steam path,.wd-twinkle,.wd-twinkle2,.wd-ring { animation: none } }
+  </style>
+  <defs>
+    <linearGradient id="wd-night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2866"/><stop offset="1" stop-color="#4b3f8e"/>
+    </linearGradient>
+    <linearGradient id="wd-drape" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f7d9b8"/><stop offset=".5" stop-color="#fff0dc"/><stop offset="1" stop-color="#f7d9b8"/>
+    </linearGradient>
+    <linearGradient id="wd-backcloth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9e1f45"/><stop offset="1" stop-color="#c22a5f"/>
+    </linearGradient>
+    <radialGradient id="wd-fireglow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity=".9"/><stop offset=".5" stop-color="#ff7a29" stop-opacity=".25"/><stop offset="1" stop-color="#ff7a29" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wd-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e2c193"/><stop offset="1" stop-color="#f0d6ae"/>
+    </linearGradient>
+    <linearGradient id="wd-steel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9c98ab"/><stop offset=".3" stop-color="#eeedf3"/><stop offset=".6" stop-color="#c9c6d3"/><stop offset="1" stop-color="#8e8a9d"/>
+    </linearGradient>
+    <pattern id="wd-lights" width="26" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="2.2" fill="#ffe08a"/><circle cx="19" cy="17" r="2.2" fill="#ffe08a"/>
+    </pattern>
+    <pattern id="wd-lights2" width="26" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="19" cy="6" r="2" fill="#ffd0e0"/><circle cx="6" cy="17" r="2" fill="#ffd0e0"/>
+    </pattern>
+    <pattern id="wd-ladi" width="13" height="11" patternUnits="userSpaceOnUse">
+      <rect width="13" height="11" fill="none"/>
+      <path d="M6.5 0 v11" stroke="#2c7d38" stroke-width="1"/>
+      <circle cx="6.5" cy="5.5" r="4.6" fill="#ff8c1a" stroke="#c45a00" stroke-width="1"/>
+    </pattern>
+    <pattern id="wd-ladi2" width="13" height="11" patternUnits="userSpaceOnUse">
+      <path d="M6.5 0 v11" stroke="#2c7d38" stroke-width="1"/>
+      <circle cx="6.5" cy="5.5" r="4.6" fill="#ffc21a" stroke="#c48a00" stroke-width="1"/>
+    </pattern>
+    <pattern id="wd-zari" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="1.6" fill="#ffd27a"/>
+    </pattern>
+    <clipPath id="wd-frame"><rect width="800" height="560"/></clipPath>
+    <clipPath id="wd-ladiclip"><path d="M292 176 H528 V250 q-12 26 -24 0 q-12 30 -24 0 q-12 22 -24 0 q-12 34 -24 0 q-12 22 -24 0 q-12 30 -24 0 q-12 22 -24 0 q-12 34 -24 0 q-12 22 -24 0 q-12 28 -24 0z"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#wd-frame)">
+  <!-- night and the tent -->
+  <rect width="800" height="560" fill="url(#wd-night)"/>
+  <rect x="0" y="40" width="800" height="360" fill="url(#wd-lights)" class="wd-twinkle" opacity=".6"/>
+  <rect x="0" y="40" width="800" height="360" fill="url(#wd-lights2)" class="wd-twinkle2" opacity=".5"/>
+  <path d="M0 40 H120 Q100 220 120 404 H0Z" fill="url(#wd-drape)" opacity=".85"/>
+  <path d="M800 40 H680 Q700 220 680 404 H800Z" fill="url(#wd-drape)" opacity=".85"/>
+  <g stroke="#e3b98c" stroke-width="2" fill="none" opacity=".8">
+    <path d="M30 60 Q24 220 32 404 M66 60 Q58 220 70 404 M98 60 Q90 220 104 404"/>
+    <path d="M770 60 Q776 220 768 404 M734 60 Q742 220 730 404 M702 60 Q710 220 696 404"/>
+  </g>
+  <circle cx="410" cy="350" r="150" fill="url(#wd-fireglow)" class="wd-twinkle"/>
+
+  <!-- floor, carpet and rangoli -->
+  <rect x="0" y="400" width="800" height="160" fill="url(#wd-floor)"/>
+  <path d="M330 402 H490 L600 560 H220Z" fill="#b8324f"/>
+  <path d="M342 402 H478 L578 560 H242Z" fill="none" stroke="#ffb020" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+  <g fill="#e8407a" opacity=".9">
+    <ellipse cx="380" cy="440" rx="4" ry="2.4"/><ellipse cx="452" cy="470" rx="4" ry="2.4" transform="rotate(30 452 470)"/>
+    <ellipse cx="340" cy="500" rx="4" ry="2.4" transform="rotate(-20 340 500)"/><ellipse cx="300" cy="540" rx="4" ry="2.4"/>
+    <ellipse cx="520" cy="530" rx="4" ry="2.4" transform="rotate(40 520 530)"/><ellipse cx="430" cy="430" rx="4" ry="2.4"/>
+  </g>
+  <g fill="#ffb020"><ellipse cx="406" cy="452" rx="3.5" ry="2"/><ellipse cx="360" cy="472" rx="3.5" ry="2"/><ellipse cx="480" cy="505" rx="3.5" ry="2"/><ellipse cx="270" cy="525" rx="3.5" ry="2"/></g>
+
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- shamiana swags across the top -->
+    <path d="M-10 0 H810 V34 Q760 74 710 34 Q660 74 610 34 Q560 74 510 34 Q460 74 410 34 Q360 74 310 34 Q260 74 210 34 Q160 74 110 34 Q60 74 10 34 Q0 50 -10 40Z" fill="#e8407a"/>
+    <g stroke="none">
+      <path d="M110 0 H210 V34 Q160 74 110 34Z" fill="#ffb020"/>
+      <path d="M310 0 H410 V34 Q360 74 310 34Z" fill="#ffb020"/>
+      <path d="M510 0 H610 V34 Q560 74 510 34Z" fill="#ffb020"/>
+      <path d="M710 0 H810 V34 Q760 74 710 34Z" fill="#ffb020"/>
+      <path d="M-10 0 H810 V12 H-10Z" fill="#1f1a2e" opacity=".15"/>
+    </g>
+    <path d="M-10 34 H810 M-10 0 V40" fill="none" stroke="none"/>
+    <path d="M10 34 Q60 74 110 34 Q160 74 210 34 Q260 74 310 34 Q360 74 410 34 Q460 74 510 34 Q560 74 610 34 Q660 74 710 34 Q760 74 810 34" fill="none"/>
+    <g stroke-width="2">
+      <path d="M110 34 v16" /><circle cx="110" cy="54" r="5" fill="#ffb020"/>
+      <path d="M210 34 v16" /><circle cx="210" cy="54" r="5" fill="#e8407a"/>
+      <path d="M310 34 v16" /><circle cx="310" cy="54" r="5" fill="#ffb020"/>
+      <path d="M410 34 v16" /><circle cx="410" cy="54" r="5" fill="#e8407a"/>
+      <path d="M510 34 v16" /><circle cx="510" cy="54" r="5" fill="#ffb020"/>
+      <path d="M610 34 v16" /><circle cx="610" cy="54" r="5" fill="#e8407a"/>
+      <path d="M710 34 v16" /><circle cx="710" cy="54" r="5" fill="#ffb020"/>
+    </g>
+
+    <!-- string lights -->
+    <path d="M-10 70 Q200 120 410 84 Q620 120 810 70" fill="none" stroke-width="2"/>
+    <g stroke-width="1.5">
+      <circle cx="40" cy="80" r="5" fill="#ffe08a" class="wd-twinkle"/><circle cx="100" cy="92" r="5" fill="#ff8fb3" class="wd-twinkle2"/>
+      <circle cx="160" cy="100" r="5" fill="#ffe08a" class="wd-twinkle"/><circle cx="220" cy="103" r="5" fill="#bfe6ff" class="wd-twinkle2"/>
+      <circle cx="280" cy="100" r="5" fill="#ffe08a" class="wd-twinkle"/><circle cx="340" cy="93" r="5" fill="#ff8fb3" class="wd-twinkle2"/>
+      <circle cx="480" cy="93" r="5" fill="#ff8fb3" class="wd-twinkle2"/><circle cx="540" cy="100" r="5" fill="#ffe08a" class="wd-twinkle"/>
+      <circle cx="600" cy="103" r="5" fill="#bfe6ff" class="wd-twinkle2"/><circle cx="660" cy="100" r="5" fill="#ffe08a" class="wd-twinkle"/>
+      <circle cx="720" cy="92" r="5" fill="#ff8fb3" class="wd-twinkle2"/><circle cx="780" cy="80" r="5" fill="#ffe08a" class="wd-twinkle"/>
+    </g>
+
+    <!-- mandap -->
+    <rect x="292" y="176" width="236" height="210" fill="url(#wd-backcloth)"/>
+    <rect x="292" y="176" width="236" height="210" fill="url(#wd-zari)" stroke="none"/>
+    <path d="M292 176 h236" stroke-width="2"/>
+    <!-- marigold ladis hanging from the canopy -->
+    <g clip-path="url(#wd-ladiclip)">
+      <rect x="292" y="176" width="117" height="110" fill="url(#wd-ladi)" stroke="none"/>
+      <rect x="409" y="176" width="119" height="110" fill="url(#wd-ladi2)" stroke="none"/>
+    </g>
+    <!-- platform -->
+    <path d="M246 384 H574 L584 404 H236Z" fill="#fff0dc"/>
+    <path d="M236 404 H584 V416 H236Z" fill="#e3c69b"/>
+    <path d="M246 388 H574" stroke="#ffb020" stroke-width="3" stroke-dasharray="1 10"/>
+    <!-- pillars wrapped in garlands -->
+    <g>
+      <rect x="262" y="160" width="26" height="226" fill="#fff0dc"/>
+      <rect x="532" y="160" width="26" height="226" fill="#fff0dc"/>
+      <rect x="280" y="160" width="8" height="226" fill="#e9cfa7" stroke="none"/>
+      <rect x="550" y="160" width="8" height="226" fill="#e9cfa7" stroke="none"/>
+      <path d="M262 180 l26 18 M262 214 l26 18 M262 248 l26 18 M262 282 l26 18 M262 316 l26 18 M262 350 l26 18" stroke="#ff8c1a" stroke-width="7" stroke-dasharray="0 8"/>
+      <path d="M532 180 l26 18 M532 214 l26 18 M532 248 l26 18 M532 282 l26 18 M532 316 l26 18 M532 350 l26 18" stroke="#ff8c1a" stroke-width="7" stroke-dasharray="0 8"/>
+      <rect x="256" y="374" width="38" height="14" rx="3" fill="#ffb020"/>
+      <rect x="526" y="374" width="38" height="14" rx="3" fill="#ffb020"/>
+    </g>
+    <!-- side drapes tied at the pillars -->
+    <path d="M288 176 Q312 230 296 290 Q306 300 316 292 Q326 230 300 176Z" fill="#ff8fb3" stroke-width="2.5"/>
+    <path d="M532 176 Q508 230 524 290 Q514 300 504 292 Q494 230 520 176Z" fill="#ff8fb3" stroke-width="2.5"/>
+    <!-- canopy with name board -->
+    <path d="M246 164 Q260 120 300 118 Q340 70 410 66 Q480 70 520 118 Q560 120 574 164Z" fill="#e8407a"/>
+    <path d="M300 118 Q340 70 410 66 Q480 70 520 118" fill="none" stroke="#ffb020" stroke-width="5"/>
+    <path d="M410 66 v-18" stroke-width="3"/><path d="M402 52 q8 -16 16 0 q-8 8 -16 0z" fill="#ffb020"/>
+    <circle cx="300" cy="118" r="7" fill="#ffb020"/><circle cx="520" cy="118" r="7" fill="#ffb020"/>
+    <rect x="240" y="150" width="340" height="32" rx="8" fill="#ffb020"/>
+    <path d="M250 166 q8 -10 16 0 q8 10 16 0 M538 166 q8 -10 16 0 q8 10 16 0" fill="none" stroke="#c22a5f" stroke-width="2.5"/>
+    <text x="410" y="174" text-anchor="middle" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="22" fill="#1f1a2e" stroke="none">Riya <tspan fill="#c22a5f">weds</tspan> Kabir</text>
+
+    <!-- the groom -->
+    <g>
+      <path d="M456 346 v38 h10 v-38z M470 346 v38 h10 v-38z" fill="#fff8ec" stroke-width="2.5"/>
+      <path d="M452 384 q0 -6 8 -6 h8 l2 8 h-18z M468 386 l2 -8 h8 q8 0 8 6 v2z" fill="#ffb020" stroke-width="2"/>
+      <path d="M446 290 Q468 282 490 290 L498 354 H438Z" fill="#fff3dc"/>
+      <path d="M478 288 Q488 290 490 290 L498 354 H482 Q486 320 478 288Z" fill="#ecd9b6" stroke="none"/>
+      <path d="M446 290 Q468 282 490 290 L498 354 H438Z" fill="none"/>
+      <path d="M468 296 v54" stroke="#e3c69b" stroke-width="2"/>
+      <g fill="#ffb020" stroke-width="1.2"><circle cx="468" cy="300" r="2.4"/><circle cx="468" cy="312" r="2.4"/><circle cx="468" cy="324" r="2.4"/><circle cx="468" cy="336" r="2.4"/></g>
+      <path d="M488 290 L448 350 L440 344 L478 288Z" fill="#c22a5f" stroke-width="2.5"/>
+      <path d="M448 350 q-4 6 -10 8" fill="none" stroke="#c22a5f" stroke-width="6"/>
+      <rect x="462" y="276" width="12" height="12" fill="#b87a3f" stroke-width="2.5"/>
+      <path d="M460 286 h16 v6 h-16z" fill="#fff3dc" stroke-width="2"/>
+      <ellipse cx="468" cy="262" rx="15" ry="17" fill="#c68642"/>
+      <path d="M461 256 q3 -2 6 0 M471 256 q3 -2 6 0" fill="none" stroke-width="2"/>
+      <circle cx="463" cy="262" r="1.8" fill="#1f1a2e" stroke="none"/><circle cx="474" cy="262" r="1.8" fill="#1f1a2e" stroke="none"/>
+      <path d="M463 271 q5 -3 10 0 q-5 1 -10 0z" fill="#2a1d1a" stroke-width="1.5"/>
+      <path d="M464 275 q4 3 8 0" fill="none" stroke-width="2"/>
+      <path d="M450 252 Q450 228 468 226 Q488 226 488 252 Q478 246 468 247 Q458 246 450 252Z" fill="#ff7a29"/>
+      <path d="M452 242 Q468 234 486 242 M451 248 Q468 240 487 248" fill="none" stroke="#ffb020" stroke-width="2.5"/>
+      <path d="M486 240 q14 6 12 28 q-6 -10 -12 -14z" fill="#ff7a29" stroke-width="2.5"/>
+      <path d="M470 232 q2 -16 12 -22 q-2 12 -8 22z" fill="#fff8ec" stroke-width="2"/>
+      <circle cx="470" cy="236" r="4.5" fill="#e8407a" stroke-width="2"/>
+      <path d="M449 288 Q446 330 458 346 M487 288 Q492 330 478 346" fill="none" stroke="#ff8c1a" stroke-width="7" stroke-dasharray="0 7"/>
+      <path d="M452 290 Q450 326 462 342 M484 290 Q488 326 476 342" fill="none" stroke="#e8407a" stroke-width="5" stroke-dasharray="0 14"/>
+      <path d="M448 296 Q440 316 462 318 L474 318 Q496 316 488 296" fill="#fff3dc" stroke-width="2.5"/>
+      <path d="M462 318 l6 -14 l6 14z" fill="#c68642" stroke-width="2"/>
+    </g>
+
+    <!-- the bride -->
+    <g>
+      <path d="M326 318 Q312 352 298 386 L406 386 Q392 352 378 318Z" fill="#d62839"/>
+      <path d="M302 374 L402 374 L406 386 L298 386Z" fill="#ffb020" stroke-width="2.5"/>
+      <g fill="#ffd27a" stroke="none"><circle cx="330" cy="350" r="2"/><circle cx="352" cy="340" r="2"/><circle cx="374" cy="350" r="2"/><circle cx="318" cy="366" r="2"/><circle cx="342" cy="362" r="2"/><circle cx="364" cy="364" r="2"/><circle cx="388" cy="366" r="2"/></g>
+      <path d="M334 292 Q352 286 370 292 L376 320 L328 320Z" fill="#d62839"/>
+      <path d="M340 292 Q352 306 364 292" fill="none" stroke="#ffb020" stroke-width="3"/>
+      <path d="M328 320 h48" stroke="#ffb020" stroke-width="4"/>
+      <rect x="346" y="278" width="12" height="12" fill="#b87a3f" stroke-width="2.5"/>
+      <ellipse cx="352" cy="266" rx="15" ry="17" fill="#c68642"/>
+      <path d="M338 258 Q352 244 366 258 Q352 252 338 258Z" fill="#2a1d1a" stroke-width="1.5"/>
+      <path d="M352 250 v6" stroke="#ffb020" stroke-width="1.5"/><circle cx="352" cy="257" r="2.6" fill="#ffb020" stroke-width="1.2"/>
+      <circle cx="352" cy="262" r="1.4" fill="#d62839" stroke="none"/>
+      <path d="M344 266 q3 2 6 0 M355 266 q3 2 6 0" fill="none" stroke-width="2"/>
+      <path d="M347 276 q5 3 10 0" fill="none" stroke-width="2"/>
+      <circle cx="359" cy="272" r="3.6" fill="none" stroke="#ffb020" stroke-width="1.5"/>
+      <circle cx="342" cy="272" r="3" fill="#e8407a" opacity=".35" stroke="none"/><circle cx="362" cy="270" r="3" fill="#e8407a" opacity=".35" stroke="none"/>
+      <path d="M342 286 Q352 296 362 286" fill="none" stroke="#ffb020" stroke-width="3"/>
+      <path d="M332 252 Q352 226 372 252 Q384 292 388 354 L374 354 Q372 290 367 260 Q352 244 337 260 Q332 290 330 354 L316 354 Q320 292 332 252Z" fill="#e8407a" fill-opacity=".92"/>
+      <path d="M332 252 Q352 226 372 252 Q384 292 388 354 M316 354 Q320 292 332 252" fill="none" stroke="#ffb020" stroke-width="3.5"/>
+      <path d="M332 252 Q352 226 372 252 Q384 292 388 354 L374 354 Q372 290 367 260 Q352 244 337 260 Q332 290 330 354 L316 354 Q320 292 332 252Z" fill="none"/>
+      <path d="M336 294 Q324 314 344 318 L360 318 Q380 314 368 294" fill="#d62839" stroke-width="2.5"/>
+      <path d="M332 306 l8 6 M334 300 l8 6" stroke="#fff8ec" stroke-width="3"/><path d="M372 306 l-8 6 M370 300 l-8 6" stroke="#fff8ec" stroke-width="3"/>
+      <path d="M346 318 l6 -14 l6 14z" fill="#c68642" stroke-width="2"/>
+      <path d="M349 312 l3 -5 l3 5" fill="none" stroke="#a0401b" stroke-width="1.2"/>
+      <path d="M335 290 Q330 330 344 346 M369 290 Q376 330 360 346" fill="none" stroke="#ff8c1a" stroke-width="7" stroke-dasharray="0 7"/>
+    </g>
+
+    <!-- gathbandhan: his stole tied to her dupatta -->
+    <path d="M386 350 Q412 372 440 350" fill="none" stroke="#ff8fb3" stroke-width="6"/>
+    <path d="M386 350 Q412 372 440 350" fill="none" stroke-width="1.5" stroke-dasharray="3 5"/>
+    <circle cx="413" cy="361" r="6" fill="#ff8fb3" stroke-width="2"/>
+
+    <!-- sacred fire -->
+    <path d="M384 372 H436 L430 388 H390Z" fill="#c8702f"/>
+    <path d="M384 372 H436 V378 H384Z" fill="#a85520" stroke-width="2"/>
+    <path d="M388 380 h44" stroke="#ffb020" stroke-width="2" stroke-dasharray="3 4"/>
+    <g class="wd-flame">
+      <path d="M392 372 C390 356 402 352 404 336 C412 348 414 340 416 330 C424 346 432 352 428 372Z" fill="#ff7a29"/>
+    </g>
+    <g class="wd-flame2" stroke="none">
+      <path d="M398 372 C398 362 406 358 408 348 C412 356 416 352 418 346 C422 358 426 362 422 372Z" fill="#ffb020"/>
+      <path d="M404 372 C404 366 409 362 410 356 C413 362 416 366 415 372Z" fill="#fff4c4"/>
+    </g>
+
+    <!-- urli with floating flowers at the steps -->
+    <g stroke-width="2.5">
+      <path d="M276 404 q0 16 24 16 q24 0 24 -16z" fill="#c8702f"/>
+      <ellipse cx="300" cy="404" rx="24" ry="5" fill="#7fc7d9"/>
+      <circle cx="292" cy="403" r="4" fill="#ff8c1a" stroke-width="1.5"/><circle cx="306" cy="404" r="4" fill="#e8407a" stroke-width="1.5"/>
+      <path d="M496 404 q0 16 24 16 q24 0 24 -16z" fill="#c8702f"/>
+      <ellipse cx="520" cy="404" rx="24" ry="5" fill="#7fc7d9"/>
+      <circle cx="512" cy="404" r="4" fill="#ffc21a" stroke-width="1.5"/><circle cx="527" cy="403" r="4" fill="#e8407a" stroke-width="1.5"/>
+    </g>
+
+    <!-- rangoli at the aisle -->
+    <g stroke-width="2">
+      <ellipse cx="410" cy="514" rx="64" ry="20" fill="#ffb020"/>
+      <ellipse cx="410" cy="514" rx="48" ry="15" fill="#e8407a"/>
+      <ellipse cx="410" cy="514" rx="32" ry="10" fill="#fff8ec"/>
+      <ellipse cx="410" cy="514" rx="16" ry="5" fill="#0f8b8d"/>
+      <path d="M346 514 h-10 M474 514 h10 M410 494 v-8 M410 534 v8" stroke="#3fa34d" stroke-width="5"/>
+    </g>
+
+    <!-- buffet with the caterer -->
+    <g>
+      <path d="M86 300 q-10 -32 10 -40 q4 -14 22 -12 q18 -2 22 12 q20 8 10 40z" fill="#ffffff"/>
+      <path d="M90 296 h56" stroke-width="2.5"/>
+      <ellipse cx="118" cy="320" rx="19" ry="21" fill="#a0672f"/>
+      <path d="M106 314 q4 -3 8 0 M122 314 q4 -3 8 0" fill="none" stroke-width="2"/>
+      <circle cx="110" cy="320" r="2" fill="#1f1a2e" stroke="none"/><circle cx="126" cy="320" r="2" fill="#1f1a2e" stroke="none"/>
+      <path d="M108 331 q10 -6 20 0 q-10 3 -20 0z" fill="#2a1d1a" stroke-width="1.5"/>
+      <path d="M112 336 q6 4 12 0" fill="none" stroke-width="2"/>
+      <path d="M78 424 Q76 360 96 348 L140 348 Q160 360 158 424Z" fill="#ffffff"/>
+      <path d="M104 344 l14 14 l14 -14z" fill="#e8407a" stroke-width="2.5"/>
+      <g fill="#d6d3dc" stroke-width="1.5"><circle cx="108" cy="372" r="3"/><circle cx="128" cy="372" r="3"/><circle cx="108" cy="392" r="3"/><circle cx="128" cy="392" r="3"/></g>
+      <path d="M96 356 Q78 384 104 408 L114 400 Q98 384 108 362Z" fill="#ffffff"/>
+      <path d="M140 356 Q160 380 140 404 L130 398 Q146 380 132 362Z" fill="#f1eff5"/>
+      <ellipse cx="136" cy="404" rx="8" ry="6" fill="#a0672f"/>
+      <path d="M136 404 l-18 26" stroke-width="4"/><ellipse cx="114" cy="432" rx="9" ry="5" fill="url(#wd-steel)" stroke-width="2"/>
+    </g>
+    <g>
+      <rect x="-10" y="420" width="226" height="12" rx="3" fill="#fff8ec"/>
+      <path d="M-10 432 H216 V506 H-10Z" fill="#ffb020"/>
+      <path d="M-10 432 Q20 462 46 432 Q72 462 98 432 Q124 462 150 432 Q176 462 202 432 L216 432 L216 444 Q204 446 202 432" fill="#e8407a"/>
+      <path d="M20 450 v54 M72 450 v54 M124 450 v54 M176 450 v54" stroke="#d98e00" stroke-width="2"/>
+      <path d="M-10 506 H216" stroke-width="3"/>
+      <ellipse cx="100" cy="512" rx="120" ry="8" fill="#1f1a2e" opacity=".14" stroke="none"/>
+      <g stroke-width="2.5">
+        <path d="M8 420 l4 -8 M58 420 l-4 -8" />
+        <rect x="4" y="398" width="58" height="16" rx="3" fill="url(#wd-steel)"/>
+        <path d="M6 398 q27 -30 54 0z" fill="url(#wd-steel)"/><rect x="28" y="378" width="10" height="5" rx="2" fill="#1f1a2e" stroke-width="1"/>
+        <path d="M148 420 l4 -8 M198 420 l-4 -8" />
+        <rect x="144" y="398" width="58" height="16" rx="3" fill="url(#wd-steel)"/>
+        <path d="M146 398 q27 -30 54 0z" fill="url(#wd-steel)"/><rect x="168" y="378" width="10" height="5" rx="2" fill="#1f1a2e" stroke-width="1"/>
+        <path d="M78 420 l4 -8 M128 420 l-4 -8" />
+        <rect x="74" y="402" width="58" height="14" rx="3" fill="url(#wd-steel)"/>
+        <ellipse cx="103" cy="402" rx="29" ry="6" fill="#e8742a"/>
+        <circle cx="96" cy="401" r="3" fill="#fff8ec" stroke-width="1.2"/><circle cx="110" cy="403" r="3" fill="#fff8ec" stroke-width="1.2"/>
+      </g>
+      <g class="wd-steam" fill="none" stroke="#ffffff" stroke-width="2.5" opacity=".8">
+        <path d="M24 370 q-6 -8 0 -16 q6 -8 0 -16"/>
+        <path d="M172 370 q-6 -8 0 -16 q6 -8 0 -16"/>
+        <path d="M88 388 q-6 -8 0 -16 q6 -8 0 -16"/>
+      </g>
+    </g>
+
+    <!-- the planner -->
+    <ellipse cx="660" cy="550" rx="76" ry="9" fill="#1f1a2e" opacity=".18" stroke="none"/>
+    <g>
+      <path d="M674 300 q34 6 28 64 q-6 30 -16 40 q4 -40 -6 -64 q-6 -20 -6 -40z" fill="#2a1d1a"/>
+      <path d="M628 452 L630 538 H648 L652 452Z M660 452 L664 538 H682 L682 452Z" fill="#fff8ec" stroke-width="2.5"/>
+      <path d="M624 548 q0 -10 10 -10 h16 v10z M660 548 q0 -10 10 -10 h16 v10z" fill="#e8407a" stroke-width="2.5"/>
+      <path d="M622 328 Q650 318 682 328 L700 456 H604Z" fill="#0f8b8d"/>
+      <path d="M672 326 Q680 328 682 328 L700 456 H680 Q684 380 672 326Z" fill="#0a6668" stroke="none"/>
+      <path d="M622 328 Q650 318 682 328 L700 456 H604Z" fill="none"/>
+      <path d="M606 444 H698" stroke="#ffb020" stroke-width="4"/>
+      <path d="M638 324 q12 14 26 0" fill="none" stroke="#ffb020" stroke-width="3"/>
+      <path d="M624 330 Q644 360 690 330 L686 326 Q650 346 628 326Z" fill="#ffb020" stroke-width="2.5"/>
+      <rect x="642" y="306" width="14" height="20" fill="#b87a3f" stroke-width="2.5"/>
+      <ellipse cx="648" cy="288" rx="23" ry="26" fill="#c68642"/>
+      <path d="M672 282 q-6 -30 -30 -24 q-18 4 -18 26 q10 -16 26 -14 q14 2 22 12z" fill="#2a1d1a"/>
+      <path d="M670 268 q8 4 10 14" fill="none" stroke="#2a1d1a" stroke-width="5"/>
+      <path d="M632 276 q5 -5 11 -2" fill="none" stroke-width="2.5"/>
+      <path d="M648 276 q5 -3 10 1" fill="none" stroke-width="2.5"/>
+      <ellipse cx="637" cy="285" rx="2.5" ry="3.3" fill="#1f1a2e" stroke="none"/>
+      <ellipse cx="653" cy="285" rx="2.5" ry="3.3" fill="#1f1a2e" stroke="none"/>
+      <path d="M626 286 q-4 6 0 10" fill="none" stroke-width="2.5"/>
+      <ellipse cx="640" cy="301" rx="4" ry="4.5" fill="#7a2e2e" stroke-width="2"/>
+      <circle cx="660" cy="300" r="3" fill="#ffb020" stroke-width="1.5"/>
+      <path d="M678 328 Q724 338 726 384 L702 392 Q700 364 670 350Z" fill="#0f8b8d"/>
+      <path d="M704 388 L724 380" stroke="#ffb020" stroke-width="3"/>
+      <path d="M717 378 Q706 340 682 310 L670 318 Q690 346 702 386Z" fill="#c68642"/>
+      <g class="wd-ring">
+        <rect x="664" y="280" width="15" height="30" rx="4" fill="#3d3a8c" transform="rotate(18 671 295)"/>
+        <ellipse cx="676" cy="312" rx="9" ry="8" fill="#c68642" transform="rotate(-30 676 312)"/>
+      </g>
+      <path d="M624 334 Q596 380 596 444 L610 448 Q610 386 632 346Z" fill="#0f8b8d"/>
+      <g transform="rotate(-6 640 440)">
+        <rect x="594" y="380" width="100" height="128" rx="6" fill="#a8693d"/>
+        <rect x="602" y="390" width="84" height="112" rx="2" fill="#fff8ec" stroke-width="2"/>
+        <rect x="628" y="374" width="32" height="14" rx="3" fill="#d6d3dc" stroke-width="2.5"/>
+        <text x="646" y="405" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="9" fill="#c22a5f" stroke="none">MUHURAT 9:42 PM</text>
+        <g font-family="Nunito, sans-serif" font-weight="900" font-size="12" fill="#1f1a2e" stroke="none">
+          <text x="624" y="424">Caterer</text>
+          <text x="624" y="442">Venue</text>
+          <text x="624" y="460">Tent</text>
+          <text x="624" y="478" fill="#c22a5f">Hotel</text>
+          <text x="624" y="496">Buses</text>
+        </g>
+        <g stroke-width="1.8" fill="#fff8ec">
+          <rect x="608" y="414" width="11" height="11" rx="2"/><rect x="608" y="432" width="11" height="11" rx="2"/>
+          <rect x="608" y="450" width="11" height="11" rx="2"/><rect x="608" y="468" width="11" height="11" rx="2" stroke="#c22a5f"/>
+          <rect x="608" y="486" width="11" height="11" rx="2"/>
+        </g>
+        <path d="M610 419 l3 4 l6 -8 M610 437 l3 4 l6 -8 M610 455 l3 4 l6 -8 M610 491 l3 4 l6 -8" fill="none" stroke="#3fa34d" stroke-width="2.5"/>
+        <circle cx="674" cy="474" r="8" fill="#e8407a" stroke-width="2"/>
+        <text x="674" y="479" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="12" fill="#fff" stroke="none">?</text>
+      </g>
+      <ellipse cx="600" cy="452" rx="9" ry="8" fill="#c68642"/>
+    </g>
+
+    <!-- the call -->
+    <g>
+      <path d="M560 180 h212 a14 14 0 0 1 14 14 v32 a14 14 0 0 1 -14 14 h-80 l-14 26 l-4 -26 h-114 a14 14 0 0 1 -14 -14 v-32 a14 14 0 0 1 14 -14z" fill="#ffffff"/>
+      <circle cx="576" cy="210" r="12" fill="#3fa34d" stroke-width="2"/>
+      <path d="M571 204 q-1 8 6 12 l3 -3 l-3 -3 l-2 1 q-2 -2 -2 -5 l2 -1 l-1 -3z" fill="#fff" stroke="none"/>
+      <text x="594" y="205" font-family="Nunito, sans-serif" font-weight="800" font-size="11" fill="#8a8399" stroke="none">Riya's papa</text>
+      <text x="594" y="226" font-family="Nunito, sans-serif" font-weight="900" font-size="17" fill="#1f1a2e" stroke="none">Ab <tspan fill="#c22a5f">450</tspan> log aayenge!</text>
+    </g>
+  </g>
+  </g>
+</svg>

@@ -1,0 +1,287 @@
+<title>Kirana Live</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: a shop floor of five stations (manager, counter, shelves, ledger, door) with
+   speech bubbles over whoever is talking; the running conversation below it. Single
+   light look, matching the Karobaar Gym site (ink outlines, marigold, offset shadows). */
+:root {
+  --ink: #1f1a2e; --ink-soft: #4a4560; --cream: #fff8ec; --paper: #fffdf8;
+  --marigold: #ffb020; --saffron: #ff7a29; --rani: #e8407a; --peacock: #0f8b8d;
+  --indigo: #3d3a8c; --leaf: #3fa34d; --sky: #d8efff; --muted: #f3ead8;
+  --display: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Nunito", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--cream); color: var(--ink); }
+body {
+  font-family: var(--body); font-size: 16px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 40px;
+  background-image: radial-gradient(rgba(31, 26, 46, .07) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+.wrap { max-width: 1100px; margin: 0 auto; display: grid; gap: 18px; }
+h1, h2 { font-family: var(--display); line-height: 1.1; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(30px, 5vw, 46px); font-weight: 800; }
+.lede { margin: 6px 0 0; color: var(--ink-soft); max-width: 62ch; }
+.eyebrow { font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--peacock); }
+
+/* controls */
+.bar {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  background: var(--paper); border: 3px solid var(--ink); border-radius: 18px;
+  box-shadow: 4px 4px 0 var(--ink); padding: 10px 12px;
+}
+.bar label { font-weight: 800; font-size: 14px; display: flex; gap: 6px; align-items: center; }
+select, button {
+  font: inherit; font-weight: 800; color: var(--ink); background: var(--paper);
+  border: 2.5px solid var(--ink); border-radius: 999px; padding: 5px 12px; cursor: pointer;
+}
+button.primary { background: var(--marigold); }
+button:focus-visible, select:focus-visible { outline: 3px solid var(--indigo); outline-offset: 2px; }
+.clock {
+  margin-left: auto; font-family: var(--display); font-weight: 800; font-size: 22px;
+  background: var(--ink); color: var(--marigold); border-radius: 12px; padding: 2px 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* the shop floor */
+.floor {
+  position: relative; border: 3px solid var(--ink); border-radius: 22px;
+  background: linear-gradient(var(--sky) 0 38%, var(--muted) 38% 100%);
+  box-shadow: 6px 6px 0 var(--ink); padding: 18px 14px 16px; overflow: hidden;
+}
+.awning {
+  position: absolute; inset: 0 0 auto 0; height: 22px;
+  background: repeating-linear-gradient(90deg, var(--saffron) 0 28px, var(--paper) 28px 56px);
+  border-bottom: 3px solid var(--ink);
+}
+.shopname {
+  position: relative; margin: 14px auto 10px; width: fit-content; padding: 2px 18px;
+  font-family: var(--display); font-weight: 800; font-size: 20px; background: var(--paper);
+  border: 3px solid var(--ink); border-radius: 10px;
+}
+.stations { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; align-items: end; }
+.station { display: grid; justify-items: center; gap: 6px; min-width: 0; position: relative; padding-top: 128px; }
+.who {
+  width: 64px; height: 64px; border-radius: 50%; border: 3px solid var(--ink);
+  display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 20px;
+  background: var(--c, var(--paper)); transition: transform .25s;
+}
+.station.talking .who { transform: translateY(-6px) scale(1.08); box-shadow: 0 6px 0 var(--ink); }
+.prop {
+  width: 100%; max-width: 150px; height: 34px; border: 3px solid var(--ink); border-radius: 8px;
+  background: var(--paper); font-size: 12px; font-weight: 800; display: grid; place-items: center;
+  color: var(--ink-soft); text-align: center; line-height: 1.1;
+}
+.role { font-weight: 800; font-size: 14px; text-align: center; overflow-wrap: anywhere; }
+.bubble {
+  position: absolute; bottom: calc(100% - 118px); left: 50%; transform: translateX(-50%);
+  width: min(260px, 46vw); max-height: 116px; overflow: hidden;
+  background: var(--paper); border: 2.5px solid var(--ink); border-radius: 16px;
+  padding: 7px 10px; font-size: 13.5px; line-height: 1.35; box-shadow: 3px 3px 0 var(--ink);
+  opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 2;
+}
+.bubble::after {
+  content: ""; position: absolute; left: 50%; bottom: -10px; width: 16px; height: 16px;
+  background: var(--paper); border-right: 2.5px solid var(--ink); border-bottom: 2.5px solid var(--ink);
+  transform: translateX(-50%) rotate(45deg);
+}
+.bubble.show { opacity: 1; }
+.bubble b { display: block; font-size: 12px; color: var(--ink-soft); }
+.station:first-child .bubble { left: 0; transform: none; }
+.station:first-child .bubble::after { left: 32px; }
+.station:last-child .bubble { left: auto; right: 0; transform: none; }
+.station:last-child .bubble::after { left: auto; right: 24px; }
+
+/* stats */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.stat { background: var(--paper); border: 2.5px solid var(--ink); border-radius: 14px; padding: 8px 12px; }
+.stat span { display: block; font-size: 12px; font-weight: 800; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .06em; }
+.stat strong { font-family: var(--display); font-size: 24px; font-variant-numeric: tabular-nums; }
+
+/* the running conversation */
+.log {
+  background: var(--paper); border: 3px solid var(--ink); border-radius: 18px;
+  height: 420px; overflow-y: auto; padding: 12px; display: grid; gap: 8px; align-content: start;
+}
+.line { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 8px; align-items: start; }
+.line time { font-size: 12px; font-weight: 800; color: var(--ink-soft); padding-top: 6px; font-variant-numeric: tabular-nums; }
+.msg {
+  justify-self: start; max-width: 680px; border: 2px solid var(--ink); border-radius: 14px;
+  padding: 6px 10px; background: var(--c, var(--paper)); white-space: pre-wrap; overflow-wrap: anywhere;
+  font-size: 14px;
+}
+.msg b { font-weight: 800; margin-right: 6px; }
+.msg .to { font-size: 12px; color: var(--ink-soft); font-weight: 700; }
+.tag { display: inline-block; margin-left: 6px; font-size: 11px; font-weight: 800; padding: 0 8px; border-radius: 999px; border: 1.5px solid var(--ink); background: var(--paper); }
+.note { font-size: 13px; color: var(--ink-soft); }
+
+[data-who="manager"] { --c: #ffe3a3; }
+[data-who="cashier"] { --c: #c9f0e8; }
+[data-who="customer"] { --c: #ffd6e3; }
+[data-who="helper"] { --c: #dcd8ff; }
+[data-who="munshi"] { --c: #e1f4d6; }
+[data-who="supplier"] { --c: #ffe0cc; }
+
+@media (max-width: 720px) {
+  .stations { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 4px; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bubble { width: min(220px, 60vw); }
+  .clock { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .who, .bubble { transition: none; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">KiranaBench · replay</div>
+    <h1>Kirana Live</h1>
+    <p class="lede">One day in a simulated Indian kirana shop, played back from a recorded run.
+      Customers talk to the cashier, the manager orders from suppliers and briefs the staff,
+      the helper fills the shelves and the munshi keeps the books.</p>
+  </header>
+
+  <div class="bar" role="group" aria-label="Replay controls">
+    <button id="play" class="primary" type="button">Play</button>
+    <button id="step" type="button">Next</button>
+    <label for="speed">Speed
+      <select id="speed"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option><option value="8">8×</option></select>
+    </label>
+    <label for="run">Run <select id="run"></select></label>
+    <label for="day">Day <select id="day"></select></label>
+    <label for="filter">Show
+      <select id="filter"><option value="all">everyone</option><option value="staff">manager and staff only</option><option value="counter">the counter only</option></select>
+    </label>
+    <span class="clock" id="clock" aria-live="off">08:00</span>
+  </div>
+
+  <section class="floor" aria-label="The shop floor">
+    <div class="awning" aria-hidden="true"></div>
+    <div class="shopname" id="shopname">Shop</div>
+    <div class="stations">
+      <div class="station" data-who="manager"><div class="bubble"></div><div class="who">M</div><div class="prop">desk · phone · email</div><div class="role">Manager</div></div>
+      <div class="station" data-who="supplier"><div class="bubble"></div><div class="who">S</div><div class="prop">supplier van</div><div class="role" data-name>Supplier</div></div>
+      <div class="station" data-who="cashier"><div class="bubble"></div><div class="who">C</div><div class="prop">counter · khata book</div><div class="role">Cashier</div></div>
+      <div class="station" data-who="customer"><div class="bubble"></div><div class="who">☺</div><div class="prop">queue</div><div class="role" data-name>Customer</div></div>
+      <div class="station" data-who="helper"><div class="bubble"></div><div class="who">H</div><div class="prop">shelves · godown</div><div class="role">Helper</div></div>
+      <div class="station" data-who="munshi"><div class="bubble"></div><div class="who">₹</div><div class="prop">ledger</div><div class="role">Munshi</div></div>
+    </div>
+  </section>
+
+  <div class="stats" aria-live="polite">
+    <div class="stat"><span>Customers served</span><strong id="s-served">0</strong></div>
+    <div class="stat"><span>Takings so far</span><strong id="s-takings">₹0</strong></div>
+    <div class="stat"><span>Khata given</span><strong id="s-khata">0</strong></div>
+    <div class="stat"><span>Day's profit</span><strong id="s-profit">–</strong></div>
+  </div>
+
+  <section>
+    <h2 style="font-size:22px;margin-bottom:8px">The day so far</h2>
+    <div class="log" id="log" aria-live="polite"></div>
+    <p class="note" id="source"></p>
+  </section>
+</div>
+
+<script type="application/json" id="replay-data">__REPLAY_DATA__</script>
+<script>
+(function () {
+  const runs = JSON.parse(document.getElementById("replay-data").textContent);
+  const $ = (id) => document.getElementById(id);
+  const stations = {};
+  document.querySelectorAll(".station").forEach((s) => (stations[s.dataset.who] = s));
+  const state = { run: 0, day: 0, i: 0, playing: false, timer: null, served: new Set(), takings: 0, khata: 0 };
+
+  runs.forEach((r, k) => $("run").add(new Option(r.label + (r.shop ? " · " + r.shop : ""), k)));
+
+  function events() {
+    const evs = runs[state.run].days[state.day].events;
+    const f = $("filter").value;
+    if (f === "staff") return evs.filter((e) => e.who !== "customer" && !(e.who === "cashier" && e.kind === "counter"));
+    if (f === "counter") return evs.filter((e) => e.kind === "counter" || e.kind === "walked_out");
+    return evs;
+  }
+  function fillDays() {
+    $("day").innerHTML = "";
+    runs[state.run].days.forEach((d, k) => $("day").add(new Option(`Day ${d.day}${d.date ? " · " + d.date : ""}`, k)));
+    $("shopname").textContent = runs[state.run].shop || "Kirana";
+  }
+  function money(x) { return "₹" + Math.round(x).toLocaleString("en-IN"); }
+  function reset() {
+    stop(); state.i = 0; state.served = new Set(); state.takings = 0; state.khata = 0;
+    $("log").innerHTML = ""; $("clock").textContent = "08:00";
+    Object.values(stations).forEach((s) => { s.classList.remove("talking"); s.querySelector(".bubble").classList.remove("show"); });
+    const d = runs[state.run].days[state.day];
+    $("s-served").textContent = "0"; $("s-takings").textContent = "₹0"; $("s-khata").textContent = "0";
+    $("s-profit").textContent = d.profit != null ? "at close" : "–";
+    const sum = d.summary || {};
+    $("source").textContent = `${events().length} events recorded in this day. At closing: ${sum.served ?? "?"} customers served, ${money(sum.revenue_truth || 0)} sold.`;
+  }
+  function show(e) {
+    $("clock").textContent = e.clock;
+    Object.values(stations).forEach((s) => s.classList.remove("talking"));
+    Object.values(stations).forEach((s) => s.querySelector(".bubble").classList.remove("show"));
+    const st = stations[e.who] || stations.supplier;
+    const b = st.querySelector(".bubble");
+    const to = e.to && e.to.length ? ` → ${e.to.join(", ")}` : "";
+    b.innerHTML = "";
+    const nm = document.createElement("b"); nm.textContent = e.name + to; b.append(nm, document.createTextNode(e.text));
+    b.classList.add("show"); st.classList.add("talking");
+    const label = st.querySelector("[data-name]"); if (label) label.textContent = e.name;
+
+    const line = document.createElement("div"); line.className = "line";
+    const t = document.createElement("time"); t.textContent = e.clock;
+    const m = document.createElement("div"); m.className = "msg"; m.dataset.who = e.who;
+    const who = document.createElement("b"); who.textContent = e.name;
+    m.append(who);
+    if (to) { const s = document.createElement("span"); s.className = "to"; s.textContent = to.trim() + "  "; m.append(s); }
+    m.append(document.createTextNode(e.text));
+    (e.tags || []).forEach((tg) => { const s = document.createElement("span"); s.className = "tag"; s.textContent = tg; m.append(s); });
+    line.append(t, m); $("log").append(line);
+    $("log").scrollTop = $("log").scrollHeight;
+
+    if (e.kind === "counter" && e.tags) {
+      state.served.add(e.visit);
+      const paid = e.tags.find((x) => x.startsWith("paid ₹"));
+      if (paid) state.takings += Number(paid.slice(6));
+      if (e.tags.includes("khata approved")) state.khata += 1;
+      $("s-served").textContent = state.served.size;
+      $("s-takings").textContent = money(state.takings);
+      $("s-khata").textContent = state.khata;
+    }
+  }
+  function next() {
+    const evs = events();
+    if (state.i >= evs.length) {
+      stop();
+      const d = runs[state.run].days[state.day];
+      if (d.profit != null) $("s-profit").textContent = (d.profit >= 0 ? "+" : "−") + money(Math.abs(d.profit));
+      return false;
+    }
+    show(evs[state.i++]); return true;
+  }
+  function delay() {
+    const evs = events(); const e = evs[state.i - 1]; const len = e ? e.text.length : 40;
+    return Math.max(450, Math.min(4200, 900 + len * 28)) / Number($("speed").value);
+  }
+  function tick() { if (!state.playing) return; if (next()) state.timer = setTimeout(tick, delay()); }
+  function play() { if (state.playing) return; state.playing = true; $("play").textContent = "Pause"; tick(); }
+  function stop() { state.playing = false; clearTimeout(state.timer); $("play").textContent = "Play"; }
+
+  $("play").addEventListener("click", () => (state.playing ? stop() : play()));
+  $("step").addEventListener("click", () => { stop(); next(); });
+  $("run").addEventListener("change", (ev) => { state.run = +ev.target.value; state.day = 0; fillDays(); reset(); });
+  $("day").addEventListener("change", (ev) => { state.day = +ev.target.value; reset(); });
+  $("filter").addEventListener("change", reset);
+
+  fillDays(); reset();
+  for (let k = 0; k < 6; k++) next();          // open on a working moment, not an empty shop
+})();
+</script>

@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prayog AI · the Bharat AI Prayogshala at BITS Pilani</title>
+  <meta name="description" content="Prayog AI is the Bharat AI Prayogshala at BITS Pilani. We build Indic datasets, RL environments and models, benchmark frontier and open models on Indian tasks, and study AI safety, interpretability and self-improvement.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Baloo+Bhaina+2:wght@700&family=Baloo+Chettan+2:wght@700&family=Baloo+Da+2:wght@700&family=Baloo+Tamma+2:wght@700&family=Baloo+Tammudu+2:wght@700&family=Baloo+Thambi+2:wght@700&family=Noto+Nastaliq+Urdu:wght@700&text=%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AF%E0%A5%8B%E0%A4%97%20%E0%A4%8F%E0%A4%86%E0%A4%88%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%AF%E0%A6%BC%E0%A7%8B%E0%A6%97%20%E0%A6%8F%E0%A6%86%E0%A6%87%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AF%E0%A5%8B%E0%A4%97%20%E0%A4%8F%E0%A4%86%E0%A4%AF%E0%B0%AA%E0%B1%8D%E0%B0%B0%E0%B0%AF%E0%B1%8B%E0%B0%97%E0%B1%8D%20%E0%B0%8F%E0%B0%90%E0%AE%AA%E0%AE%BF%E0%AE%B0%E0%AE%AF%E0%AF%8B%E0%AE%95%E0%AF%8D%20%E0%AE%8F%E0%AE%90%E0%AA%AA%E0%AB%8D%E0%AA%B0%E0%AA%AF%E0%AB%8B%E0%AA%97%20%E0%AA%8F%E0%AA%86%E0%AA%88%D9%BE%D8%B1%DB%8C%D9%88%DA%AF%20%D8%A7%DB%92%20%D8%A2%D8%A6%DB%8C%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%AF%E0%B3%8B%E0%B2%97%E0%B3%8D%20%E0%B2%8E%E0%B2%90%E0%AC%AA%E0%AD%8D%E0%AC%B0%E0%AD%9F%E0%AD%8B%E0%AC%97%20%E0%AC%8F%E0%AC%86%E0%AC%87%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%AF%E0%B5%8B%E0%B4%97%E0%B5%8D%20%E0%B4%8E%E0%B4%90%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80%E0%B0%A4%E0%B1%86%E0%B0%B2%E0%B1%81%E0%B0%97%E0%B1%81%E0%AE%A4%E0%AE%AE%E0%AE%BF%E0%AE%B4%E0%AF%8D%E0%AA%97%E0%AB%81%E0%AA%9C%E0%AA%B0%E0%AA%BE%E0%AA%A4%E0%AB%80%D8%A7%D8%B1%D8%AF%D9%88%E0%B2%95%E0%B2%A8%E0%B3%8D%E0%B2%A8%E0%B2%A1%E0%AC%93%E0%AC%A1%E0%AC%BC%E0%AC%BF%E0%AC%86%E0%B4%AE%E0%B4%B2%E0%B4%AF%E0%B4%BE%E0%B4%B3%E0%B4%82&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="landing.css">
+  <link rel="stylesheet" href="prayog.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2064%2064%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2228%22%20fill%3D%22%23ffb020%22%20stroke%3D%22%231f1a2e%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M26%2014%20H38%20M28%2014%20V27%20L17%2046%20Q15%2051%2021%2051%20H43%20Q49%2051%2047%2046%20L36%2027%20V14%22%20fill%3D%22%23fff8ec%22%20stroke%3D%22%231f1a2e%22%20stroke-width%3D%223.5%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M21.5%2042%20H42.5%20L46%2047.5%20Q47%2050%2043%2050%20H21%20Q17%2050%2018%2047.5Z%22%20fill%3D%22%23e8407a%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2229%22%20cy%3D%2237%22%20r%3D%222.2%22%20fill%3D%22%23e8407a%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2232%22%20r%3D%221.6%22%20fill%3D%22%23e8407a%22%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <a href="index.html" class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="28" fill="#ffb020" stroke="#1f1a2e" stroke-width="4"/>
+      <path d="M26 14 H38 M28 14 V27 L17 46 Q15 51 21 51 H43 Q49 51 47 46 L36 27 V14" fill="#fff8ec" stroke="#1f1a2e" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M21.5 42 H42.5 L46 47.5 Q47 50 43 50 H21 Q17 50 18 47.5Z" fill="#e8407a"/>
+      <circle cx="29" cy="37" r="2.2" fill="#e8407a"/><circle cx="35" cy="32" r="1.6" fill="#e8407a"/>
+    </svg>
+    <span>Prayog AI</span>
+  </a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="index.html#pillars">Pillars</a>
+    <a href="index.html#metro">Metro map</a>
+    <a href="index.html#languages" class="nav-wide">Languages</a>
+    <a href="karobaar/index.html" class="nav-blog">Karobaar Gym</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero hero-board">
+  <div class="hero-copy">
+    <div class="board-wrap reveal">
+      <div class="board">
+        <p class="board-script" aria-hidden="true"><span class="board-line" lang="hi" data-tag="हिन्दी · Hindi" style="--f:'Baloo 2'">प्रयोग एआई</span><span class="board-line" lang="bn" data-tag="বাংলা · Bengali" style="--f:'Baloo Da 2'">প্রয়োগ এআই</span><span class="board-line" lang="mr" data-tag="मराठी · Marathi" style="--f:'Baloo 2'">प्रयोग एआय</span><span class="board-line" lang="te" data-tag="తెలుగు · Telugu" style="--f:'Baloo Tammudu 2'">ప్రయోగ్ ఏఐ</span><span class="board-line" lang="ta" data-tag="தமிழ் · Tamil" style="--f:'Baloo Thambi 2'">பிரயோக் ஏஐ</span><span class="board-line" lang="gu" data-tag="ગુજરાતી · Gujarati" style="--f:'Baloo Bhai 2'">પ્રયોગ એઆઈ</span><span class="board-line" lang="ur" data-tag="اردو · Urdu" style="--f:'Noto Nastaliq Urdu'" dir="rtl">پریوگ اے آئی</span><span class="board-line" lang="kn" data-tag="ಕನ್ನಡ · Kannada" style="--f:'Baloo Tamma 2'">ಪ್ರಯೋಗ್ ಎಐ</span><span class="board-line" lang="or" data-tag="ଓଡ଼ିଆ · Odia" style="--f:'Baloo Bhaina 2'">ପ୍ରୟୋଗ ଏଆଇ</span><span class="board-line" lang="ml" data-tag="മലയാളം · Malayalam" style="--f:'Baloo Chettan 2'">പ്രയോഗ് എഐ</span></p>
+        <h1 class="board-en">PRAYOG AI</h1>
+        <p class="board-sub"><span class="sub-hi"><span lang="hi">भारत एआई प्रयोगशाला</span> · </span>BHARAT AI PRAYOGSHALA · BITS PILANI</p>
+        <span class="board-lang" aria-hidden="true">हिन्दी · Hindi</span>
+      </div>
+      <div class="board-posts" aria-hidden="true"><i></i><i></i></div>
+    </div>
+    <p class="lede reveal"><b>Prayog AI</b> is the Bharat AI Prayogshala at BITS Pilani. <i>Prayogshala</i> is Hindi for laboratory, and <i>prayog</i> means experiment. We work on AI for India across seven pillars: Indic datasets and RL environments, open models trained on them, benchmarks for frontier and open models, and research on safety, interpretability and self-improvement.</p>
+    <div class="cta reveal">
+      <a class="btn btn-primary" href="#pillars">See the seven pillars <span aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="#metro">Ride the metro map</a>
+    </div>
+    <ul class="hero-stats reveal">
+      <li><b data-count="7">0</b><span>pillars</span></li>
+      <li><b data-count="10">0</b><span>Indian languages</span></li>
+      <li><b data-count="5">0</b><span>RL environment projects</span></li>
+      <li><b data-count="226">0</b><span>portal tasks, all checked by code</span></li>
+    </ul>
+  </div>
+
+  <div class="town-wrap" id="town">
+    <p class="scene-hint">Each building is a pillar. Click one to go inside.</p>
+    <svg class="street town2" viewBox="0 40 1720 300" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="t-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe6ff"/><stop offset="1" stop-color="#fff1d6"/></linearGradient></defs>
+  <rect x="0" y="0" width="1720" height="360" fill="url(#t-sky)"/>
+  <g transform="translate(1610 96) scale(.7)">
+    <g class="sun-rays" stroke="#ffb020" stroke-width="6" stroke-linecap="round"><path d="M0 -62 V-48 M0 48 V62 M-62 0 H-48 M48 0 H62 M-44 -44 L-34 -34 M34 34 L44 44 M-44 44 L-34 34 M34 -34 L44 -44"/></g>
+    <circle r="36" fill="#ffb020" stroke="#1f1a2e" stroke-width="3"/>
+  </g>
+  <g class="cloud c1"><path d="M0 30 Q0 8 24 10 Q34 -8 56 4 Q80 -2 84 20 Q104 22 100 38 H6 Q-6 38 0 30Z" fill="#fff" stroke="#1f1a2e" stroke-width="3"/></g>
+  <g class="cloud c2"><path d="M0 26 Q2 6 22 8 Q32 -6 50 4 Q70 0 72 18 Q88 20 84 32 H6 Q-4 32 0 26Z" fill="#fff" stroke="#1f1a2e" stroke-width="3"/></g>
+  <path d="M0 250 Q140 214 300 252 Q460 210 640 246 T980 240 T1320 236 T1720 244 V330 H0Z" fill="#cfe9c4" stroke="#1f1a2e" stroke-width="3"/>
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round">
+    <a href="pillars/datasets.html" class="bldg" aria-label="Datasets: Pustakalaya, the library">
+      <g transform="translate(40 20)">
+        <g class="b-datasets">
+  <rect x="8" y="286" width="194" height="14" fill="#e8d3b0"/>
+  <rect x="18" y="274" width="174" height="14" fill="#f3e6cc"/>
+  <rect x="26" y="150" width="158" height="124" fill="#fff8ec"/>
+  <path d="M14 152 L105 104 L196 152Z" fill="#8fd6d0"/>
+  <circle cx="105" cy="134" r="12" fill="#fff8ec"/>
+  <text x="105" y="139" text-anchor="middle" class="svg-sign small">अ</text>
+  <rect x="14" y="148" width="182" height="10" fill="#e8d3b0"/>
+  <rect x="36" y="164" width="138" height="40" rx="6" fill="#0f8b8d"/>
+  <text x="105.0" y="181" text-anchor="middle" class="svg-sign small light hi">पुस्तकालय</text>
+  <text x="105.0" y="197" text-anchor="middle" class="svg-sign small light en">DATASETS</text>
+  <g fill="#fffdf8"><rect x="34" y="210" width="10" height="64"/><rect x="166" y="210" width="10" height="64"/></g>
+  <rect x="52" y="214" width="34" height="38" rx="3" fill="#bfe6ff"/>
+  <rect x="124" y="214" width="34" height="38" rx="3" fill="#bfe6ff"/>
+  <g stroke-width="2"><rect x="55" y="228" width="6" height="22" fill="#e8407a"/><rect x="62" y="232" width="6" height="18" fill="#ffb020"/><rect x="69" y="226" width="6" height="24" fill="#3d3a8c"/><rect x="76" y="230" width="6" height="20" fill="#3fa34d"/>
+  <rect x="127" y="230" width="6" height="20" fill="#ff7a29"/><rect x="134" y="226" width="6" height="24" fill="#0f8b8d"/><rect x="141" y="232" width="6" height="18" fill="#e8407a"/><rect x="148" y="228" width="6" height="22" fill="#ffb020"/></g>
+  <path d="M92 274 V236 Q92 222 105 222 Q118 222 118 236 V274" fill="#3d3a8c"/>
+  <g class="floaty" stroke="none">
+    <text x="40" y="120" class="svg-sign small">ক</text>
+    <text x="160" y="112" class="svg-sign small f2">த</text>
+    <text x="178" y="138" class="svg-sign small f3">A</text>
+  </g></g>
+        <text x="105" y="72" text-anchor="middle" class="svg-label">Datasets</text>
+      </g>
+    </a>
+    <a href="pillars/environments.html" class="bldg" aria-label="RL Environments: Akhada, the wrestling gym">
+      <g transform="translate(276 20)">
+        <g class="b-environments">
+  <path d="M10 160 q16 10 32 0 q16 10 32 0 q16 10 32 0 q16 10 32 0 q16 10 32 0 q16 10 30 0" fill="none" stroke-width="2"/>
+  <g stroke-width="2"><path d="M18 164 l6 10 6 -10Z" fill="#e8407a"/><path d="M50 164 l6 10 6 -10Z" fill="#ffb020"/><path d="M146 164 l6 10 6 -10Z" fill="#0f8b8d"/><path d="M178 164 l6 10 6 -10Z" fill="#e8407a"/></g>
+  <rect x="10" y="206" width="190" height="80" fill="#ffd6a0"/>
+  <rect x="6" y="198" width="198" height="10" fill="#e8d3b0"/>
+  <path d="M10 236 H200 M10 262 H200 M60 206 V236 M150 206 V236 M40 236 V262 M170 236 V262" stroke-width="1.5" fill="none" opacity=".5"/>
+  <rect x="60" y="150" width="16" height="136" fill="#e8d3b0"/>
+  <rect x="134" y="150" width="16" height="136" fill="#e8d3b0"/>
+  <rect x="76" y="206" width="58" height="80" fill="#c98a4b"/>
+  <rect x="36" y="134" width="138" height="40" rx="6" fill="#ffb020"/>
+  <text x="105.0" y="151" text-anchor="middle" class="svg-sign small hi">अखाड़ा</text>
+  <text x="105.0" y="167" text-anchor="middle" class="svg-sign small en">RL ENVIRONMENTS</text>
+  <path d="M30 286 q-8 0 -7 -10 l3 -26 q1 -8 4 -8 q3 0 4 8 l3 26 q1 10 -7 10Z" fill="#c98a4b"/><path d="M46 286 q-8 0 -7 -10 l3 -26 q1 -8 4 -8 q3 0 4 8 l3 26 q1 10 -7 10Z" fill="#c98a4b"/><path d="M166 286 q-8 0 -7 -10 l3 -26 q1 -8 4 -8 q3 0 4 8 l3 26 q1 10 -7 10Z" fill="#c98a4b"/><path d="M182 286 q-8 0 -7 -10 l3 -26 q1 -8 4 -8 q3 0 4 8 l3 26 q1 10 -7 10Z" fill="#c98a4b"/>
+  <ellipse cx="105" cy="292" rx="100" ry="9" fill="#c98a4b"/>
+  <g class="spar"><g transform="translate(92 290) scale(1)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#ff7a29"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  
+</g></g>
+  <g class="spar s2"><g transform="translate(118 290) scale(1)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#0f8b8d"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  
+</g></g></g>
+        <text x="105" y="72" text-anchor="middle" class="svg-label">RL Environments</text>
+      </g>
+    </a>
+    <a href="pillars/models.html" class="bldg" aria-label="Models: Pathshala, the school">
+      <g transform="translate(512 20)">
+        <g class="b-models">
+  <rect x="14" y="286" width="182" height="14" fill="#e8d3b0"/>
+  <rect x="22" y="176" width="166" height="110" fill="#ffe3ee"/>
+  <path d="M8 182 L105 128 L202 182Z" fill="#e8407a"/>
+  <rect x="91" y="96" width="28" height="34" fill="#fff8ec"/>
+  <path d="M85 98 L105 80 L125 98Z" fill="#e8407a"/>
+  <g class="bell"><path d="M98 122 q0 -14 7 -14 q7 0 7 14Z" fill="#ffb020"/><circle cx="105" cy="124" r="2.5" fill="#1f1a2e"/></g>
+  <rect x="36" y="188" width="138" height="40" rx="6" fill="#e8407a"/>
+  <text x="105.0" y="205" text-anchor="middle" class="svg-sign small light hi">पाठशाला</text>
+  <text x="105.0" y="221" text-anchor="middle" class="svg-sign small light en">MODELS</text>
+  <rect x="32" y="238" width="40" height="32" rx="3" fill="#2f6b4f"/>
+  <path d="M38 248 h14 M38 256 h22 M56 248 l4 4 6 -8" stroke="#fff8ec" stroke-width="2" fill="none"/>
+  <rect x="138" y="238" width="40" height="32" rx="3" fill="#bfe6ff"/>
+  <path d="M90 286 V246 Q90 234 105 234 Q120 234 120 246 V286" fill="#3d3a8c"/>
+  <g class="walker"><g transform="translate(0 0) scale(0.8)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#8fd6d0"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  <rect x="-15" y="-22" width="8" height="12" rx="2" fill="#ffb020"/>
+</g></g></g>
+        <text x="105" y="72" text-anchor="middle" class="svg-label">Models</text>
+      </g>
+    </a>
+    <a href="pillars/evaluation.html" class="bldg" aria-label="Evaluation &amp; Benchmarking: Pariksha Kendra, the exam centre">
+      <g transform="translate(748 20)">
+        <g class="b-evaluation">
+  <rect x="14" y="286" width="182" height="14" fill="#e8d3b0"/>
+  <rect x="16" y="160" width="178" height="126" fill="#ecebff"/>
+  <rect x="10" y="150" width="190" height="14" fill="#b9b6ff"/>
+  <rect x="84" y="112" width="42" height="40" rx="6" fill="#fff8ec"/>
+  <circle cx="105" cy="132" r="14" fill="#fff"/>
+  <path class="clock-m" d="M105 132 H115" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M105 132 V124" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="36" y="170" width="138" height="40" rx="6" fill="#3d3a8c"/>
+  <text x="105.0" y="187" text-anchor="middle" class="svg-sign small light hi">परीक्षा केंद्र</text>
+  <text x="105.0" y="203" text-anchor="middle" class="svg-sign small light en">EVALUATION</text>
+  <rect x="28" y="224" width="44" height="62" fill="#3d3a8c"/>
+  <circle cx="64" cy="256" r="2.5" fill="#ffb020"/>
+  <rect x="114" y="222" width="72" height="56" rx="4" fill="#fffdf8"/>
+  <rect x="114" y="222" width="72" height="13" rx="4" fill="#b9b6ff"/>
+  <text x="150" y="232.5" text-anchor="middle" class="svg-coin">RESULT</text>
+  <path d="M124 244 H160" stroke-width="2"/><g class="mark m0"><path d="M168 243 l3 3 5 -6" stroke="#3fa34d" stroke-width="2.5" fill="none"/></g><path d="M124 253 H160" stroke-width="2"/><g class="mark m1"><path d="M168 250 l6 6 M174 250 l-6 6" stroke="#e8407a" stroke-width="2.5"/></g><path d="M124 262 H160" stroke-width="2"/><g class="mark m2"><path d="M168 261 l3 3 5 -6" stroke="#3fa34d" stroke-width="2.5" fill="none"/></g><path d="M124 271 H160" stroke-width="2"/><g class="mark m3"><path d="M168 270 l3 3 5 -6" stroke="#3fa34d" stroke-width="2.5" fill="none"/></g></g>
+        <text x="105" y="72" text-anchor="middle" class="svg-label">Evaluation</text>
+      </g>
+    </a>
+    <a href="pillars/safety.html" class="bldg" aria-label="AI Safety: Suraksha Chowki, the safety post">
+      <g transform="translate(984 20)">
+        <g class="b-safety">
+  <rect x="108" y="196" width="94" height="90" fill="#fff8ec"/>
+  <rect x="102" y="186" width="106" height="12" fill="#ff7a29"/>
+  <rect x="112" y="204" width="86" height="40" rx="6" fill="#ff7a29"/>
+  <text x="155.0" y="221" text-anchor="middle" class="svg-sign small light hi">सुरक्षा</text>
+  <text x="155.0" y="237" text-anchor="middle" class="svg-sign small light en">AI SAFETY</text>
+  <rect x="122" y="252" width="26" height="34" fill="#3d3a8c"/>
+  <rect x="160" y="252" width="30" height="20" rx="3" fill="#bfe6ff"/>
+  <path d="M14 286 V170" stroke-width="4"/>
+  <rect x="4" y="132" width="20" height="50" rx="6" fill="#1f1a2e"/>
+  <circle class="tl r" cx="14" cy="144" r="5" fill="#e8407a" stroke="none"/>
+  <circle class="tl a" cx="14" cy="157" r="5" fill="#ffb020" stroke="none"/>
+  <circle class="tl g" cx="14" cy="170" r="5" fill="#3fa34d" stroke="none"/>
+  <path d="M30 206 Q64 166 98 206Z" fill="#ff7a29"/>
+  <path d="M47 192 Q64 178 81 192 M38 202 Q64 176 90 202" stroke="#fff8ec" stroke-width="2.5" fill="none"/>
+  <path d="M64 206 V258" stroke-width="3"/>
+  <rect x="42" y="258" width="44" height="28" fill="#fffdf8"/>
+  <path d="M42 266 H86 M42 276 H86" stroke="#e8407a" stroke-width="3"/>
+  <g class="cop"><g transform="translate(64 258) scale(0.9)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#3d3a8c"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  <rect x="-12" y="-44" width="24" height="5" rx="2" fill="#3d3a8c"/><path class="wave" d="M9 -20 L20 -34" stroke-width="4" stroke-linecap="round"/>
+</g></g></g>
+        <text x="105" y="72" text-anchor="middle" class="svg-label">AI Safety</text>
+      </g>
+    </a>
+    <a href="pillars/interpretability.html" class="bldg" aria-label="Mechanistic Interpretability: Jantar Mantar, the observatory">
+      <g transform="translate(1220 20)">
+        <g class="b-interpretability">
+  <path d="M150 286 V196 A90 90 0 0 0 60 286Z" fill="#f4c2b4"/>
+  <path d="M30 286 L150 114 V286Z" fill="#e9a08f"/>
+  <path d="M40 274 h12 v-17" fill="none" stroke-width="2"/><path d="M52 257 h12 v-17" fill="none" stroke-width="2"/><path d="M64 240 h12 v-17" fill="none" stroke-width="2"/><path d="M76 223 h12 v-17" fill="none" stroke-width="2"/><path d="M88 206 h12 v-17" fill="none" stroke-width="2"/><path d="M100 189 h12 v-17" fill="none" stroke-width="2"/><path d="M112 172 h12 v-17" fill="none" stroke-width="2"/><path d="M124 155 h12 v-17" fill="none" stroke-width="2"/><path d="M136 138 h12 v-17" fill="none" stroke-width="2"/>
+  <path d="M150 286 V226 A60 60 0 0 1 206 286Z" fill="#f4c2b4"/>
+  <path d="M150 286 V246 M150 266 L196 286" stroke-width="2" fill="none"/>
+  <rect x="146" y="106" width="8" height="12" fill="#e9a08f"/>
+  <g class="scan">
+    <circle cx="0" cy="0" r="16" fill="#bfe6ff" fill-opacity=".7"/>
+    <path d="M11 11 L26 26" stroke-width="6" stroke-linecap="round"/>
+    <g stroke-width="1.5"><circle cx="-5" cy="-4" r="2.5" fill="#3fa34d"/><circle cx="5" cy="-6" r="2.5" fill="#ffb020"/><circle cx="0" cy="5" r="2.5" fill="#e8407a"/><path d="M-5 -4 L5 -6 L0 5Z" fill="none"/></g>
+  </g>
+  <rect x="20" y="248" width="140" height="40" rx="6" fill="#3fa34d"/>
+  <text x="90.0" y="265" text-anchor="middle" class="svg-sign small light hi">जंतर मंतर</text>
+  <text x="90.0" y="281" text-anchor="middle" class="svg-sign small light en">INTERPRETABILITY</text></g>
+        <text x="105" y="72" text-anchor="middle" class="svg-label">Interpretability</text>
+      </g>
+    </a>
+    <a href="pillars/self-improvement.html" class="bldg" aria-label="Recursive Self-improvement: Karkhana, the workshop">
+      <g transform="translate(1456 20)">
+        <g class="b-self-improvement">
+  <rect x="166" y="94" width="20" height="60" fill="#c0392b"/>
+  <g class="smoke" fill="#fff" stroke-width="2"><circle cx="178" cy="80" r="8"/><circle cx="190" cy="66" r="10"/><circle cx="176" cy="50" r="7"/></g>
+  <rect x="10" y="168" width="190" height="118" fill="#ece4ff"/>
+  <path d="M10 170 L52 138 V170 L94 138 V170 L136 138 V170 L178 138 V170 H200 V170Z" fill="#7a4fd6"/>
+  <path d="M52 140 V170 M94 140 V170 M136 140 V170" stroke-width="3"/>
+  <g fill="#bfe6ff" stroke-width="2"><path d="M16 167 L46 145 V167Z"/><path d="M58 167 L88 145 V167Z"/><path d="M100 167 L130 145 V167Z"/><path d="M142 167 L172 145 V167Z"/></g>
+  <rect x="30" y="178" width="150" height="40" rx="6" fill="#7a4fd6"/>
+  <text x="105.0" y="195" text-anchor="middle" class="svg-sign small light hi">कारख़ाना</text>
+  <text x="105.0" y="211" text-anchor="middle" class="svg-sign small light en">SELF-IMPROVEMENT</text>
+  <g transform="translate(48 252)"><g class="gear"><path d="M-4 -24 h8 l2 6 6 3 6 -3 6 6 -3 6 3 6 6 2 v8 l-6 2 -3 6 3 6 -6 6 -6 -3 -6 3 -2 6 h-8 l-2 -6 -6 -3 -6 3 -6 -6 3 -6 -3 -6 -6 -2 v-8 l6 -2 3 -6 -3 -6 6 -6 6 3 6 -3Z" fill="#ffb020"/><circle r="7" fill="#ece4ff"/></g></g>
+  <rect x="94" y="226" width="96" height="56" rx="3" fill="#bfe6ff"/>
+  <rect x="98" y="268" width="88" height="6" fill="#c98a4b" stroke-width="2"/>
+  <g transform="translate(118 268) scale(0.7)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#e8407a"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  <path class="wrench" d="M10 -18 L22 -24" stroke-width="4" stroke-linecap="round"/>
+</g>
+  <g transform="translate(164 268) scale(.7)"><rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/><rect x="-9" y="-23" width="18" height="15" rx="4" fill="#d9c6ff" stroke-dasharray="4 3"/><path d="M-4 -8 V0 M4 -8 V0"/></g>
+  <path class="spark" d="M150 236 l3 6 6 3 -6 3 -3 6 -3 -6 -6 -3 6 -3Z" fill="#ffb020" stroke-width="1.5"/></g>
+        <text x="105" y="72" text-anchor="middle" class="svg-label">Self-improvement</text>
+      </g>
+    </a>
+  </g>
+  <rect x="-10" y="318" width="1740" height="30" fill="#e8d3b0" stroke="#1f1a2e" stroke-width="3"/>
+  <g class="road-dash small"><path d="M0 333 H1720" stroke="#fff8ec" stroke-width="3" stroke-dasharray="18 14"/></g>
+</svg>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>PNR</span><span>Tatkal</span><span>UPI collect</span><span>GST invoice</span><span>khata</span><span>IFSC</span><span>income tax</span><span>lower berth</span><span>muhurat</span><span>kirana</span><span>mandi</span><span>Hinglish</span><span>लक्ष्मी / Laxmi</span><span>landmark address</span><span>Aadhaar</span><span>PNR</span><span>Tatkal</span><span>UPI collect</span><span>GST invoice</span><span>khata</span><span>IFSC</span><span>income tax</span><span>lower berth</span><span>muhurat</span><span>kirana</span><span>mandi</span><span>Hinglish</span><span>लक्ष्मी / Laxmi</span><span>landmark address</span><span>Aadhaar</span>
+  </div>
+</div>
+
+<section class="section pillars-band" id="pillars">
+  <div class="section-head">
+    <p class="eyebrow reveal">Seven pillars</p>
+    <h2 class="reveal">We work across <span class="hl hl-marigold">seven pillars</span></h2>
+    <p class="reveal">Our datasets and environments train models. Our benchmarks test them. Safety and interpretability research looks at how they behave and what happens inside them, and self-improvement feeds what we learn back in. Many projects serve several pillars at once.</p>
+  </div>
+  <div class="pcards">
+  <article class="pcard reveal" style="--pc:#8fd6d0; --lc:#0f8b8d">
+    <a class="pcard-top" href="pillars/datasets.html" aria-label="Datasets">
+      <span class="pillar-num">01</span>
+      <svg class="pcard-bldg" viewBox="-10 76 230 236" role="img" aria-label="Pustakalaya (पुस्तकालय), the library: the Datasets pillar">
+  <rect x="-10" y="298" width="230" height="16" fill="#cfe9c4" stroke="#1f1a2e" stroke-width="3"/>
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" class="b-datasets">
+  <rect x="8" y="286" width="194" height="14" fill="#e8d3b0"/>
+  <rect x="18" y="274" width="174" height="14" fill="#f3e6cc"/>
+  <rect x="26" y="150" width="158" height="124" fill="#fff8ec"/>
+  <path d="M14 152 L105 104 L196 152Z" fill="#8fd6d0"/>
+  <circle cx="105" cy="134" r="12" fill="#fff8ec"/>
+  <text x="105" y="139" text-anchor="middle" class="svg-sign small">अ</text>
+  <rect x="14" y="148" width="182" height="10" fill="#e8d3b0"/>
+  <rect x="36" y="164" width="138" height="40" rx="6" fill="#0f8b8d"/>
+  <text x="105.0" y="181" text-anchor="middle" class="svg-sign small light hi">पुस्तकालय</text>
+  <text x="105.0" y="197" text-anchor="middle" class="svg-sign small light en">DATASETS</text>
+  <g fill="#fffdf8"><rect x="34" y="210" width="10" height="64"/><rect x="166" y="210" width="10" height="64"/></g>
+  <rect x="52" y="214" width="34" height="38" rx="3" fill="#bfe6ff"/>
+  <rect x="124" y="214" width="34" height="38" rx="3" fill="#bfe6ff"/>
+  <g stroke-width="2"><rect x="55" y="228" width="6" height="22" fill="#e8407a"/><rect x="62" y="232" width="6" height="18" fill="#ffb020"/><rect x="69" y="226" width="6" height="24" fill="#3d3a8c"/><rect x="76" y="230" width="6" height="20" fill="#3fa34d"/>
+  <rect x="127" y="230" width="6" height="20" fill="#ff7a29"/><rect x="134" y="226" width="6" height="24" fill="#0f8b8d"/><rect x="141" y="232" width="6" height="18" fill="#e8407a"/><rect x="148" y="228" width="6" height="22" fill="#ffb020"/></g>
+  <path d="M92 274 V236 Q92 222 105 222 Q118 222 118 236 V274" fill="#3d3a8c"/>
+  <g class="floaty" stroke="none">
+    <text x="40" y="120" class="svg-sign small">ক</text>
+    <text x="160" y="112" class="svg-sign small f2">த</text>
+    <text x="178" y="138" class="svg-sign small f3">A</text>
+  </g></g>
+</svg>
+    </a>
+    <div class="pcard-body">
+      <p class="pcard-bldg-name"><span lang="hi">पुस्तकालय</span> · Pustakalaya, the library</p>
+      <h3><a href="pillars/datasets.html">Datasets</a></h3>
+      <p class="pcard-line">Indic datasets: fixed sets, and generators that make new samples on demand.</p>
+      <p class="chip-label">Projects</p><div class="pcard-chips"><a class="chip" href="projects/indic-reasoning-traces.html">Indic Reasoning Traces</a><a class="chip" href="projects/indicdb.html">IndicDB</a><a class="chip" href="projects/indic-reasoning-gym.html">Indic Reasoning Gym</a></div>
+    </div>
+  </article>
+  <article class="pcard reveal" style="--pc:#ffb020; --lc:#e09400">
+    <a class="pcard-top" href="pillars/environments.html" aria-label="RL Environments">
+      <span class="pillar-num">02</span>
+      <svg class="pcard-bldg" viewBox="-10 76 230 236" role="img" aria-label="Akhada (अखाड़ा), the wrestling gym: the RL Environments pillar">
+  <rect x="-10" y="298" width="230" height="16" fill="#cfe9c4" stroke="#1f1a2e" stroke-width="3"/>
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" class="b-environments">
+  <path d="M10 160 q16 10 32 0 q16 10 32 0 q16 10 32 0 q16 10 32 0 q16 10 32 0 q16 10 30 0" fill="none" stroke-width="2"/>
+  <g stroke-width="2"><path d="M18 164 l6 10 6 -10Z" fill="#e8407a"/><path d="M50 164 l6 10 6 -10Z" fill="#ffb020"/><path d="M146 164 l6 10 6 -10Z" fill="#0f8b8d"/><path d="M178 164 l6 10 6 -10Z" fill="#e8407a"/></g>
+  <rect x="10" y="206" width="190" height="80" fill="#ffd6a0"/>
+  <rect x="6" y="198" width="198" height="10" fill="#e8d3b0"/>
+  <path d="M10 236 H200 M10 262 H200 M60 206 V236 M150 206 V236 M40 236 V262 M170 236 V262" stroke-width="1.5" fill="none" opacity=".5"/>
+  <rect x="60" y="150" width="16" height="136" fill="#e8d3b0"/>
+  <rect x="134" y="150" width="16" height="136" fill="#e8d3b0"/>
+  <rect x="76" y="206" width="58" height="80" fill="#c98a4b"/>
+  <rect x="36" y="134" width="138" height="40" rx="6" fill="#ffb020"/>
+  <text x="105.0" y="151" text-anchor="middle" class="svg-sign small hi">अखाड़ा</text>
+  <text x="105.0" y="167" text-anchor="middle" class="svg-sign small en">RL ENVIRONMENTS</text>
+  <path d="M30 286 q-8 0 -7 -10 l3 -26 q1 -8 4 -8 q3 0 4 8 l3 26 q1 10 -7 10Z" fill="#c98a4b"/><path d="M46 286 q-8 0 -7 -10 l3 -26 q1 -8 4 -8 q3 0 4 8 l3 26 q1 10 -7 10Z" fill="#c98a4b"/><path d="M166 286 q-8 0 -7 -10 l3 -26 q1 -8 4 -8 q3 0 4 8 l3 26 q1 10 -7 10Z" fill="#c98a4b"/><path d="M182 286 q-8 0 -7 -10 l3 -26 q1 -8 4 -8 q3 0 4 8 l3 26 q1 10 -7 10Z" fill="#c98a4b"/>
+  <ellipse cx="105" cy="292" rx="100" ry="9" fill="#c98a4b"/>
+  <g class="spar"><g transform="translate(92 290) scale(1)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#ff7a29"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  
+</g></g>
+  <g class="spar s2"><g transform="translate(118 290) scale(1)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#0f8b8d"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  
+</g></g></g>
+</svg>
+    </a>
+    <div class="pcard-body">
+      <p class="pcard-bldg-name"><span lang="hi">अखाड़ा</span> · Akhada, the wrestling gym</p>
+      <h3><a href="pillars/environments.html">RL Environments</a></h3>
+      <p class="pcard-line">Indian apps, websites, businesses, puzzles and codebases where agents practise.</p>
+      <p class="chip-label">Projects</p><div class="pcard-chips"><a class="chip" href="projects/indic-swe-gym.html">Indic SWE-Gym</a><a class="chip" href="projects/indic-reasoning-gym.html">Indic Reasoning Gym</a><a class="chip" href="projects/tool-use.html">Tool-calling Environments</a><a class="chip" href="projects/bharatgui.html">BharatGUI</a><a class="chip" href="projects/karobaar.html">Karobaar Gym</a></div>
+    </div>
+  </article>
+  <article class="pcard reveal" style="--pc:#ffadc8; --lc:#e8407a">
+    <a class="pcard-top" href="pillars/models.html" aria-label="Models">
+      <span class="pillar-num">03</span>
+      <svg class="pcard-bldg" viewBox="-10 76 230 236" role="img" aria-label="Pathshala (पाठशाला), the school: the Models pillar">
+  <rect x="-10" y="298" width="230" height="16" fill="#cfe9c4" stroke="#1f1a2e" stroke-width="3"/>
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" class="b-models">
+  <rect x="14" y="286" width="182" height="14" fill="#e8d3b0"/>
+  <rect x="22" y="176" width="166" height="110" fill="#ffe3ee"/>
+  <path d="M8 182 L105 128 L202 182Z" fill="#e8407a"/>
+  <rect x="91" y="96" width="28" height="34" fill="#fff8ec"/>
+  <path d="M85 98 L105 80 L125 98Z" fill="#e8407a"/>
+  <g class="bell"><path d="M98 122 q0 -14 7 -14 q7 0 7 14Z" fill="#ffb020"/><circle cx="105" cy="124" r="2.5" fill="#1f1a2e"/></g>
+  <rect x="36" y="188" width="138" height="40" rx="6" fill="#e8407a"/>
+  <text x="105.0" y="205" text-anchor="middle" class="svg-sign small light hi">पाठशाला</text>
+  <text x="105.0" y="221" text-anchor="middle" class="svg-sign small light en">MODELS</text>
+  <rect x="32" y="238" width="40" height="32" rx="3" fill="#2f6b4f"/>
+  <path d="M38 248 h14 M38 256 h22 M56 248 l4 4 6 -8" stroke="#fff8ec" stroke-width="2" fill="none"/>
+  <rect x="138" y="238" width="40" height="32" rx="3" fill="#bfe6ff"/>
+  <path d="M90 286 V246 Q90 234 105 234 Q120 234 120 246 V286" fill="#3d3a8c"/>
+  <g class="walker"><g transform="translate(0 0) scale(0.8)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#8fd6d0"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  <rect x="-15" y="-22" width="8" height="12" rx="2" fill="#ffb020"/>
+</g></g></g>
+</svg>
+    </a>
+    <div class="pcard-body">
+      <p class="pcard-bldg-name"><span lang="hi">पाठशाला</span> · Pathshala, the school</p>
+      <h3><a href="pillars/models.html">Models</a></h3>
+      <p class="pcard-line">Open models fine-tuned on our data and environments, from 4B to about 70B.</p>
+      <p class="chip-label">Projects</p><div class="pcard-chips"><a class="chip" href="projects/indic-reasoning-traces.html">Indic Reasoning Traces</a><a class="chip" href="projects/indic-swe-gym.html">Indic SWE-Gym</a><a class="chip" href="projects/indic-reasoning-gym.html">Indic Reasoning Gym</a><a class="chip" href="projects/karobaar.html">Karobaar Gym</a></div>
+    </div>
+  </article>
+  <article class="pcard reveal" style="--pc:#b9b6ff; --lc:#3d3a8c">
+    <a class="pcard-top" href="pillars/evaluation.html" aria-label="Evaluation &amp; Benchmarking">
+      <span class="pillar-num">04</span>
+      <svg class="pcard-bldg" viewBox="-10 76 230 236" role="img" aria-label="Pariksha Kendra (परीक्षा केंद्र), the exam centre: the Evaluation &amp; Benchmarking pillar">
+  <rect x="-10" y="298" width="230" height="16" fill="#cfe9c4" stroke="#1f1a2e" stroke-width="3"/>
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" class="b-evaluation">
+  <rect x="14" y="286" width="182" height="14" fill="#e8d3b0"/>
+  <rect x="16" y="160" width="178" height="126" fill="#ecebff"/>
+  <rect x="10" y="150" width="190" height="14" fill="#b9b6ff"/>
+  <rect x="84" y="112" width="42" height="40" rx="6" fill="#fff8ec"/>
+  <circle cx="105" cy="132" r="14" fill="#fff"/>
+  <path class="clock-m" d="M105 132 H115" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M105 132 V124" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="36" y="170" width="138" height="40" rx="6" fill="#3d3a8c"/>
+  <text x="105.0" y="187" text-anchor="middle" class="svg-sign small light hi">परीक्षा केंद्र</text>
+  <text x="105.0" y="203" text-anchor="middle" class="svg-sign small light en">EVALUATION</text>
+  <rect x="28" y="224" width="44" height="62" fill="#3d3a8c"/>
+  <circle cx="64" cy="256" r="2.5" fill="#ffb020"/>
+  <rect x="114" y="222" width="72" height="56" rx="4" fill="#fffdf8"/>
+  <rect x="114" y="222" width="72" height="13" rx="4" fill="#b9b6ff"/>
+  <text x="150" y="232.5" text-anchor="middle" class="svg-coin">RESULT</text>
+  <path d="M124 244 H160" stroke-width="2"/><g class="mark m0"><path d="M168 243 l3 3 5 -6" stroke="#3fa34d" stroke-width="2.5" fill="none"/></g><path d="M124 253 H160" stroke-width="2"/><g class="mark m1"><path d="M168 250 l6 6 M174 250 l-6 6" stroke="#e8407a" stroke-width="2.5"/></g><path d="M124 262 H160" stroke-width="2"/><g class="mark m2"><path d="M168 261 l3 3 5 -6" stroke="#3fa34d" stroke-width="2.5" fill="none"/></g><path d="M124 271 H160" stroke-width="2"/><g class="mark m3"><path d="M168 270 l3 3 5 -6" stroke="#3fa34d" stroke-width="2.5" fill="none"/></g></g>
+</svg>
+    </a>
+    <div class="pcard-body">
+      <p class="pcard-bldg-name"><span lang="hi">परीक्षा केंद्र</span> · Pariksha Kendra, the exam centre</p>
+      <h3><a href="pillars/evaluation.html">Evaluation &amp; Benchmarking</a></h3>
+      <p class="pcard-line">Benchmarks for frontier and open models on Indian tasks and languages.</p>
+      <p class="chip-label">Projects</p><div class="pcard-chips"><a class="chip" href="projects/indicdb.html">IndicDB</a><a class="chip" href="projects/tool-use.html">Tool-calling Environments</a><a class="chip" href="projects/bharatgui.html">BharatGUI</a><a class="chip" href="projects/karobaar.html">Karobaar Gym</a><a class="chip" href="projects/alignment-faking.html">Alignment Faking and Evaluation Awareness</a><a class="chip" href="projects/misgendering.html">Misgendering in English-to-Hindi Translation</a></div>
+    </div>
+  </article>
+  <article class="pcard reveal" style="--pc:#ffc49a; --lc:#ff7a29">
+    <a class="pcard-top" href="pillars/safety.html" aria-label="AI Safety">
+      <span class="pillar-num">05</span>
+      <svg class="pcard-bldg" viewBox="-10 76 230 236" role="img" aria-label="Suraksha Chowki (सुरक्षा चौकी), the safety post: the AI Safety pillar">
+  <rect x="-10" y="298" width="230" height="16" fill="#cfe9c4" stroke="#1f1a2e" stroke-width="3"/>
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" class="b-safety">
+  <rect x="108" y="196" width="94" height="90" fill="#fff8ec"/>
+  <rect x="102" y="186" width="106" height="12" fill="#ff7a29"/>
+  <rect x="112" y="204" width="86" height="40" rx="6" fill="#ff7a29"/>
+  <text x="155.0" y="221" text-anchor="middle" class="svg-sign small light hi">सुरक्षा</text>
+  <text x="155.0" y="237" text-anchor="middle" class="svg-sign small light en">AI SAFETY</text>
+  <rect x="122" y="252" width="26" height="34" fill="#3d3a8c"/>
+  <rect x="160" y="252" width="30" height="20" rx="3" fill="#bfe6ff"/>
+  <path d="M14 286 V170" stroke-width="4"/>
+  <rect x="4" y="132" width="20" height="50" rx="6" fill="#1f1a2e"/>
+  <circle class="tl r" cx="14" cy="144" r="5" fill="#e8407a" stroke="none"/>
+  <circle class="tl a" cx="14" cy="157" r="5" fill="#ffb020" stroke="none"/>
+  <circle class="tl g" cx="14" cy="170" r="5" fill="#3fa34d" stroke="none"/>
+  <path d="M30 206 Q64 166 98 206Z" fill="#ff7a29"/>
+  <path d="M47 192 Q64 178 81 192 M38 202 Q64 176 90 202" stroke="#fff8ec" stroke-width="2.5" fill="none"/>
+  <path d="M64 206 V258" stroke-width="3"/>
+  <rect x="42" y="258" width="44" height="28" fill="#fffdf8"/>
+  <path d="M42 266 H86 M42 276 H86" stroke="#e8407a" stroke-width="3"/>
+  <g class="cop"><g transform="translate(64 258) scale(0.9)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#3d3a8c"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  <rect x="-12" y="-44" width="24" height="5" rx="2" fill="#3d3a8c"/><path class="wave" d="M9 -20 L20 -34" stroke-width="4" stroke-linecap="round"/>
+</g></g></g>
+</svg>
+    </a>
+    <div class="pcard-body">
+      <p class="pcard-bldg-name"><span lang="hi">सुरक्षा चौकी</span> · Suraksha Chowki, the safety post</p>
+      <h3><a href="pillars/safety.html">AI Safety</a></h3>
+      <p class="pcard-line">Alignment faking, evaluation awareness and fairness in Indian languages.</p>
+      <p class="chip-label">Projects</p><div class="pcard-chips"><a class="chip" href="projects/alignment-faking.html">Alignment Faking and Evaluation Awareness</a><a class="chip" href="projects/misgendering.html">Misgendering in English-to-Hindi Translation</a></div>
+    </div>
+  </article>
+  <article class="pcard reveal" style="--pc:#b6f0c0; --lc:#3fa34d">
+    <a class="pcard-top" href="pillars/interpretability.html" aria-label="Mechanistic Interpretability">
+      <span class="pillar-num">06</span>
+      <svg class="pcard-bldg" viewBox="-10 76 230 236" role="img" aria-label="Jantar Mantar (जंतर मंतर), the observatory: the Mechanistic Interpretability pillar">
+  <rect x="-10" y="298" width="230" height="16" fill="#cfe9c4" stroke="#1f1a2e" stroke-width="3"/>
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" class="b-interpretability">
+  <path d="M150 286 V196 A90 90 0 0 0 60 286Z" fill="#f4c2b4"/>
+  <path d="M30 286 L150 114 V286Z" fill="#e9a08f"/>
+  <path d="M40 274 h12 v-17" fill="none" stroke-width="2"/><path d="M52 257 h12 v-17" fill="none" stroke-width="2"/><path d="M64 240 h12 v-17" fill="none" stroke-width="2"/><path d="M76 223 h12 v-17" fill="none" stroke-width="2"/><path d="M88 206 h12 v-17" fill="none" stroke-width="2"/><path d="M100 189 h12 v-17" fill="none" stroke-width="2"/><path d="M112 172 h12 v-17" fill="none" stroke-width="2"/><path d="M124 155 h12 v-17" fill="none" stroke-width="2"/><path d="M136 138 h12 v-17" fill="none" stroke-width="2"/>
+  <path d="M150 286 V226 A60 60 0 0 1 206 286Z" fill="#f4c2b4"/>
+  <path d="M150 286 V246 M150 266 L196 286" stroke-width="2" fill="none"/>
+  <rect x="146" y="106" width="8" height="12" fill="#e9a08f"/>
+  <g class="scan">
+    <circle cx="0" cy="0" r="16" fill="#bfe6ff" fill-opacity=".7"/>
+    <path d="M11 11 L26 26" stroke-width="6" stroke-linecap="round"/>
+    <g stroke-width="1.5"><circle cx="-5" cy="-4" r="2.5" fill="#3fa34d"/><circle cx="5" cy="-6" r="2.5" fill="#ffb020"/><circle cx="0" cy="5" r="2.5" fill="#e8407a"/><path d="M-5 -4 L5 -6 L0 5Z" fill="none"/></g>
+  </g>
+  <rect x="20" y="248" width="140" height="40" rx="6" fill="#3fa34d"/>
+  <text x="90.0" y="265" text-anchor="middle" class="svg-sign small light hi">जंतर मंतर</text>
+  <text x="90.0" y="281" text-anchor="middle" class="svg-sign small light en">INTERPRETABILITY</text></g>
+</svg>
+    </a>
+    <div class="pcard-body">
+      <p class="pcard-bldg-name"><span lang="hi">जंतर मंतर</span> · Jantar Mantar, the observatory</p>
+      <h3><a href="pillars/interpretability.html">Mechanistic Interpretability</a></h3>
+      <p class="pcard-line">Looking inside models to see how they read and reason in Indian languages.</p>
+      
+    </div>
+  </article>
+  <article class="pcard reveal" style="--pc:#d9c6ff; --lc:#7a4fd6">
+    <a class="pcard-top" href="pillars/self-improvement.html" aria-label="Recursive Self-improvement">
+      <span class="pillar-num">07</span>
+      <svg class="pcard-bldg" viewBox="-10 76 230 236" role="img" aria-label="Karkhana (कारख़ाना), the workshop: the Recursive Self-improvement pillar">
+  <rect x="-10" y="298" width="230" height="16" fill="#cfe9c4" stroke="#1f1a2e" stroke-width="3"/>
+  <g stroke="#1f1a2e" stroke-width="3" stroke-linejoin="round" class="b-self-improvement">
+  <rect x="166" y="94" width="20" height="60" fill="#c0392b"/>
+  <g class="smoke" fill="#fff" stroke-width="2"><circle cx="178" cy="80" r="8"/><circle cx="190" cy="66" r="10"/><circle cx="176" cy="50" r="7"/></g>
+  <rect x="10" y="168" width="190" height="118" fill="#ece4ff"/>
+  <path d="M10 170 L52 138 V170 L94 138 V170 L136 138 V170 L178 138 V170 H200 V170Z" fill="#7a4fd6"/>
+  <path d="M52 140 V170 M94 140 V170 M136 140 V170" stroke-width="3"/>
+  <g fill="#bfe6ff" stroke-width="2"><path d="M16 167 L46 145 V167Z"/><path d="M58 167 L88 145 V167Z"/><path d="M100 167 L130 145 V167Z"/><path d="M142 167 L172 145 V167Z"/></g>
+  <rect x="30" y="178" width="150" height="40" rx="6" fill="#7a4fd6"/>
+  <text x="105.0" y="195" text-anchor="middle" class="svg-sign small light hi">कारख़ाना</text>
+  <text x="105.0" y="211" text-anchor="middle" class="svg-sign small light en">SELF-IMPROVEMENT</text>
+  <g transform="translate(48 252)"><g class="gear"><path d="M-4 -24 h8 l2 6 6 3 6 -3 6 6 -3 6 3 6 6 2 v8 l-6 2 -3 6 3 6 -6 6 -6 -3 -6 3 -2 6 h-8 l-2 -6 -6 -3 -6 3 -6 -6 3 -6 -3 -6 -6 -2 v-8 l6 -2 3 -6 -3 -6 6 -6 6 3 6 -3Z" fill="#ffb020"/><circle r="7" fill="#ece4ff"/></g></g>
+  <rect x="94" y="226" width="96" height="56" rx="3" fill="#bfe6ff"/>
+  <rect x="98" y="268" width="88" height="6" fill="#c98a4b" stroke-width="2"/>
+  <g transform="translate(118 268) scale(0.7)">
+  <path d="M0 -46 V-40" /><circle cx="0" cy="-48" r="3" fill="#e8407a"/>
+  <rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/>
+  <rect x="-8" y="-36" width="16" height="9" rx="3.5" fill="#1f1a2e"/>
+  <circle cx="-3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/><circle cx="3.5" cy="-31.5" r="1.8" fill="#8fd6d0" stroke="none"/>
+  <rect x="-9" y="-23" width="18" height="15" rx="4" fill="#e8407a"/>
+  <path d="M-4 -8 V0 M4 -8 V0" stroke-linecap="round"/>
+  <path class="wrench" d="M10 -18 L22 -24" stroke-width="4" stroke-linecap="round"/>
+</g>
+  <g transform="translate(164 268) scale(.7)"><rect x="-11" y="-40" width="22" height="17" rx="6" fill="#e3e5f5"/><rect x="-9" y="-23" width="18" height="15" rx="4" fill="#d9c6ff" stroke-dasharray="4 3"/><path d="M-4 -8 V0 M4 -8 V0"/></g>
+  <path class="spark" d="M150 236 l3 6 6 3 -6 3 -3 6 -3 -6 -6 -3 6 -3Z" fill="#ffb020" stroke-width="1.5"/></g>
+</svg>
+    </a>
+    <div class="pcard-body">
+      <p class="pcard-bldg-name"><span lang="hi">कारख़ाना</span> · Karkhana, the workshop</p>
+      <h3><a href="pillars/self-improvement.html">Recursive Self-improvement</a></h3>
+      <p class="pcard-line">Our own agent harness, and agents that improve themselves.</p>
+      
+    </div>
+  </article>
+  </div>
+</section>
+
+<section class="section" id="metro">
+  <div class="section-head">
+    <p class="eyebrow reveal">Metro map</p>
+    <h2 class="reveal" id="metro-title">One project, <span class="hl hl-rani">many lines</span></h2>
+    <p class="reveal">Each pillar is a metro line, and each project is a station. A project that serves several pillars is an interchange: Karobaar Gym is an RL environment, a training ground for our models and a benchmark, so three lines stop there. Click a station to open the project, or a numbered terminus to open the pillar.</p>
+  </div>
+  <div class="metro-wrap reveal">
+    <div class="metro-scroll" tabindex="0" aria-label="Metro map, scrolls sideways on small screens">
+      <svg class="metro-map" viewBox="20 0 1110 590" role="group" aria-labelledby="metro-title">
+<desc>A metro map. Each of the seven pillars is a coloured line, named after its building in the town. Each project is a station; a project on several lines is an interchange.</desc>
+<path id="ml-datasets" class="m-line" d="M70 100 H180 L240 160 L380 300 V420" stroke="#0f8b8d"/>
+<path id="ml-models" class="m-line" d="M620 100 H300 L240 160 V312 H540" stroke="#e8407a"/>
+<path id="ml-environments" class="m-line" d="M70 300 H840" stroke="#e09400"/>
+<path id="ml-evaluation" class="m-line" d="M70 520 H280 L380 420 H540 V288 H900 L980 368 V520" stroke="#3d3a8c"/>
+<path id="ml-safety" class="m-line" d="M1070 430 H994 V520" stroke="#ff7a29"/>
+<path id="ml-interpretability" class="m-line" d="M1070 60 H660 L620 100" stroke="#3fa34d"/>
+<path id="ml-self-improvement" class="m-line" d="M1070 180 H700 L620 100" stroke="#7a4fd6"/>
+<g class="m-train" aria-hidden="true"><rect x="-13" y="-6.5" width="26" height="13" rx="4" fill="#0f8b8d" stroke="#1f1a2e" stroke-width="2.5"/><path d="M-7 -1.5 h3 M-1.5 -1.5 h3 M4 -1.5 h3" stroke="#fff8ec" stroke-width="3" stroke-linecap="round"/>
+  <animateMotion dur="9.0s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#ml-datasets"/></animateMotion></g>
+<g class="m-train" aria-hidden="true"><rect x="-13" y="-6.5" width="26" height="13" rx="4" fill="#e8407a" stroke="#1f1a2e" stroke-width="2.5"/><path d="M-7 -1.5 h3 M-1.5 -1.5 h3 M4 -1.5 h3" stroke="#fff8ec" stroke-width="3" stroke-linecap="round"/>
+  <animateMotion dur="11.5s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#ml-models"/></animateMotion></g>
+<g class="m-train" aria-hidden="true"><rect x="-13" y="-6.5" width="26" height="13" rx="4" fill="#e09400" stroke="#1f1a2e" stroke-width="2.5"/><path d="M-7 -1.5 h3 M-1.5 -1.5 h3 M4 -1.5 h3" stroke="#fff8ec" stroke-width="3" stroke-linecap="round"/>
+  <animateMotion dur="14.0s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#ml-environments"/></animateMotion></g>
+<g class="m-train" aria-hidden="true"><rect x="-13" y="-6.5" width="26" height="13" rx="4" fill="#3d3a8c" stroke="#1f1a2e" stroke-width="2.5"/><path d="M-7 -1.5 h3 M-1.5 -1.5 h3 M4 -1.5 h3" stroke="#fff8ec" stroke-width="3" stroke-linecap="round"/>
+  <animateMotion dur="16.5s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#ml-evaluation"/></animateMotion></g>
+<g class="m-train" aria-hidden="true"><rect x="-13" y="-6.5" width="26" height="13" rx="4" fill="#ff7a29" stroke="#1f1a2e" stroke-width="2.5"/><path d="M-7 -1.5 h3 M-1.5 -1.5 h3 M4 -1.5 h3" stroke="#fff8ec" stroke-width="3" stroke-linecap="round"/>
+  <animateMotion dur="9.0s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#ml-safety"/></animateMotion></g>
+<g class="m-train" aria-hidden="true"><rect x="-13" y="-6.5" width="26" height="13" rx="4" fill="#3fa34d" stroke="#1f1a2e" stroke-width="2.5"/><path d="M-7 -1.5 h3 M-1.5 -1.5 h3 M4 -1.5 h3" stroke="#fff8ec" stroke-width="3" stroke-linecap="round"/>
+  <animateMotion dur="11.5s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#ml-interpretability"/></animateMotion></g>
+<g class="m-train" aria-hidden="true"><rect x="-13" y="-6.5" width="26" height="13" rx="4" fill="#7a4fd6" stroke="#1f1a2e" stroke-width="2.5"/><path d="M-7 -1.5 h3 M-1.5 -1.5 h3 M4 -1.5 h3" stroke="#fff8ec" stroke-width="3" stroke-linecap="round"/>
+  <animateMotion dur="14.0s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#ml-self-improvement"/></animateMotion></g>
+<a href="projects/indic-reasoning-traces.html" class="m-station" aria-label="Indic Reasoning Traces, on the lines Datasets, Models">
+  <circle cx="240" cy="160" r="12" class="m-stop"/><text x="224" y="172" text-anchor="end" class="m-label"><tspan x="224" dy="0">Indic Reasoning</tspan><tspan x="224" dy="17">Traces</tspan></text></a>
+<a href="projects/indic-swe-gym.html" class="m-station" aria-label="Indic SWE-Gym, on the lines RL Environments, Models">
+  <rect x="228" y="288" width="24" height="36" rx="12" class="m-stop"/><text x="240" y="346" text-anchor="middle" class="m-label"><tspan x="240" dy="0">Indic SWE-Gym</tspan></text></a>
+<a href="projects/indic-reasoning-gym.html" class="m-station" aria-label="Indic Reasoning Gym, on the lines RL Environments, Datasets, Models">
+  <rect x="368" y="288" width="24" height="36" rx="12" class="m-stop"/><text x="394" y="344" text-anchor="start" class="m-label"><tspan x="394" dy="0">Indic</tspan><tspan x="394" dy="17">Reasoning Gym</tspan></text></a>
+<a href="projects/karobaar.html" class="m-station" aria-label="Karobaar Gym, on the lines RL Environments, Models, Evaluation">
+  <rect x="528" y="276" width="24" height="48" rx="12" class="m-stop"/><text x="540" y="262" text-anchor="middle" class="m-label"><tspan x="540" dy="0">Karobaar Gym</tspan></text></a>
+<a href="projects/tool-use.html" class="m-station" aria-label="Tool-calling Environments, on the lines RL Environments, Evaluation">
+  <rect x="678" y="276" width="24" height="36" rx="12" class="m-stop"/><text x="690" y="248" text-anchor="middle" class="m-label"><tspan x="690" dy="0">Tool-calling</tspan><tspan x="690" dy="17">environments</tspan></text></a>
+<a href="projects/bharatgui.html" class="m-station" aria-label="BharatGUI, on the lines RL Environments, Evaluation">
+  <rect x="828" y="276" width="24" height="36" rx="12" class="m-stop"/><text x="840" y="262" text-anchor="middle" class="m-label"><tspan x="840" dy="0">BharatGUI</tspan></text></a>
+<a href="projects/indicdb.html" class="m-station" aria-label="IndicDB, on the lines Datasets, Evaluation">
+  <circle cx="380" cy="420" r="12" class="m-stop"/><text x="396" y="452" text-anchor="start" class="m-label"><tspan x="396" dy="0">IndicDB</tspan></text></a>
+<a href="projects/misgendering.html" class="m-station" aria-label="Misgendering in English-to-Hindi Translation, on the lines AI Safety, Evaluation">
+  <rect x="968" y="418" width="38" height="24" rx="12" class="m-stop"/><text x="962" y="426" text-anchor="end" class="m-label"><tspan x="962" dy="0">Misgendering in</tspan><tspan x="962" dy="17">EN→HI translation</tspan></text></a>
+<a href="projects/alignment-faking.html" class="m-station" aria-label="Alignment Faking and Evaluation Awareness, on the lines AI Safety, Evaluation">
+  <rect x="968" y="508" width="38" height="24" rx="12" class="m-stop"/><text x="962" y="516" text-anchor="end" class="m-label"><tspan x="962" dy="0">Alignment faking &amp;</tspan><tspan x="962" dy="17">evaluation awareness</tspan></text></a>
+<a href="pillars/datasets.html" class="m-term" aria-label="Datasets line: Pustakalaya">
+  <rect x="53" y="83" width="34" height="34" rx="9" fill="#0f8b8d" class="m-term-box"/>
+  <text x="70" y="106" text-anchor="middle" class="m-num">01</text>
+  <text x="53" y="58" text-anchor="start" class="m-tlabel"><tspan class="m-tname">Datasets</tspan><tspan x="53" dy="17" class="m-thi">पुस्तकालय · Pustakalaya</tspan></text></a>
+<a href="pillars/environments.html" class="m-term" aria-label="RL Environments line: Akhada">
+  <rect x="53" y="283" width="34" height="34" rx="9" fill="#e09400" class="m-term-box"/>
+  <text x="70" y="306" text-anchor="middle" class="m-num">02</text>
+  <text x="53" y="258" text-anchor="start" class="m-tlabel"><tspan class="m-tname">RL Environments</tspan><tspan x="53" dy="17" class="m-thi">अखाड़ा · Akhada</tspan></text></a>
+<a href="pillars/evaluation.html" class="m-term" aria-label="Evaluation &amp; Benchmarking line: Pariksha Kendra">
+  <rect x="53" y="503" width="34" height="34" rx="9" fill="#3d3a8c" class="m-term-box"/>
+  <text x="70" y="526" text-anchor="middle" class="m-num">04</text>
+  <text x="53" y="478" text-anchor="start" class="m-tlabel"><tspan class="m-tname">Evaluation</tspan><tspan x="53" dy="17" class="m-thi">परीक्षा केंद्र · Pariksha Kendra</tspan></text></a>
+<a href="pillars/models.html" class="m-term" aria-label="Models line: Pathshala">
+  <rect x="603" y="83" width="34" height="34" rx="9" fill="#e8407a" class="m-term-box"/>
+  <text x="620" y="106" text-anchor="middle" class="m-num">03</text>
+  <text x="594" y="66" text-anchor="end" class="m-tlabel"><tspan class="m-tname">Models</tspan><tspan x="594" dy="17" class="m-thi">पाठशाला · Pathshala</tspan></text></a>
+<a href="pillars/interpretability.html" class="m-term" aria-label="Mechanistic Interpretability line: Jantar Mantar">
+  <rect x="1053" y="43" width="34" height="34" rx="9" fill="#3fa34d" class="m-term-box"/>
+  <text x="1070" y="66" text-anchor="middle" class="m-num">06</text>
+  <text x="1087" y="98" text-anchor="end" class="m-tlabel"><tspan class="m-tname">Interpretability</tspan><tspan x="1087" dy="17" class="m-thi">जंतर मंतर · Jantar Mantar</tspan></text></a>
+<a href="pillars/self-improvement.html" class="m-term" aria-label="Recursive Self-improvement line: Karkhana">
+  <rect x="1053" y="163" width="34" height="34" rx="9" fill="#7a4fd6" class="m-term-box"/>
+  <text x="1070" y="186" text-anchor="middle" class="m-num">07</text>
+  <text x="1087" y="218" text-anchor="end" class="m-tlabel"><tspan class="m-tname">Self-improvement</tspan><tspan x="1087" dy="17" class="m-thi">कारख़ाना · Karkhana</tspan></text></a>
+<a href="pillars/safety.html" class="m-term" aria-label="AI Safety line: Suraksha Chowki">
+  <rect x="1053" y="413" width="34" height="34" rx="9" fill="#ff7a29" class="m-term-box"/>
+  <text x="1070" y="436" text-anchor="middle" class="m-num">05</text>
+  <text x="1087" y="388" text-anchor="end" class="m-tlabel"><tspan class="m-tname">AI Safety</tspan><tspan x="1087" dy="17" class="m-thi">सुरक्षा चौकी · Suraksha Chowki</tspan></text></a>
+</svg>
+    </div>
+    <p class="metro-swipe" aria-hidden="true">Swipe to see the whole map →</p>
+    <div class="metro-legend"><a class="line-chip" href="pillars/datasets.html"><i style="--lc:#0f8b8d"></i>Datasets</a><a class="line-chip" href="pillars/environments.html"><i style="--lc:#e09400"></i>RL Environments</a><a class="line-chip" href="pillars/models.html"><i style="--lc:#e8407a"></i>Models</a><a class="line-chip" href="pillars/evaluation.html"><i style="--lc:#3d3a8c"></i>Evaluation</a><a class="line-chip" href="pillars/safety.html"><i style="--lc:#ff7a29"></i>AI Safety</a><a class="line-chip" href="pillars/interpretability.html"><i style="--lc:#3fa34d"></i>Interpretability</a><a class="line-chip" href="pillars/self-improvement.html"><i style="--lc:#7a4fd6"></i>Self-improvement</a></div>
+  </div>
+</section>
+
+<section class="section india-wrap" id="india">
+  <div class="section-head">
+    <p class="eyebrow reveal">What makes it Indian</p>
+    <h2 class="reveal">Translation changes the language, not the context</h2>
+    <p class="reveal">A Western train-booking task translated into Hindi still has fares in dollars and Western refund rules. Our tasks depend on Indian context as well as Indian languages.</p>
+  </div>
+  <div class="culture">
+    <div class="card reveal" style="--accent: var(--marigold)"><b>How people write</b><span>Scripts, Hinglish, honorifics: <i>aap</i>, <i>ji</i>, <i>bhaiya</i>.</span></div>
+    <div class="card reveal" style="--accent: #ffadc8"><b>What everyone knows</b><span>A PNR, an IFSC code, an address that says “behind the Hanuman temple”.</span></div>
+    <div class="card reveal" style="--accent: #8fd6d0"><b>What people actually do</b><span>Approve a UPI collect request, race for a Tatkal ticket, raise a GST invoice for each sale.</span></div>
+    <div class="card reveal" style="--accent: #b9b6ff"><b>What people value</b><span>A Jain meal with no onion or garlic, a lower berth for an elderly parent, a purchase timed to a <i>muhurat</i>.</span></div>
+  </div>
+</section>
+
+<section class="section" id="languages">
+  <div class="section-head">
+    <p class="eyebrow reveal">Languages</p>
+    <h2 class="reveal">Ten languages, about 90% of India</h2>
+    <p class="reveal">We build for the ten most widely spoken scheduled languages of India, plus English and Hinglish. The sign at the top of this page cycles through all ten.</p>
+  </div>
+  <ul class="langs"><li class="reveal"><b lang="hi">हिन्दी</b><span>Hindi</span></li><li class="reveal"><b lang="bn">বাংলা</b><span>Bengali</span></li><li class="reveal"><b lang="mr">मराठी</b><span>Marathi</span></li><li class="reveal"><b lang="te">తెలుగు</b><span>Telugu</span></li><li class="reveal"><b lang="ta">தமிழ்</b><span>Tamil</span></li><li class="reveal"><b lang="gu">ગુજરાતી</b><span>Gujarati</span></li><li class="reveal"><b lang="ur" dir="rtl">اردو</b><span>Urdu</span></li><li class="reveal"><b lang="kn">ಕನ್ನಡ</b><span>Kannada</span></li><li class="reveal"><b lang="or">ଓଡ଼ିଆ</b><span>Odia</span></li><li class="reveal"><b lang="ml">മലയാളം</b><span>Malayalam</span></li></ul>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p><b>Prayog AI</b> · the Bharat AI Prayogshala at BITS Pilani</p>
+  <p class="foot-links"><a href="pillars/datasets.html">Datasets</a> · <a href="pillars/environments.html">RL Environments</a> · <a href="pillars/models.html">Models</a> · <a href="pillars/evaluation.html">Evaluation</a> · <a href="pillars/safety.html">AI Safety</a> · <a href="pillars/interpretability.html">Interpretability</a> · <a href="pillars/self-improvement.html">Self-improvement</a></p>
+</footer>
+<script src="script.js"></script>
+<script src="prayog.js"></script>
+<script src="scrollbuddy.js"></script>
+</body>
+</html>
