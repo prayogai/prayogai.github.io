@@ -39,3 +39,15 @@
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") set(false); });
   matchMedia("(min-width: 721px)").addEventListener("change", (m) => { if (m.matches) set(false); });
 })();
+
+// Phone swipe strip: light the dot of the building in view.
+(() => {
+  const strip = document.querySelector(".town-swipe .swipe-track");
+  if (!strip || !("IntersectionObserver" in window)) return;
+  const slides = [...strip.querySelectorAll(".slide")];
+  const dots = [...document.querySelectorAll(".town-swipe .swipe-dots i")];
+  const io = new IntersectionObserver((es) => es.forEach((en) => {
+    if (en.isIntersecting) dots.forEach((d, k) => d.classList.toggle("on", slides[k] === en.target));
+  }), { root: strip, threshold: 0.6 });
+  slides.forEach((s) => io.observe(s));
+})();

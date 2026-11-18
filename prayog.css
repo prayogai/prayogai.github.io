@@ -477,3 +477,39 @@ body { font-size: 20px; }
   /* smaller building on pillar and project pages */
   .pillar-hero-art, .proj-art-bldg { max-width: 300px; margin: 0 auto; }
 }
+
+/* ============ departure board: two columns (PI, 2026-11-18) ============ */
+.dboard table { table-layout: fixed; }
+.dboard col.c-name { width: 34%; }
+.dboard td p { margin: 0; }
+.dboard .d-what { text-wrap: pretty; line-height: 1.5; max-width: 62ch; }
+.dboard p.tags { margin-top: 10px; white-space: normal; }
+.dboard tbody th, .dboard td { padding: 18px 26px; }
+.dboard tbody th a { line-height: 1.35; }
+
+/* building names: never break inside a phrase */
+.nw { white-space: nowrap; }
+.pcard-bldg-name .gloss { display: block; font-weight: 700; }
+
+/* phone swipe strip (hidden on desktop) */
+.town-swipe { display: none; }
+@media (max-width: 720px) {
+  .town-swipe { display: block; margin: 0 -16px 26px; }
+  .swipe-track { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 9vw 12px;
+    scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .swipe-track::-webkit-scrollbar { display: none; }
+  .slide { flex: 0 0 82vw; scroll-snap-align: center; display: block; text-decoration: none; color: var(--ink);
+    background: #ffe8c4; border: var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 5px 5px 0 var(--lc); }
+  .slide-bldg { display: block; width: 100%; height: auto; }
+  .slide-cap { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--paper); border-top: var(--line);
+    font-family: var(--display); font-weight: 800; font-size: 21px; line-height: 1.15; }
+  .slide-cap b { font-size: 13px; background: var(--pc); border: 2.5px solid var(--ink); border-radius: 9px; padding: 0 7px; }
+  .swipe-dots { display: flex; justify-content: center; gap: 8px; }
+  .swipe-dots i { width: 9px; height: 9px; border-radius: 50%; background: rgba(31, 26, 46, .22); transition: background .2s, transform .2s; }
+  .swipe-dots i.on { background: var(--ink); transform: scale(1.3); }
+  /* cards below become text rows: the strip already shows each building */
+  .pcard-top { display: none; }
+  .pcard { border-left-width: 10px; border-left-color: var(--lc); }
+  .dboard tbody th, .dboard td { padding: 2px 0; }
+}
+.slide-bldg text { stroke: none; }
