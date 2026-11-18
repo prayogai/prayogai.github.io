@@ -217,3 +217,39 @@ a.line-chip:hover { transform: translateY(-2px); background: #fff; }
 .gal figcaption b { display: block; font-family: var(--display); font-size: 22px; color: var(--ink); }
 @media (max-width: 760px) { .gallery { grid-template-columns: 1fr; } }
 #training .world { max-width: 1180px; margin: 0 auto; }
+
+/* ============ v3 (2026-11-18): platform hero, team, scroll robot inside the nav bar ============ */
+.hero-platform { padding: 0; }
+.platform { position: relative; overflow: hidden; border-bottom: var(--line); }
+.platform-scene { display: block; position: relative; width: max(100%, 980px); height: auto; left: 50%; transform: translateX(-50%); }
+.platform-scene text { stroke: none; }
+.platform .board-wrap { position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); bottom: 26.07%; margin: 0; }
+.platform .board { min-width: 0; width: clamp(330px, 36vw, 560px); padding: 18px 20px 14px; text-align: center; }
+.platform .board-script { font-size: clamp(24px, 3vw, 42px); }
+.platform h1.board-en { font-size: clamp(40px, 5.2vw, 78px); }
+.platform .board-sub { font-size: clamp(9px, 1vw, 13px); margin-top: 8px; }
+.platform .board-posts i { height: clamp(26px, 3vw, 44px); }
+.hero-cta { margin: 26px 0 30px; }
+#what-we-do .town-wrap { margin: 0 0 40px; border-top: var(--line); border-bottom: var(--line); }
+
+.team { display: flex; flex-wrap: wrap; justify-content: center; gap: 26px; max-width: 900px; margin: 0 auto; }
+.member { width: 300px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; text-decoration: none;
+  background: var(--paper); border: var(--line); border-radius: var(--radius); padding: 24px 18px 20px; box-shadow: var(--shadow);
+  transition: transform .2s cubic-bezier(.3, 1.6, .5, 1); }
+.member:hover { transform: translateY(-5px) rotate(-1deg); }
+.avatar { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 8px;
+  background: var(--pc); border: var(--line); font-family: var(--display); font-weight: 800; font-size: 28px; }
+.member b { font-family: var(--display); font-size: 23px; }
+.member span:not(.avatar) { color: var(--ink-soft); font-weight: 700; font-size: 15px; }
+.member i { font-style: normal; font-weight: 800; font-size: 13.5px; color: var(--rani); margin-top: 6px; }
+
+/* scroll robot: a lane inside the top bar, not over the page */
+.nav { padding-bottom: 26px; }
+.nav .sb { top: auto; bottom: 3px; height: 20px; margin-top: 0; }
+.nav .sb-bot, .nav .sb-bot svg { width: 17px; height: 20px; }
+.nav .sb-flag, .nav .sb-flag svg { width: 16px; height: 20px; }
+.nav .sb-trail { height: 3px; bottom: 1px; }
+.platform .board { width: clamp(320px, 29vw, 460px); padding: 14px 16px 12px; }
+.platform .board-script { font-size: clamp(22px, 2.4vw, 34px); }
+.platform h1.board-en { font-size: clamp(38px, 4.3vw, 64px); }
+.platform .board-lang { top: 8px; right: 10px; font-size: 10px; }
