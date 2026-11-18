@@ -305,3 +305,91 @@ a.line-chip:hover { transform: translateY(-2px); background: #fff; }
 .vs-arrow { align-self: center; font-family: var(--display); font-weight: 800; font-size: 40px; }
 @media (max-width: 820px) { .versus { grid-template-columns: 1fr; } .vs-arrow { transform: rotate(90deg); justify-self: center; } }
 .avatar { object-fit: cover; padding: 0; width: 96px; height: 96px; }
+
+/* ============ 2026-11-18: small text 1.5x larger (PI). Generated from the rules above; SVG drawing text excluded. ============ */
+.nav-links a { font-size: 22.5px; }
+.eyebrow { font-size: 19.5px; }
+.hero-stats span { font-size: 19.5px; }
+.scene-hint { font-size: 19.5px; }
+.world-tag .num { font-size: 22.5px; }
+.chip-label { font-size: 18px; }
+.chip { font-size: 21px; }
+.badge { font-size: 21px; }
+.rule p { font-size: 23px; }
+.callout { font-size: 23px; }
+.core-parts span { font-size: 20px; }
+.plug { font-size: 22.5px; }
+.loop-node small { font-size: 19.5px; }
+.loop-center small { font-size: 19px; }
+.gap-sub { font-size: 22.5px; }
+.bar-name { font-size: 22.5px; }
+.gap-note { font-size: 21px; }
+.stop span { font-size: 22.5px; }
+.pillars p { font-size: 23px; }
+.planned { font-size: 18px; }
+.step span { font-size: 22.5px; }
+.card span { font-size: 23px; }
+.langs span { font-size: 19.5px; }
+.foot .todo { font-size: 19.5px; }
+.pillar-num { font-size: 21px; }
+.pillar-what { font-size: 24px; }
+.pillar-now p { font-size: 22.5px; }
+.pillar-todo { font-size: 19.5px; }
+.training .world-tag .num { font-size: 19.5px; }
+.pillar-roof { font-size: 21px; }
+.foot-links { font-size: 21px; }
+.board-sub { font-size: clamp(16px, 2vw, 21px); }
+.board-lang { font-size: 17px; }
+.board-lang { font-size: 15px; }
+.town-wrap .scene-hint { font-size: 18px; }
+.pcard-bldg-name { font-size: 19.5px; }
+.pcard-line { font-size: 22.5px; }
+.pcard-chips .chip { font-size: 19.5px; }
+.line-chip { font-size: 21px; }
+.crumbs { font-size: 21px; }
+.proj-card p { font-size: 23px; }
+.proj-tag { font-size: 19px !important; }
+.env-count { font-size: 21px !important; }
+.also .line-chip { font-size: 19.5px; }
+.envs span { font-size: 22px; }
+.platform .board-sub { font-size: clamp(13.5px, 1.5vw, 19.5px); }
+.member span:not(.avatar) { font-size: 22.5px; }
+.member i { font-size: 20px; }
+.platform .board-lang { font-size: 15px; }
+.dboard thead th { font-size: 18px; }
+.dboard td { font-size: 22.5px; }
+.tag { font-size: 19px; }
+.vs-label { font-size: 19.5px; }
+.vs-en { font-size: 22.5px; }
+.vs-card ul { font-size: 23px; }
+
+/* keep the hierarchy after the 1.5x change: body, leads and headings grow too */
+body { font-size: 20px; }
+.lede { font-size: clamp(20px, 2.2vw, 24px); }
+.section-head p:not(.eyebrow) { font-size: 22px; }
+.pitch { font-size: 21px; }
+.brand span { font-size: 32px; }
+.pcards { max-width: 1440px; }
+.pcard { width: 330px; }
+.pcard h3, .proj-card h3 { font-size: 32px; }
+.pcard-chips .chip, .also .line-chip { border-radius: 14px; line-height: 1.25; padding: 4px 12px; }
+.member b { font-size: 28px; }
+.envs b { font-size: 25px; }
+.vs-task { font-size: 27px; }
+.gal figcaption b { font-size: 27px; }
+.dboard tbody th a { font-size: 22px; }
+.proj-grid { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+/* board: sub-line on one line, language tag sits on the board's top edge */
+.platform .board { width: clamp(330px, 34vw, 540px); }
+.platform .board-sub { font-size: clamp(12.5px, 1.25vw, 18px); letter-spacing: .06em; white-space: nowrap; }
+.board-lang, .platform .board-lang { top: -14px; right: 16px; font-size: 15px; padding: 1px 10px; border: 2px solid #ffd21f; }
+@media (max-width: 620px) {
+  .brand span { font-size: 25px; }
+  .nav-links a { font-size: 19px; }
+  .pcard { width: 100%; max-width: 400px; }
+  .proj-grid { grid-template-columns: 1fr; }
+  .board-lang, .platform .board-lang { font-size: 13px; }
+}
+.pcards { gap: 30px 22px; }
+@media (min-width: 621px) { .pcard { width: 318px; } }
+@media (max-width: 620px) { .eyebrow { letter-spacing: .05em; border-radius: 18px; line-height: 1.35; } }
