@@ -56,3 +56,19 @@
   addEventListener("resize", update);
   update();
 })();
+
+// Multilingual labels: every Hindi label cycles through the other nine languages,
+// in step with the station board (same 2.6 s beat, same order).
+(() => {
+  const LANGS = ["hi", "bn", "mr", "te", "ta", "gu", "ur", "kn", "or", "ml"];
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const groups = [...document.querySelectorAll(".ml, .ml-svg")];
+  if (!groups.length) return;
+  let i = 0;
+  setInterval(() => {
+    if (document.hidden) return;
+    i = (i + 1) % LANGS.length;
+    const L = LANGS[i];
+    groups.forEach((g) => { for (const c of g.children) c.classList.toggle("on", c.getAttribute("lang") === L); });
+  }, 2600);
+})();

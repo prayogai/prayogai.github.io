@@ -537,3 +537,25 @@ body { font-size: 20px; }
   .swipe-dots i { width: 9px; height: 9px; border-radius: 50%; background: rgba(31, 26, 46, .22); transition: background .2s, transform .2s; }
   .swipe-dots i.on { background: var(--ink); transform: scale(1.3); }
 }
+
+/* ============ multilingual labels (PI, 2026-11-20): Hindi label cycles through nine more languages ============ */
+.ml { display: inline-grid; vertical-align: baseline; }
+.ml > span { grid-area: 1 / 1; opacity: 0; transition: opacity .5s ease; white-space: nowrap; }
+.ml > span.on { opacity: 1; }
+.ml-svg text { opacity: 0; transition: opacity .5s ease; }
+.ml-svg text.on { opacity: 1; }
+.ml > [lang="bn"], .ml-svg [lang="bn"] { font-family: "Baloo Da 2", "Baloo 2", sans-serif; }
+.ml > [lang="te"], .ml-svg [lang="te"] { font-family: "Baloo Tammudu 2", "Baloo 2", sans-serif; }
+.ml > [lang="ta"], .ml-svg [lang="ta"] { font-family: "Baloo Thambi 2", "Baloo 2", sans-serif; }
+.ml > [lang="gu"], .ml-svg [lang="gu"] { font-family: "Baloo Bhai 2", "Baloo 2", sans-serif; }
+.ml > [lang="kn"], .ml-svg [lang="kn"] { font-family: "Baloo Tamma 2", "Baloo 2", sans-serif; }
+.ml > [lang="or"], .ml-svg [lang="or"] { font-family: "Baloo Bhaina 2", "Baloo 2", sans-serif; }
+.ml > [lang="ml"], .ml-svg [lang="ml"] { font-family: "Baloo Chettan 2", "Baloo 2", sans-serif; }
+.ml > [lang="ur"], .ml-svg [lang="ur"] { font-family: "Noto Nastaliq Urdu", serif; }
+.ml > [lang="ur"] { font-size: .85em; line-height: 1; }
+.dboard-head .ml { font-size: 22px; letter-spacing: 0; color: #fff8ec; }
+@media (prefers-reduced-motion: reduce) { .ml > span, .ml-svg text { transition: none; } }
+.ml > span { justify-self: start; }
+.pcard-bldg-name .ml { display: grid; font-family: var(--display); font-size: 21px; font-weight: 800; color: var(--ink); line-height: 1.35; }
+.pcard-bldg-name .ml > [lang="ur"] { font-size: 17px; line-height: 1.6; }
+@media (max-width: 720px) { .pcard-bldg-name .ml { font-size: 17px; } }
